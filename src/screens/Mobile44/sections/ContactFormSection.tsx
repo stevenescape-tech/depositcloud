@@ -54,7 +54,23 @@ export const ContactFormSection = (): JSX.Element => {
     setShowError(false);
 
     try {
-      console.log("Form submitted:", formData);
+      const response = await fetch('https://formspree.io/f/xaqnzljo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          company: formData.companyName,
+          portfolio: formData.portfolioSize,
+          email: formData.workEmail,
+          _replyto: formData.workEmail,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
       
       setSubmitStatus("success");
       setFormData({
