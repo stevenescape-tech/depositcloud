@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "api/send-email.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "SENDGRID_API_KEY": "@sendgrid-api-key",
+    "SENDGRID_FROM_EMAIL": "@sendgrid-from-email"
+  }
+}
