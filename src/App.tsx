@@ -27,7 +27,7 @@ function ResponsiveHome() {
   useEffect(() => {
     const checkScreenSize = () => {
       const width = window.innerWidth;
-      if (width < 900) {
+      if (width < 768) {
         setScreenSize('mobile');
       } else if (width < 1280) {
         setScreenSize('tablet');
@@ -53,6 +53,9 @@ function ResponsiveHome() {
 function App() {
   return (
     <Router>
+      <a href="#main-content" className="skip-to-main">
+        Skip to main content
+      </a>
       <Routes>
         <Route path="/" element={<ResponsiveHome />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />

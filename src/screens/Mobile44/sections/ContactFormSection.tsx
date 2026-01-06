@@ -90,12 +90,12 @@ export const ContactFormSection = (): JSX.Element => {
   };
 
   return (
-    <section id="contact" className="relative w-full bg-[#161616] overflow-hidden">
+    <section id="contact" role="region" aria-labelledby="contact-heading" className="relative w-full bg-[#161616] overflow-hidden">
       <div className="absolute top-px -left-2.5 w-[1945px] bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] h-px bg-[100%_100%]" />
 
       <div className="w-full mx-auto px-6 pt-[30px] pb-0 flex flex-col items-center justify-center">
         <div className="flex flex-col items-center gap-7 w-full mb-[77px] translate-y-[-1rem] animate-fade-in opacity-0">
-          <h2 className="w-full mt-[-1.00px] [font-family:'Helvetica-Bold',Helvetica] font-bold text-white text-[28px] text-center tracking-[-1.68px] leading-[normal]">
+          <h2 id="contact-heading" className="w-full mt-[-1.00px] [font-family:'Helvetica-Bold',Helvetica] font-bold text-white text-[28px] text-center tracking-[-1.68px] leading-[normal]">
             See what DepositCloud unlocks for your portfolio
           </h2>
 
@@ -105,29 +105,41 @@ export const ContactFormSection = (): JSX.Element => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <form onSubmit={handleSubmit} aria-label="Contact form" className="flex flex-col items-center gap-4 w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
           <div className="flex flex-col items-start gap-[41px] w-full">
             {formFields.map((field) => (
-              <Input
-                key={field.id}
-                id={field.id}
-                type={field.type}
-                placeholder={field.placeholder}
-                value={formData[field.id as keyof typeof formData]}
-                onChange={handleInputChange}
-                required={field.required}
-                disabled={isSubmitting || submitStatus === "success"}
-                className={`w-full h-12 bg-white border border-solid px-7 [font-family:'Courier_Prime',Helvetica] font-normal text-[#595959] text-xs tracking-[0] leading-7 placeholder:text-[#595959] disabled:opacity-50 ${
-                  touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()
-                    ? 'border-red-500'
-                    : 'border-[#51b0ff]'
-                }`}
-              />
+              <div key={field.id} className="w-full">
+                <label htmlFor={field.id} className="sr-only">
+                  {field.placeholder}
+                </label>
+                <Input
+                  id={field.id}
+                  type={field.type}
+                  placeholder={field.placeholder}
+                  value={formData[field.id as keyof typeof formData]}
+                  onChange={handleInputChange}
+                  required={field.required}
+                  disabled={isSubmitting || submitStatus === "success"}
+                  aria-required={field.required}
+                  aria-invalid={touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()}
+                  aria-describedby={touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim() ? `${field.id}-error` : undefined}
+                  className={`w-full h-12 bg-white border border-solid px-7 [font-family:'Courier_Prime',Helvetica] font-normal text-[#595959] text-xs tracking-[0] leading-7 placeholder:text-[#595959] disabled:opacity-50 focus:outline-2 focus:outline-offset-2 focus:outline-[#51b0ff] ${
+                    touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()
+                      ? 'border-red-500'
+                      : 'border-[#51b0ff]'
+                  }`}
+                />
+                {touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim() && (
+                  <span id={`${field.id}-error`} className="sr-only">
+                    {field.placeholder} is required
+                  </span>
+                )}
+              </div>
             ))}
           </div>
 
           {showError && (
-            <p className="text-red-500 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs -mt-2">
+            <p role="alert" className="text-red-500 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs -mt-2">
               Please complete all fields
             </p>
           )}
@@ -136,7 +148,8 @@ export const ContactFormSection = (): JSX.Element => {
             type="submit"
             variant="outline"
             disabled={isSubmitting || submitStatus === "success"}
-            className={`w-auto min-w-[239px] h-auto mt-[52px] px-[23px] py-4 rounded-[5px] border border-solid bg-transparent hover:bg-transparent font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] disabled:opacity-100 ${
+            aria-label={submitStatus === "success" ? "Form submitted successfully" : isSubmitting ? "Submitting form" : "Submit demo request"}
+            className={`w-auto min-w-[239px] h-auto mt-[52px] px-[23px] py-4 rounded-[5px] border border-solid bg-transparent hover:bg-transparent font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] disabled:opacity-100 focus:outline-2 focus:outline-offset-2 focus:outline-white ${
               submitStatus === "success"
                 ? 'border-green-500 hover:bg-green-500/10'
                 : 'border-[#51b0ff] hover:bg-[#51b0ff]/10'
@@ -146,7 +159,7 @@ export const ContactFormSection = (): JSX.Element => {
           </Button>
 
           {submitStatus === "error" && (
-            <p className="text-red-400 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs mt-2">
+            <p role="alert" className="text-red-400 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs mt-2">
               Sorry, there was an error. Please try again or email us directly.
             </p>
           )}
@@ -158,14 +171,14 @@ export const ContactFormSection = (): JSX.Element => {
           </p>
           <a
             href="mailto:sales@depositcloud.com"
-            className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#51b0ff] text-xs text-center tracking-[0] leading-7 underline"
+            className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#51b0ff] text-xs text-center tracking-[0] leading-7 underline hover:text-[#51b0ff]/80 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
           >
             sales@depositcloud.com
           </a>
         </div>
       </div>
 
-      <footer className="flex flex-col w-full items-center gap-[15px] mt-[58px] bg-transparent">
+      <footer role="contentinfo" className="flex flex-col w-full items-center gap-[15px] mt-[58px] bg-transparent">
         <div className="relative w-[1920px] bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider-5.svg)] h-px bg-[100%_100%]" />
 
         <div className="flex w-full max-w-[408px] items-center justify-center px-6 pb-7">
@@ -178,7 +191,8 @@ export const ContactFormSection = (): JSX.Element => {
               <a 
                 href="/terms-of-service" 
                 onClick={(e) => { e.preventDefault(); window.location.href = '/terms-of-service'; }}
-                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors"
+                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
+                aria-current={location.pathname === '/terms-of-service' ? 'page' : undefined}
               >
                 Terms of Service
               </a>
@@ -188,7 +202,8 @@ export const ContactFormSection = (): JSX.Element => {
               <a 
                 href="/privacy-policy"
                 onClick={(e) => { e.preventDefault(); window.location.href = '/privacy-policy'; }}
-                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors"
+                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
+                aria-current={location.pathname === '/privacy-policy' ? 'page' : undefined}
               >
                 Privacy policy
               </a>
@@ -198,7 +213,8 @@ export const ContactFormSection = (): JSX.Element => {
               <a 
                 href="/legal-notices"
                 onClick={(e) => { e.preventDefault(); window.location.href = '/legal-notices'; }}
-                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors"
+                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
+                aria-current={location.pathname === '/legal-notices' ? 'page' : undefined}
               >
                 Legal Notices
               </a>

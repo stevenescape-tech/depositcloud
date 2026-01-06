@@ -70,7 +70,7 @@ export const MainHeaderSection = (): JSX.Element => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 flex w-full items-center justify-between bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/header.png)] bg-cover bg-center backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] py-4 px-4 border-b-[0.5px] border-[#51b0ff]">
+      <header className="fixed top-0 left-0 right-0 z-[10000] flex w-full items-center justify-between bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/header.png)] bg-cover bg-center backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] py-4 px-4 border-b-[0.5px] border-[#51b0ff]">
         <img
           className="w-[150px] h-auto cursor-pointer"
           alt="Depositcloud logo"
@@ -80,8 +80,9 @@ export const MainHeaderSection = (): JSX.Element => {
 
         <button
           onClick={toggleMenu}
-          className="relative w-8 h-8 flex items-center justify-center text-white hover:opacity-80 transition-opacity z-50"
-          aria-label="Toggle menu"
+          className="relative w-8 h-8 flex items-center justify-center text-white hover:opacity-80 transition-opacity z-[10000]"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
         >
           <div className={`absolute transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -101,7 +102,7 @@ export const MainHeaderSection = (): JSX.Element => {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 bg-black transition-all duration-300 ${
+        className={`fixed inset-0 z-[9999] bg-black transition-all duration-300 ${
           isMenuOpen
             ? "opacity-95 pointer-events-auto"
             : "opacity-0 pointer-events-none"

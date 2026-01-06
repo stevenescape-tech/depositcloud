@@ -21,7 +21,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
   const card2Ref = useScrollAnimation();
 
   return (
-    <section className="relative w-full py-14 xl:py-[85px] px-4">
+    <section role="region" aria-labelledby="benefits-heading" className="relative w-screen py-14 xl:py-[85px] px-4">
       <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/section---deposit-platform.png)] bg-cover bg-center opacity-[0.68]" />
       <div className="absolute inset-0 bg-black opacity-75" />
       <div className="relative z-10 max-w-[1128px] mx-auto flex flex-col items-center gap-[52px]">
@@ -34,7 +34,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
             </div>
 
             <div className="flex flex-col items-center w-full">
-              <h2 className="font-h2 font-[number:var(--h2-font-weight)] text-white text-[length:var(--h2-font-size)] text-center tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
+              <h2 id="benefits-heading" className="font-h2 font-[number:var(--h2-font-weight)] text-white text-[length:var(--h2-font-size)] text-center tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
                 From friction to flow.
               </h2>
 

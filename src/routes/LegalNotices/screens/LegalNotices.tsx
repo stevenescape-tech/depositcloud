@@ -1,46 +1,10 @@
-import { useNavigate } from "react-router-dom";
-import { Button } from "../components/ui/button";
+import { Navigation } from "../../../components/Navigation";
+import { Footer } from "../../../components/Footer";
 
 export const LegalNotices = (): JSX.Element => {
-  const navigate = useNavigate();
-  
-  const navigationItems = [
-    { label: "Platform", action: () => window.location.href = '/#platform' },
-    { label: "Features", action: () => window.location.href = '/#features' },
-    { label: "Book a demo", action: () => window.location.href = '/#contact' },
-  ];
-
-  const handleLogoClick = () => {
-    window.location.href = '/';
-  };
-
   return (
     <div className="flex flex-col min-h-screen items-center relative bg-white overflow-hidden">
-      <header className="flex flex-col w-full items-center justify-center gap-[11px] sticky top-0 left-0 z-50 bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/header.png)] bg-cover bg-center backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] py-4 border-b-[0.5px] border-[#51b0ff]">
-        <nav className="w-full max-w-[1128px] px-4 justify-between flex items-center">
-          <img
-            className="w-[262px] h-10 cursor-pointer"
-            alt="Depositcloud logo"
-            src="https://c.animaapp.com/mjyhvu36aqUy0x/img/depositcloud-logo.svg"
-            onClick={handleLogoClick}
-          />
-
-          <div className="inline-flex items-center justify-center gap-[63px]">
-            {navigationItems.map((item, index) => (
-              <Button
-                key={index}
-                variant="ghost"
-                onClick={item.action}
-                className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-transparent hover:text-white/80 transition-colors"
-              >
-                {item.label}
-              </Button>
-            ))}
-          </div>
-        </nav>
-      </header>
-
-      <div className="relative w-full h-px bg-[url(https://c.animaapp.com/mk1kyl1820QxOX/img/divider.svg)] bg-[100%_100%]" />
+      <Navigation variant="legal" />
 
       <main className="flex-col justify-center gap-2.5 pt-[100px] pb-0 px-4 self-stretch w-full flex items-center">
         <article className="w-full max-w-[1128px] font-body font-[number:var(--body-font-weight)] text-black text-[14px] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
@@ -156,48 +120,9 @@ export const LegalNotices = (): JSX.Element => {
         </article>
       </main>
 
-      <footer className="flex flex-col items-center gap-6 bg-[#161616] mt-auto pb-6 w-full">
-        <div className="relative w-full h-px bg-[url(https://c.animaapp.com/mk1kyl1820QxOX/img/divider.svg)] bg-[100%_100%]" />
-
-        <div className="flex items-center justify-between w-full max-w-[1128px] mx-auto px-4 py-2">
-          <div className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-sm leading-7">
-            DepositCloud © 2018 - 2026
-          </div>
-
-          <nav className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-sm text-right">
-            <span>
-              <a
-                href="/terms-of-service"
-                className="underline leading-7 hover:text-white transition-colors"
-              >
-                Terms of Service
-              </a>
-              <span className="leading-[0.1px]">
-                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
-            <span>
-              <a
-                href="/privacy-policy"
-                className="underline leading-7 hover:text-white transition-colors"
-              >
-                Privacy policy
-              </a>
-              <span className="leading-[0.1px]">
-                &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-            </span>
-            <span>
-              <a
-                href="/legal-notices"
-                className="underline leading-7 text-white transition-colors"
-              >
-                Legal Notices
-              </a>
-            </span>
-          </nav>
-        </div>
-      </footer>
+      <div className="bg-[#161616] w-full">
+        <Footer />
+      </div>
     </div>
   );
 };

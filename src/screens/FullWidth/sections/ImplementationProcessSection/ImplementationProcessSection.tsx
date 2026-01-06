@@ -2,7 +2,7 @@ import { Separator } from "../../../../components/ui/separator";
 
 export const ImplementationProcessSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-center justify-center gap-2.5 px-4 py-14 xl:py-[85px] relative">
+    <section role="region" aria-labelledby="implementation-heading" className="flex flex-col w-screen items-center justify-center gap-2.5 px-4 py-14 xl:py-[85px] relative">
       <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/section---implement.png)] bg-cover bg-center opacity-15" />
       <div className="relative z-10 w-full max-w-[1128px]">
         <div className="flex flex-col w-full items-center justify-center relative">
@@ -14,7 +14,7 @@ export const ImplementationProcessSection = (): JSX.Element => {
             </div>
 
             <div className="flex flex-col items-center justify-center w-full opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
-              <h2 className="relative flex items-center justify-center font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[length:var(--h2-font-size)] text-center tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
+              <h2 id="implementation-heading" className="relative flex items-center justify-center font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[length:var(--h2-font-size)] text-center tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
                 Implement without starting over
               </h2>
             </div>

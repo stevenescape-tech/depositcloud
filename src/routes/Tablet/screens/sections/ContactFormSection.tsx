@@ -114,27 +114,33 @@ export const ContactFormSection = (): JSX.Element => {
           </p>
         </header>
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center gap-6 w-full max-w-[507px] mb-16 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <form onSubmit={handleSubmit} aria-label="Contact form" className="flex flex-col items-center gap-6 w-full max-w-[507px] mb-16 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
           {formFields.map((field) => (
-            <Input
-              key={field.id}
-              id={field.id}
-              type={field.type}
-              placeholder={field.placeholder}
-              value={formData[field.id as keyof typeof formData]}
-              onChange={handleInputChange}
-              required={field.required}
-              disabled={isSubmitting || submitStatus === "success"}
-              className={`h-16 bg-white text-[#595959] font-body font-[number:var(--body-font-weight)] text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] px-7 disabled:opacity-50 ${
-                touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()
-                  ? 'border-red-500'
-                  : 'border-[#51b0ff]'
-              }`}
-            />
+            <div key={field.id} className="w-full">
+              <label htmlFor={field.id} className="sr-only">
+                {field.placeholder}
+              </label>
+              <Input
+                id={field.id}
+                type={field.type}
+                placeholder={field.placeholder}
+                value={formData[field.id as keyof typeof formData]}
+                onChange={handleInputChange}
+                required={field.required}
+                disabled={isSubmitting || submitStatus === "success"}
+                aria-required={field.required}
+                aria-invalid={touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()}
+                className={`h-16 bg-white text-[#595959] font-body font-[number:var(--body-font-weight)] text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] px-7 disabled:opacity-50 focus:outline-2 focus:outline-offset-2 focus:outline-[#51b0ff] ${
+                  touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()
+                    ? 'border-red-500'
+                    : 'border-[#51b0ff]'
+                }`}
+              />
+            </div>
           ))}
 
           {showError && (
-            <p className="text-red-500 text-center font-body text-sm -mt-2">
+            <p role="alert" className="text-red-500 text-center font-body text-sm -mt-2">
               Please complete all fields
             </p>
           )}
@@ -142,7 +148,8 @@ export const ContactFormSection = (): JSX.Element => {
           <Button 
             type="submit"
             disabled={isSubmitting || submitStatus === "success"}
-            className={`w-auto min-w-[239px] h-auto mt-8 px-[23px] py-4 rounded-[5px] border bg-transparent transition-colors font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] disabled:opacity-100 ${
+            aria-label={submitStatus === "success" ? "Form submitted successfully" : isSubmitting ? "Submitting form" : "Submit demo request"}
+            className={`w-auto min-w-[239px] h-auto mt-8 px-[23px] py-4 rounded-[5px] border bg-transparent transition-colors font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] disabled:opacity-100 focus:outline-2 focus:outline-offset-2 focus:outline-white ${
               submitStatus === "success"
                 ? 'border-green-500 hover:bg-green-500/10'
                 : 'border-[#51b0ff] hover:bg-[#51b0ff]/10'
@@ -152,7 +159,7 @@ export const ContactFormSection = (): JSX.Element => {
           </Button>
 
           {submitStatus === "error" && (
-            <p className="text-red-400 text-center font-body">
+            <p role="alert" className="text-red-400 text-center font-body">
               Sorry, there was an error submitting your request. Please try again or email us directly.
             </p>
           )}

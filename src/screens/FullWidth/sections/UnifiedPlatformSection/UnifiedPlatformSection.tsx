@@ -23,7 +23,7 @@ const statistics = [
 
 export const UnifiedPlatformSection = (): JSX.Element => {
   return (
-    <section id="platform" className="relative w-full py-[86px] xl:py-[85px]">
+    <section id="platform" role="region" aria-labelledby="platform-heading" className="relative w-screen py-[86px] xl:py-[85px]">
       <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/platform.png)] bg-cover bg-center opacity-15" />
       <div className="container mx-auto max-w-[1128px] px-4 relative z-10">
         {/* Mobile/Tablet: Stacked Layout */}
@@ -95,7 +95,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
           {/* Left Column */}
           <div className="flex flex-col gap-[35px] flex-1 max-w-[500px]">
               <header className="flex flex-col gap-[35px]">
-                <h2 className="font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)] translate-y-[-1rem] animate-fade-in opacity-0">
+                <h2 id="platform-heading" className="font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)] translate-y-[-1rem] animate-fade-in opacity-0">
                   Our Solution: A unified platform that does the work for you
                 </h2>
               </header>

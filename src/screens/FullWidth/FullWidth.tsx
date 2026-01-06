@@ -10,17 +10,19 @@ import { ValueDeliverySection } from "./sections/ValueDeliverySection";
 export const FullWidth = (): JSX.Element => {
   return (
     <div
-      className="flex flex-col w-full items-center relative bg-white overflow-hidden"
+      className="flex flex-col w-screen items-center relative bg-white overflow-x-hidden"
       data-model-id="37:486"
     >
       <NavigationSection />
-      <HeroBannerSection />
+      <main id="main-content" role="main">
+        <HeroBannerSection />
       <ProblemStatementSection />
       <UnifiedPlatformSection />
       <ValueDeliverySection />
       <ImplementationProcessSection />
-      <DepositBenefitsSection />
-      <ContactFormSection />
+        <DepositBenefitsSection />
+        <ContactFormSection />
+      </main>
     </div>
   );
 };
