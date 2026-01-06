@@ -178,10 +178,9 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
             <button
               onClick={toggleMenu}
-              className="relative w-10 h-10 flex items-center justify-center text-white hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white"
+              className="relative w-10 h-10 flex items-center justify-center text-white hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white z-[10001]"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
-              style={{ zIndex: 10001 }}
             >
               <div className={`absolute transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
