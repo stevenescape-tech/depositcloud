@@ -105,35 +105,29 @@ export const ContactFormSection = (): JSX.Element => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]" aria-label="Contact form">
+        <form onSubmit={handleSubmit} className="flex flex-col items-center gap-4 w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
           <div className="flex flex-col items-start gap-[41px] w-full">
             {formFields.map((field) => (
-              <div key={field.id} className="w-full">
-                <label htmlFor={field.id} className="sr-only">
-                  {field.placeholder}
-                </label>
-                <Input
-                  id={field.id}
-                  type={field.type}
-                  placeholder={field.placeholder}
-                  value={formData[field.id as keyof typeof formData]}
-                  onChange={handleInputChange}
-                  required={field.required}
-                  disabled={isSubmitting || submitStatus === "success"}
-                  aria-required={field.required}
-                  aria-invalid={touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()}
-                  className={`w-full h-12 bg-white border border-solid px-7 [font-family:'Courier_Prime',Helvetica] font-normal text-[#595959] text-xs tracking-[0] leading-7 placeholder:text-[#595959] disabled:opacity-50 ${
-                    touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()
-                      ? 'border-red-500'
-                      : 'border-[#51b0ff]'
-                  }`}
-                />
-              </div>
+              <Input
+                key={field.id}
+                id={field.id}
+                type={field.type}
+                placeholder={field.placeholder}
+                value={formData[field.id as keyof typeof formData]}
+                onChange={handleInputChange}
+                required={field.required}
+                disabled={isSubmitting || submitStatus === "success"}
+                className={`w-full h-12 bg-white border border-solid px-7 [font-family:'Courier_Prime',Helvetica] font-normal text-[#595959] text-xs tracking-[0] leading-7 placeholder:text-[#595959] disabled:opacity-50 ${
+                  touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()
+                    ? 'border-red-500'
+                    : 'border-[#51b0ff]'
+                }`}
+              />
             ))}
           </div>
 
           {showError && (
-            <p className="text-red-500 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs -mt-2" role="alert" aria-live="polite">
+            <p className="text-red-500 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs -mt-2">
               Please complete all fields
             </p>
           )}
@@ -152,7 +146,7 @@ export const ContactFormSection = (): JSX.Element => {
           </Button>
 
           {submitStatus === "error" && (
-            <p className="text-red-400 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs mt-2" role="alert" aria-live="polite">
+            <p className="text-red-400 text-center [font-family:'Courier_Prime',Helvetica] font-normal text-xs mt-2">
               Sorry, there was an error. Please try again or email us directly.
             </p>
           )}

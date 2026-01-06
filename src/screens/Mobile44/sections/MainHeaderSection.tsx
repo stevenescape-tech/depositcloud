@@ -81,9 +81,7 @@ export const MainHeaderSection = (): JSX.Element => {
         <button
           onClick={toggleMenu}
           className="relative w-8 h-8 flex items-center justify-center text-white hover:opacity-80 transition-opacity z-50"
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-menu"
+          aria-label="Toggle menu"
         >
           <div className={`absolute transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -109,19 +107,14 @@ export const MainHeaderSection = (): JSX.Element => {
             : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Mobile navigation menu"
       >
         <nav
-          id="mobile-menu"
           className={`flex flex-col items-center justify-center h-full gap-8 transition-all duration-300 delay-100 ${
             isMenuOpen
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-4"
           }`}
           onClick={(e) => e.stopPropagation()}
-          aria-label="Mobile navigation"
         >
           {navigationItems.map((item, index) => (
             <a

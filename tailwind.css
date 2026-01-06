@@ -82,42 +82,6 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-
-  /* Skip to main content link */
-  .skip-to-main {
-    position: absolute;
-    left: -9999px;
-    z-index: 999;
-    padding: 1em;
-    background-color: #51b0ff;
-    color: white;
-    text-decoration: none;
-  }
-
-  .skip-to-main:focus {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 1em;
-  }
-
-  /* Focus visible styles */
-  *:focus-visible {
-    outline: 2px solid #51b0ff;
-    outline-offset: 2px;
-  }
-
-  /* Screen reader only class */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
 }
 
 @keyframes fade-in {
