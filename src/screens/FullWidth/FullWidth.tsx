@@ -14,13 +14,15 @@ export const FullWidth = (): JSX.Element => {
       data-model-id="37:486"
     >
       <NavigationSection />
-      <HeroBannerSection />
+      <main id="main-content">
+        <HeroBannerSection />
       <ProblemStatementSection />
       <UnifiedPlatformSection />
       <ValueDeliverySection />
       <ImplementationProcessSection />
       <DepositBenefitsSection />
       <ContactFormSection />
+      </main>
     </div>
   );
 };

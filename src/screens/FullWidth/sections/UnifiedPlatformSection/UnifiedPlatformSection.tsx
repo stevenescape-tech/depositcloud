@@ -23,7 +23,7 @@ const statistics = [
 
 export const UnifiedPlatformSection = (): JSX.Element => {
   return (
-    <section id="platform" className="relative w-full py-[86px] xl:py-[85px]">
+    <section id="platform" className="relative w-full py-[86px] xl:py-[85px]" aria-labelledby="platform-heading">
       <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/platform.png)] bg-cover bg-center opacity-15" />
       <div className="container mx-auto max-w-[1128px] px-4 relative z-10">
         {/* Mobile/Tablet: Stacked Layout */}

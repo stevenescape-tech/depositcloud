@@ -63,13 +63,18 @@ export const NavigationSection = (): JSX.Element => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-col w-full items-center justify-center gap-[11px] bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/header.png)] bg-cover bg-center backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] py-4 border-b-[0.5px] border-[#51b0ff]">
-      <nav className="flex w-full max-w-[1128px] items-center justify-between px-4 translate-y-[-1rem] animate-fade-in opacity-0">
-        <img
-          className="w-[262px] h-10 cursor-pointer"
-          alt="Depositcloud logo"
-          src="https://c.animaapp.com/mjyhvu36aqUy0x/img/depositcloud-logo.svg"
+      <nav className="flex w-full max-w-[1128px] items-center justify-between px-4 translate-y-[-1rem] animate-fade-in opacity-0" aria-label="Main navigation">
+        <button
           onClick={handleLogoClick}
-        />
+          className="cursor-pointer bg-transparent border-0 p-0"
+          aria-label="Return to homepage"
+        >
+          <img
+            className="w-[262px] h-10"
+            alt="DepositCloud"
+            src="https://c.animaapp.com/mjyhvu36aqUy0x/img/depositcloud-logo.svg"
+          />
+        </button>
 
         <div className="inline-flex items-center justify-center gap-[63px]">
           {navigationItems.map((item, index) => (

@@ -20,7 +20,7 @@ export const ValueDeliverySection = (): JSX.Element => {
   const card2Ref = useScrollAnimation();
 
   return (
-    <section id="features" className="relative w-full flex items-center justify-center px-4 py-12 xl:py-[85px]">
+    <section id="features" className="relative w-full flex items-center justify-center px-4 py-12 xl:py-[85px]" aria-labelledby="features-heading">
       <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/features.png)] bg-cover bg-center" />
       <div className="absolute inset-0 bg-black/[0.43]" />
       <div className="relative z-10 flex flex-col w-full max-w-[1128px] items-center gap-[26px]">
@@ -29,7 +29,7 @@ export const ValueDeliverySection = (): JSX.Element => {
           single family.
         </p>
 
-        <h2 className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-center max-w-[942px] font-h2 font-[number:var(--h2-font-weight)] text-white text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
+        <h2 id="features-heading" className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] text-center max-w-[942px] font-h2 font-[number:var(--h2-font-weight)] text-white text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
           A deposit platform for all residents,
           <br />
           not just new leases.

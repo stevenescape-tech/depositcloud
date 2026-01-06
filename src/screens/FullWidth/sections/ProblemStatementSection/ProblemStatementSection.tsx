@@ -29,10 +29,10 @@ export const ProblemStatementSection = (): JSX.Element => {
   const cardRefs = [card1Ref, card2Ref, card3Ref];
 
   return (
-    <section className="relative w-full bg-[#161616] overflow-hidden">
+    <section className="relative w-full bg-[#161616] overflow-hidden" aria-labelledby="problem-heading">
       <div className="flex flex-col w-full max-w-[1126px] mx-auto items-center justify-center gap-[63px] px-4 py-[88px] xl:py-[85px]">
         <div className="flex flex-col items-center gap-[13px] w-full opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
-          <h2 className="w-full font-h2 font-[number:var(--h2-font-weight)] text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] text-white text-center [font-style:var(--h2-font-style)]">
+          <h2 id="problem-heading" className="w-full font-h2 font-[number:var(--h2-font-weight)] text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] text-white text-center [font-style:var(--h2-font-style)]">
             The way deposits are managed today doesn&apos;t work.
           </h2>
 
