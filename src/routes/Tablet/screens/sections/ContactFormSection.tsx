@@ -180,7 +180,7 @@ export const ContactFormSection = (): JSX.Element => {
 
         <div className="flex items-center justify-between w-full px-[30px] py-2">
           <div className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-sm leading-7">
-            DepositCloud © 2018 - 2026
+            DepositCloud © 2017 - 2026
           </div>
 
           <nav className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-[10px] text-right tracking-[0] leading-[10px]">

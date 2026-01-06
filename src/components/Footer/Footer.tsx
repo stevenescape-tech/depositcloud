@@ -16,7 +16,7 @@ export const Footer = (): JSX.Element => {
 
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1128px] mx-auto px-4 py-2 gap-4 md:gap-0">
         <div className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-[10px] md:text-sm leading-7">
-          DepositCloud © 2018 - 2026
+          DepositCloud © 2017 - 2026
         </div>
 
         <nav aria-label="Footer navigation" className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-[10px] md:text-sm text-center md:text-right tracking-[0] leading-[10px] md:leading-7">
