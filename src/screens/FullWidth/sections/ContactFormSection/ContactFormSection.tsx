@@ -187,7 +187,11 @@ export const ContactFormSection = (): JSX.Element => {
               <span key={link.text}>
                 <a
                   href={link.href}
-                  className={`leading-7 underline transition-colors ${
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = link.href;
+                  }}
+                  className={`leading-7 underline transition-colors cursor-pointer ${
                     isActive ? 'text-white' : 'text-[#8C8C8C] hover:text-white'
                   }`}
                 >

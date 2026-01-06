@@ -185,12 +185,10 @@ export const ContactFormSection = (): JSX.Element => {
                 <a
                   href={link.href}
                   onClick={(e) => {
-                    if (link.href === "/terms-of-service" || link.href === "/privacy-policy" || link.href === "/legal-notices") {
-                      e.preventDefault();
-                      window.location.href = link.href;
-                    }
+                    e.preventDefault();
+                    window.location.href = link.href;
                   }}
-                  className={`leading-7 underline transition-colors ${
+                  className={`leading-7 underline transition-colors cursor-pointer ${
                     isActive ? 'text-white' : 'text-[#8C8C8C] hover:text-white'
                   }`}
                 >

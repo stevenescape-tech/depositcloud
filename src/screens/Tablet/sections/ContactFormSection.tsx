@@ -62,19 +62,31 @@ export const ContactFormSection = (): JSX.Element => {
           </div>
 
           <nav className="flex items-center justify-center w-full [font-family:'Courier_Prime',Helvetica] font-normal text-[#dfdfdf] text-[10px] text-right tracking-[0] leading-[10px]">
-            <a href="#" className="leading-7 underline">
+            <a 
+              href="/terms-of-service"
+              onClick={(e) => { e.preventDefault(); window.location.href = '/terms-of-service'; }}
+              className="leading-7 underline cursor-pointer hover:text-white transition-colors"
+            >
               Terms of Service
             </a>
             <span className="leading-[0.1px]">
               &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;{" "}
             </span>
-            <a href="#" className="leading-7 underline">
+            <a 
+              href="/privacy-policy"
+              onClick={(e) => { e.preventDefault(); window.location.href = '/privacy-policy'; }}
+              className="leading-7 underline cursor-pointer hover:text-white transition-colors"
+            >
               Privacy policy
             </a>
             <span className="leading-[0.1px]">
               &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;{" "}
             </span>
-            <a href="#" className="leading-7 underline">
+            <a 
+              href="/legal-notices"
+              onClick={(e) => { e.preventDefault(); window.location.href = '/legal-notices'; }}
+              className="leading-7 underline cursor-pointer hover:text-white transition-colors"
+            >
               Legal Notices
             </a>
           </nav>
