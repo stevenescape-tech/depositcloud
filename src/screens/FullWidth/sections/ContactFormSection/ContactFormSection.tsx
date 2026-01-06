@@ -58,7 +58,6 @@ export const ContactFormSection = (): JSX.Element => {
     setShowError(false);
 
     try {
-      // Using Formspree
       const response = await fetch('https://formspree.io/f/xaqnzljo', {
         method: 'POST',
         headers: {
@@ -66,15 +65,14 @@ export const ContactFormSection = (): JSX.Element => {
         },
         body: JSON.stringify({
           name: formData.fullName,
+          email: formData.workEmail,
           company: formData.companyName,
           portfolio: formData.portfolioSize,
-          email: formData.workEmail,
-          _replyto: formData.workEmail,
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send email');
+        throw new Error('Failed to send message');
       }
 
       setSubmitStatus("success");

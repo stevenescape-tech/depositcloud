@@ -7,7 +7,7 @@ const benefits = [
 const statistics = [
   {
     value: "6 of the top 10",
-    description: "NMHC trust DepositCloud",
+    description: "NMHC operators trust DepositCloud",
   },
   {
     value: "1 billion",

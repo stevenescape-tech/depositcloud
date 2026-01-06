@@ -1,11 +1,5 @@
 import { useState } from "react";
 
-const navigationItems = [
-  { label: "Platform", href: "#platform" },
-  { label: "Features", href: "#features" },
-  { label: "Book a demo", href: "#contact" },
-];
-
 export const MainHeaderSection = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -45,7 +39,7 @@ export const MainHeaderSection = (): JSX.Element => {
       const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const startPosition = window.pageYOffset;
       const distance = targetPosition - startPosition;
-      const duration = 1500; // 1.5 seconds for slower scroll
+      const duration = 1500;
       let start: number | null = null;
 
       const animation = (currentTime: number) => {
@@ -80,7 +74,7 @@ export const MainHeaderSection = (): JSX.Element => {
 
         <button
           onClick={toggleMenu}
-          className="relative w-8 h-8 flex items-center justify-center text-white hover:opacity-80 transition-opacity z-[10000]"
+          className="relative w-8 h-8 flex items-center justify-center text-white hover:opacity-80 transition-opacity z-[10001]"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
         >
@@ -117,19 +111,50 @@ export const MainHeaderSection = (): JSX.Element => {
           }`}
           onClick={(e) => e.stopPropagation()}
         >
-          {navigationItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              onClick={(e) => handleClick(e, item.href)}
-              className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity"
-              style={{
-                transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
-              }}
-            >
-              {item.label}
-            </a>
-          ))}
+          <a
+            href="#platform"
+            onClick={(e) => handleClick(e, '#platform')}
+            className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity"
+            style={{
+              transitionDelay: isMenuOpen ? '50ms' : "0ms",
+            }}
+          >
+            Platform
+          </a>
+          
+          <a
+            href="#features"
+            onClick={(e) => handleClick(e, '#features')}
+            className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity"
+            style={{
+              transitionDelay: isMenuOpen ? '100ms' : "0ms",
+            }}
+          >
+            Features
+          </a>
+          
+          <a
+            href="#contact"
+            onClick={(e) => handleClick(e, '#contact')}
+            className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity"
+            style={{
+              transitionDelay: isMenuOpen ? '150ms' : "0ms",
+            }}
+          >
+            Book a demo
+          </a>
+          
+          <a
+            href="https://new.depositcloud.com/sign_in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity"
+            style={{
+              transitionDelay: isMenuOpen ? '200ms' : "0ms",
+            }}
+          >
+            Login
+          </a>
         </nav>
       </div>
     </>

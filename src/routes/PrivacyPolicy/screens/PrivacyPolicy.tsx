@@ -4,9 +4,12 @@ import { Footer } from "../../../components/Footer";
 export const PrivacyPolicy = (): JSX.Element => {
   return (
     <div className="flex flex-col min-h-screen items-center relative bg-white overflow-hidden">
+      <a href="#main-content" className="skip-to-main">
+        Skip to main content
+      </a>
       <Navigation variant="legal" />
 
-      <main className="flex-col justify-center gap-2.5 pt-[100px] pb-0 px-4 self-stretch w-full flex items-center">
+      <main id="main-content" className="flex-col justify-center gap-2.5 pt-[100px] pb-0 px-4 self-stretch w-full flex items-center">
         <article className="w-full max-w-[1128px] font-body font-[number:var(--body-font-weight)] text-black text-[14px] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
           <h1 className="font-bold text-2xl mb-4">TECHNOLOGY PRIVACY STATEMENT</h1>
 
