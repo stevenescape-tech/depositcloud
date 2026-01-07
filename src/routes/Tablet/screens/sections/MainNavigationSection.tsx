@@ -1,9 +1,10 @@
 import { Button } from "../../components/ui/button";
 
 const navigationItems = [
-  { label: "Platform", href: "#platform" },
-  { label: "Features", href: "#features" },
-  { label: "Book a demo", href: "#contact" },
+  { label: "Platform", href: "#platform", external: false },
+  { label: "Features", href: "#features", external: false },
+  { label: "Book a demo", href: "#contact", external: false },
+  { label: "Login", href: "https://new.depositcloud.com/sign_in", external: true },
 ];
 
 export const MainNavigationSection = (): JSX.Element => {
@@ -32,7 +33,11 @@ export const MainNavigationSection = (): JSX.Element => {
     requestAnimationFrame(animation);
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, external: boolean) => {
+    if (external) {
+      return;
+    }
+    
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
@@ -77,14 +82,26 @@ export const MainNavigationSection = (): JSX.Element => {
 
         <div className="inline-flex items-center justify-center gap-[50px]">
           {navigationItems.map((item, index) => (
-            <Button
-              key={index}
-              variant="ghost"
-              className="h-auto p-0 hover:bg-transparent [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:text-white/80 transition-colors"
-              asChild
-            >
-              <a href={item.href} onClick={(e) => handleClick(e, item.href)}>{item.label}</a>
-            </Button>
+            item.external ? (
+              <a
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Button
+                key={index}
+                variant="ghost"
+                className="h-auto p-0 hover:bg-transparent [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:text-white/80 transition-colors"
+                asChild
+              >
+                <a href={item.href} onClick={(e) => handleClick(e, item.href, item.external)}>{item.label}</a>
+              </Button>
+            )
           ))}
         </div>
       </nav>
