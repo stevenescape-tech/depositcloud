@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { FullWidth } from "./screens/FullWidth";
 import { Tablet } from "./routes/Tablet/screens/Tablet";
 import { Mobile44 } from "./screens/Mobile44";
@@ -62,6 +63,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/legal-notices" element={<LegalNotices />} />
       </Routes>
+      <Analytics />
     </Router>
   );
 }
