@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment variables
+# Environment variables (if you add any later)
 .env
 .env.local
 .env.production
@@ -31,3 +31,6 @@ dist-ssr
 # Build files
 build
 .cache
+
+# Keep static assets - DO NOT IGNORE
+# All images and static files will be included in the repository

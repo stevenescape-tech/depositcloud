@@ -88,7 +88,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
   return (
     <>
-      <header role="banner" className="fixed top-0 left-0 right-0 z-50 flex flex-col w-full items-center justify-center gap-[11px] bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/header.png)] bg-cover bg-center py-4 border-b-[0.5px] border-[#51b0ff]">
+      <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/header.png)] bg-cover bg-center py-4 border-b-[0.5px] border-[#51b0ff]">
         {/* Desktop Navigation (1280px+) */}
         <nav role="navigation" aria-label="Main navigation" className="hidden xl:flex w-full max-w-[1128px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
           <button
@@ -178,7 +178,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
             <button
               onClick={toggleMenu}
-              className="relative w-10 h-10 flex items-center justify-center text-white hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white z-[10001]"
+              className="relative w-10 h-10 flex items-center justify-center text-white hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
             >
