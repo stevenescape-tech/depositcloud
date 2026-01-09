@@ -11,7 +11,7 @@ const formFields = [
 export const ContactFormSection = (): JSX.Element => {
   return (
     <section id="contact" className="relative w-full bg-[#161616] overflow-hidden">
-      <div className="w-full h-px bg-[url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/divider.svg)] bg-[100%_100%]" />
+      <div className="w-full h-px bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider.svg)] bg-[100%_100%]" />
 
       <div className="w-full max-w-[694px] mx-auto flex flex-col items-center justify-center pt-[59px] pb-0 px-4">
         <header className="flex flex-col items-center gap-[13px] w-full mb-4">
@@ -54,7 +54,7 @@ export const ContactFormSection = (): JSX.Element => {
       </div>
 
       <footer className="flex flex-col w-full items-center gap-[15px] mt-8 bg-transparent">
-        <div className="w-full h-px bg-[url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/divider-2.svg)] bg-[100%_100%]" />
+        <div className="w-full h-px bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider-2.svg)] bg-[100%_100%]" />
 
         <div className="flex w-full max-w-[694px] items-center justify-center px-4 pb-4">
           <div className="flex items-center justify-center w-full [font-family:'Courier_Prime',Helvetica] font-normal text-[#dfdfdf] text-[10px] tracking-[0] leading-7">

@@ -66,7 +66,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
                   <img
                     className="w-6 h-6 flex-shrink-0"
                     alt="Check"
-                    src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                    src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
                   />
                   <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm tracking-[-0.31px] leading-6">
                     {feature}

@@ -23,7 +23,7 @@ const stats = [
 
 export const Platform = (): JSX.Element => {
   return (
-    <div className="relative w-full max-w-[768px] min-h-[1093px] overflow-hidden bg-[url(https://c.animaapp.com/mjyphh6kOkILSM/img/platform.png)] bg-cover bg-center bg-no-repeat">
+    <div className="relative w-full max-w-[768px] min-h-[1093px] overflow-hidden bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/platform.png)] bg-cover bg-center bg-no-repeat">
       <div className="flex flex-col gap-[35px] px-[37px] pt-[60px] pb-8">
         <div className="flex flex-col gap-[35px] max-w-[694px]">
           <h1 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[32px] tracking-[-1.92px] leading-normal">
@@ -43,7 +43,7 @@ export const Platform = (): JSX.Element => {
                     <div className="flex-shrink-0">
                       <img
                         alt="Icon"
-                        src="https://c.animaapp.com/mjyphh6kOkILSM/img/icon.svg"
+                        src="https://c.animaapp.com/mk4ukvevAaIUXO/img/icon.svg"
                       />
                     </div>
                     <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-[11px] tracking-[-0.31px] leading-6">
@@ -89,13 +89,13 @@ export const Platform = (): JSX.Element => {
       <img
         className="absolute top-56 left-[497px] w-[234px] h-[482px] object-cover"
         alt="Phone back"
-        src="https://c.animaapp.com/mjyphh6kOkILSM/img/phone-2-back-1.png"
+        src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-2-back-1.png"
       />
 
       <img
         className="absolute top-[484px] left-[377px] w-[234px] h-[482px] object-cover"
         alt="Phone front"
-        src="https://c.animaapp.com/mjyphh6kOkILSM/img/phone-front.png"
+        src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-front.png"
       />
     </div>
   );

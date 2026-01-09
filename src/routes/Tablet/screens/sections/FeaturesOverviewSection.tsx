@@ -21,7 +21,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
       <img
         className="absolute top-0 left-0 w-full h-full object-cover"
         alt="Dsc"
-        src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/-dsc1222-1.png"
+        src="https://c.animaapp.com/mk4ukvevAaIUXO/img/-dsc1222-1.png"
       />
 
       <div className="relative flex flex-col items-center gap-3.5 px-[37px] py-14">
@@ -41,7 +41,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
           security deposit alternatives.
         </p>
 
-        <div className="w-full h-px bg-[url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/divider-2.svg)] bg-[100%_100%]" />
+        <div className="w-full h-px bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider-2.svg)] bg-[100%_100%]" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[21px] w-full mt-6">
           <Card className="relative flex flex-col items-start gap-4 p-12 bg-[rgba(0,0,0,0.3)] border border-solid border-[#51b0ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] backdrop-blur-[10px] [-webkit-backdrop-filter:blur(10px)] [backdrop-filter:blur(10px)] overflow-hidden">
@@ -71,7 +71,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
                     <img
                       className="w-6 h-6 flex-shrink-0"
                       alt="Check"
-                      src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                      src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
                     />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}
@@ -115,7 +115,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
                     <img
                       className="w-6 h-6 flex-shrink-0"
                       alt="Check"
-                      src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                      src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
                     />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}

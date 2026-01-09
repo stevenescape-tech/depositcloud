@@ -23,7 +23,7 @@ const statistics = [
 
 export const PlatformCapabilitiesSection = (): JSX.Element => {
   return (
-    <section className="relative w-full overflow-hidden [background:url(https://c.animaapp.com/mjyrmx59BNbwHP/img/platform.png)_50%_50%_/_cover]">
+    <section className="relative w-full overflow-hidden [background:url(https://c.animaapp.com/mk4ukvevAaIUXO/img/platform.png)_50%_50%_/_cover]">
       <div className="flex flex-col px-[37px] py-[60px] gap-[60px]">
         <div className="flex flex-col gap-[35px] max-w-[303px]">
           <h2 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[28px] tracking-[-1.68px] leading-[normal]">
@@ -47,7 +47,7 @@ export const PlatformCapabilitiesSection = (): JSX.Element => {
               ))}
             </div>
 
-            <div className="bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] h-px bg-[100%_100%]" />
+            <div className="bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider.svg)] h-px bg-[100%_100%]" />
           </div>
         </div>
 
@@ -55,12 +55,12 @@ export const PlatformCapabilitiesSection = (): JSX.Element => {
           <img
             className="absolute top-0 right-0 w-[200px] h-[411px] object-cover z-10"
             alt="Phone back"
-            src="https://c.animaapp.com/mjyrmx59BNbwHP/img/phone-2-back-1-1.png"
+            src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-2-back-1-1.png"
           />
           <img
             className="absolute bottom-0 left-0 w-[200px] h-[411px] object-cover z-20"
             alt="Phone front"
-            src="https://c.animaapp.com/mjyrmx59BNbwHP/img/phone-front-1.png"
+            src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-front-1.png"
           />
         </div>
 

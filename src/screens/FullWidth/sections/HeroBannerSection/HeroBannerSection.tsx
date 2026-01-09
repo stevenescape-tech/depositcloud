@@ -2,7 +2,7 @@ import { Button } from "../../../../components/ui/button";
 
 export const HeroBannerSection = (): JSX.Element => {
   return (
-    <section role="region" aria-label="Hero banner" className="flex flex-col min-h-screen items-center justify-center gap-[85px] py-[255px] px-4 relative w-screen bg-[linear-gradient(0deg,rgba(0,0,0,0.70)_0%,rgba(0,0,0,0.70)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat">
+    <section role="region" aria-label="Hero banner" className="flex flex-col min-h-screen items-center justify-center gap-[85px] py-[255px] px-4 relative w-screen bg-[linear-gradient(0deg,rgba(0,0,0,0.70)_0%,rgba(0,0,0,0.70)_100%),url(https://c.animaapp.com/mk4ukvevAaIUXO/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat">
       <div className="inline-flex flex-col items-center justify-center gap-[85px] relative max-w-[974px] w-full z-10">
         <div className="inline-flex flex-col items-center gap-11 relative opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
           <h1 className="relative w-full font-h1 font-[number:var(--h1-font-weight)] text-white text-[length:var(--h1-font-size)] text-center tracking-[var(--h1-letter-spacing)] leading-[var(--h1-line-height)] [font-style:var(--h1-font-style)]">

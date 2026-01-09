@@ -2,19 +2,19 @@ import { Card, CardContent } from "../../components/ui/card";
 
 const problemCards = [
   {
-    icon: "https://c.animaapp.com/mjyrmx59BNbwHP/img/frame-47.svg",
+    icon: "https://c.animaapp.com/mk4ukvevAaIUXO/img/frame-47.svg",
     title: "Regulatory Drift",
     description:
       "A shifting compliance landscape creates chaos and legal risk when compliance aspects are not met, both in prospects and move-out.",
   },
   {
-    icon: "https://c.animaapp.com/mjyrmx59BNbwHP/img/frame-50.svg",
+    icon: "https://c.animaapp.com/mk4ukvevAaIUXO/img/frame-50.svg",
     title: "Refund Bottleneck",
     description:
       "At move-out, teams waste time chasing renter info and defending charges, slowing refunds.",
   },
   {
-    icon: "https://c.animaapp.com/mjyrmx59BNbwHP/img/frame-49.svg",
+    icon: "https://c.animaapp.com/mk4ukvevAaIUXO/img/frame-49.svg",
     title: "High upfront costs",
     description:
       "A shifting compliance landscape increases legal risk when deposit rules aren't met at move-in or move-out.",
@@ -24,7 +24,7 @@ const problemCards = [
 export const ProblemStatementSection = (): JSX.Element => {
   return (
     <section className="relative w-full bg-[#161616] overflow-hidden">
-      <div className="w-full bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] h-px bg-[100%_100%]" />
+      <div className="w-full bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider.svg)] h-px bg-[100%_100%]" />
 
       <div className="flex flex-col items-center justify-center gap-9 py-[37px] px-[38px] max-w-[375px] mx-auto">
         <header className="flex flex-col items-center gap-[26px] w-full">

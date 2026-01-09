@@ -26,7 +26,7 @@ export const PlatformDetailsSection = (): JSX.Element => {
       className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          "url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/platform.png)",
+          "url(https://c.animaapp.com/mk4ukvevAaIUXO/img/platform.png)",
       }}
     >
       <div className="w-full max-w-[768px] mx-auto px-[37px] py-[60px]">
@@ -47,7 +47,7 @@ export const PlatformDetailsSection = (): JSX.Element => {
                   <img
                     className="w-6 h-6 flex-shrink-0"
                     alt="Check"
-                    src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                    src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
                   />
                   <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-[11px] tracking-[-0.31px] leading-6">
                     {benefit}
@@ -60,7 +60,7 @@ export const PlatformDetailsSection = (): JSX.Element => {
               <img
                 className="w-full"
                 alt="Divider"
-                src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/divider.svg"
+                src="https://c.animaapp.com/mk4ukvevAaIUXO/img/divider.svg"
               />
             </div>
           </div>
@@ -70,12 +70,12 @@ export const PlatformDetailsSection = (): JSX.Element => {
               <img
                 className="absolute top-0 right-0 w-[234px] h-[482px] object-contain z-10"
                 alt="Phone back"
-                src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/phone-2-back-1.png"
+                src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-2-back-1.png"
               />
               <img
                 className="absolute top-[228px] left-0 w-[234px] h-[482px] object-contain z-20"
                 alt="Phone front"
-                src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/phone-front.png"
+                src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-front.png"
               />
             </div>
           </div>

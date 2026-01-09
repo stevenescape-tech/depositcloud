@@ -4,7 +4,7 @@ export const Icon = (): JSX.Element => {
       <img
         className="w-[18px] h-[18px]"
         alt="Svg"
-        src="https://c.animaapp.com/mjyim3ytI7iHB7/img/svg.svg"
+        src="https://c.animaapp.com/mk4ukvevAaIUXO/img/svg.svg"
       />
     </div>
   );

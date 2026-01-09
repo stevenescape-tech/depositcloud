@@ -24,7 +24,7 @@ const statistics = [
 export const UnifiedPlatformSection = (): JSX.Element => {
   return (
     <section id="platform" role="region" aria-labelledby="platform-heading" className="relative w-screen py-[86px] xl:py-[85px]">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/platform.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/platform.png)] bg-cover bg-center opacity-15" />
       <div className="container mx-auto max-w-[1128px] px-4 relative z-10">
         {/* Mobile/Tablet: Stacked Layout */}
         <div className="flex flex-col gap-[35px] xl:hidden">
@@ -49,7 +49,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                     <img
                       className="w-6 h-6 flex-shrink-0"
                       alt="Check"
-                      src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                      src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
                     />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-[#2b2b2b] text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {point.text}
@@ -115,7 +115,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                         <img
                           className="w-6 h-6 flex-shrink-0"
                           alt="Check"
-                          src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                          src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
                         />
                         <p className="font-caption font-[number:var(--caption-font-weight)] text-[#2b2b2b] text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                           {point.text}
@@ -159,7 +159,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
             {/* Right Column - Phone Images */}
             <div className="relative flex-shrink-0 opacity-0 translate-y-[40px] animate-slide-up [--animation-delay:200ms]" style={{ width: '628px', height: '958px' }}>
               <img
-                src="https://c.animaapp.com/mjyhvu36aqUy0x/img/phone-2-back-1_1.png"
+                src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-2-back-1_1.png"
                 alt="Phone back"
                 style={{
                   position: 'absolute',
@@ -172,7 +172,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                 }}
               />
               <img
-                src="https://c.animaapp.com/mjyhvu36aqUy0x/img/phone-front_1.png"
+                src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-front_1.png"
                 alt="Phone front"
                 style={{
                   position: 'absolute',
