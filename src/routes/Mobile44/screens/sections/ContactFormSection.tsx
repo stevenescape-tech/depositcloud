@@ -11,7 +11,7 @@ const formFields = [
 export const ContactFormSection = (): JSX.Element => {
   return (
     <section className="relative w-full bg-[#161616] overflow-hidden">
-      <div className="absolute top-px -left-2.5 w-[1945px] bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider.svg)] h-px bg-[100%_100%]" />
+      <div className="absolute top-px -left-2.5 w-[1945px] bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] h-px bg-[100%_100%]" />
 
       <div className="w-full max-w-[327px] mx-auto px-6 pt-[30px] pb-0 flex flex-col items-center justify-center">
         <div className="flex flex-col items-center gap-7 w-full mb-[77px] translate-y-[-1rem] animate-fade-in opacity-0">
@@ -59,7 +59,7 @@ export const ContactFormSection = (): JSX.Element => {
       </div>
 
       <footer className="flex flex-col w-full items-center gap-[15px] mt-[58px] bg-transparent">
-        <div className="relative w-[1920px] bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider-5.svg)] h-px bg-[100%_100%]" />
+        <div className="relative w-[1920px] bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider-5.svg)] h-px bg-[100%_100%]" />
 
         <div className="flex w-full max-w-[408px] items-center justify-center px-6 pb-7">
           <div className="flex flex-col w-full max-w-[266px] items-start">

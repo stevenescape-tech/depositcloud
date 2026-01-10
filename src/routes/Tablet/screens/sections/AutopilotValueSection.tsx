@@ -22,7 +22,7 @@ export const AutopilotValueSection = (): JSX.Element => {
 
   return (
     <section id="features" className="relative w-full flex items-center justify-center px-4 py-12 xl:py-[85px] scroll-mt-20">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/features.png)] bg-cover bg-center opacity-[0.68]" />
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/features.png)] bg-cover bg-center opacity-[0.68]" />
       <div className="absolute inset-0 bg-black opacity-75" />
       <div className="relative z-10 flex flex-col w-full items-center gap-[26px] px-[30px]">
         <p className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] text-center font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
@@ -71,7 +71,7 @@ export const AutopilotValueSection = (): JSX.Element => {
                     <img
                       className="w-6 h-6 flex-shrink-0"
                       alt="Check"
-                      src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
+                      src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
                     />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}
@@ -115,7 +115,7 @@ export const AutopilotValueSection = (): JSX.Element => {
                     <img
                       className="w-6 h-6 flex-shrink-0"
                       alt="Check"
-                      src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
+                      src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
                     />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}

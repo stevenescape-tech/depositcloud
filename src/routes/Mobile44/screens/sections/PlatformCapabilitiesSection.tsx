@@ -22,7 +22,7 @@ const statistics = [
 export const PlatformCapabilitiesSection = (): JSX.Element => {
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/platform.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/platform.png)] bg-cover bg-center opacity-15" />
       <div className="relative z-10 flex flex-col px-6 py-[30px] gap-[60px]">
         {/* Header Section */}
         <div className="flex flex-col gap-[35px] max-w-[303px]">
@@ -42,7 +42,7 @@ export const PlatformCapabilitiesSection = (): JSX.Element => {
                   <img
                     className="w-4 h-4 flex-shrink-0"
                     alt="Check"
-                    src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
+                    src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
                   />
                   <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-sm tracking-[-0.31px] leading-6">
                     {benefit.text}
@@ -51,7 +51,7 @@ export const PlatformCapabilitiesSection = (): JSX.Element => {
               ))}
             </div>
 
-            <div className="bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider.svg)] h-px bg-[100%_100%]" />
+            <div className="bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] h-px bg-[100%_100%]" />
           </div>
         </div>
 
@@ -60,13 +60,13 @@ export const PlatformCapabilitiesSection = (): JSX.Element => {
           <img
             className="absolute top-0 right-0 w-[180px] h-auto object-contain z-10"
             alt="Phone back"
-            src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-2-back-1-1.png"
+            src="https://c.animaapp.com/mjyrmx59BNbwHP/img/phone-2-back-1-1.png"
             style={{ imageRendering: 'crisp-edges' }}
           />
           <img
             className="absolute bottom-0 left-0 w-[180px] h-auto object-contain z-20"
             alt="Phone front"
-            src="https://c.animaapp.com/mk4ukvevAaIUXO/img/phone-front-1.png"
+            src="https://c.animaapp.com/mjyrmx59BNbwHP/img/phone-front-1.png"
             style={{ imageRendering: 'crisp-edges' }}
           />
         </div>

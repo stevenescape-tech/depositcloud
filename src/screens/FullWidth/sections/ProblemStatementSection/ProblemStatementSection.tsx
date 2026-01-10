@@ -3,19 +3,19 @@ import { useScrollAnimation } from "../../../../lib/useScrollAnimation";
 
 const problemCards = [
   {
-    icon: "https://c.animaapp.com/mk4ukvevAaIUXO/img/frame-47.svg",
+    icon: "https://c.animaapp.com/mjyhvu36aqUy0x/img/frame-47.svg",
     title: "Regulatory Drift",
     description:
       "A shifting compliance landscape creates chaos and legal risk when compliance aspects are not met, both in prospects and move-out.",
   },
   {
-    icon: "https://c.animaapp.com/mk4ukvevAaIUXO/img/frame-50.svg",
+    icon: "https://c.animaapp.com/mjyhvu36aqUy0x/img/frame-50.svg",
     title: "Refund Bottleneck",
     description:
       "At move-out, teams waste time chasing renter info and defending charges, slowing refunds.",
   },
   {
-    icon: "https://c.animaapp.com/mk4ukvevAaIUXO/img/frame-49.svg",
+    icon: "https://c.animaapp.com/mjyhvu36aqUy0x/img/frame-49.svg",
     title: "High upfront costs",
     description:
       "A shifting compliance landscape increases legal risk when deposit rules aren't met at move-in or move-out.",

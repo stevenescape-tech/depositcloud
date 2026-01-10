@@ -3,7 +3,7 @@ import { Separator } from "../components/ui/separator";
 export const ImplementationDetailsSection = (): JSX.Element => {
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/section---implement.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/section---implement.png)] bg-cover bg-center opacity-15" />
       <div className="relative z-10 flex flex-col items-center gap-2.5 pt-[22px] pb-7 px-6">
         <div className="flex flex-col items-center justify-center gap-3.5 w-full">
           <div className="flex flex-col items-center gap-[15px] w-full">
@@ -26,7 +26,7 @@ export const ImplementationDetailsSection = (): JSX.Element => {
               </p>
             </div>
 
-            <Separator className="w-full bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/divider.svg)] bg-[length:100%_100%] h-px opacity-0 animate-fade-in [--animation-delay:800ms]" />
+            <Separator className="w-full bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] bg-[length:100%_100%] h-px opacity-0 animate-fade-in [--animation-delay:800ms]" />
 
             <div className="flex items-center justify-center w-full opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:1000ms]">
               <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-base text-center tracking-[0] leading-7">

@@ -2,7 +2,7 @@ import { Button } from "../../components/ui/button";
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col min-h-screen items-center justify-center gap-[30px] px-4 relative w-full bg-[linear-gradient(0deg,rgba(0,0,0,0.70)_0%,rgba(0,0,0,0.70)_100%),url(https://c.animaapp.com/mk4ukvevAaIUXO/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat">
+    <section className="flex flex-col min-h-screen items-center justify-center gap-[30px] px-4 relative w-full bg-[linear-gradient(0deg,rgba(0,0,0,0.70)_0%,rgba(0,0,0,0.70)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat">
       <div className="flex flex-col w-full max-w-[301px] items-center justify-center gap-[30px] relative z-10">
         <div className="flex flex-col items-center w-full gap-5 opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:400ms]">
           <h1 className="w-full font-h1 font-[number:var(--h1-font-weight)] text-white text-[40px] text-center tracking-[-2.40px] leading-[normal] [font-style:var(--h1-font-style)]">

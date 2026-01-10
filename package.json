@@ -18,7 +18,7 @@
     "class-variance-authority": "^0.7.0",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
-    "@vercel/analytics": "latest"
+    "@vercel/analytics": "^1.1.1"
   },
   "devDependencies": {
     "@types/react": "18.2.0",

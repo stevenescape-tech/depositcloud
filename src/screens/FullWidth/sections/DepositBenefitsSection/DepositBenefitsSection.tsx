@@ -22,7 +22,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
 
   return (
     <section role="region" aria-labelledby="benefits-heading" className="relative w-screen py-14 xl:py-[85px] px-4">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mk4ukvevAaIUXO/img/section---deposit-platform.png)] bg-cover bg-center opacity-[0.68]" />
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/section---deposit-platform.png)] bg-cover bg-center opacity-[0.68]" />
       <div className="absolute inset-0 bg-black opacity-75" />
       <div className="relative z-10 max-w-[1128px] mx-auto flex flex-col items-center gap-[52px]">
         <header className="flex flex-col max-w-[768px] w-full items-center gap-[26px] translate-y-[-1rem] animate-fade-in opacity-0">
@@ -75,7 +75,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
                     <img
                       className="w-6 h-6 flex-shrink-0"
                       alt="Check"
-                      src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
+                      src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
                     />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}
@@ -115,7 +115,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
                     <img
                       className="w-6 h-6 flex-shrink-0"
                       alt="Check"
-                      src="https://c.animaapp.com/mk4ukvevAaIUXO/img/check-icon.png"
+                      src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
                     />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}

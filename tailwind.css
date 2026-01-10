@@ -143,20 +143,6 @@
   }
 }
 
-/* Ensure images load properly on all devices */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Fix for background images on mobile */
-@media (max-width: 767px) {
-  [class*="bg-[url"] {
-    background-attachment: scroll !important;
-  }
-}
-
 .animate-fade-in {
   animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
 }
