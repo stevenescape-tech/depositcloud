@@ -2,9 +2,9 @@ import { ContactFormSection } from "./sections/ContactFormSection";
 import { DepositBenefitsSection } from "./sections/DepositBenefitsSection";
 import { HeroBannerSection } from "./sections/HeroBannerSection";
 import { ImplementationProcessSection } from "./sections/ImplementationProcessSection";
-import { NavigationSection } from "./sections/NavigationSection";
+import { Navigation } from "../../components/Navigation";
 import { ProblemStatementSection } from "./sections/ProblemStatementSection";
-import { UnifiedPlatformSection } from "./sections/UnifiedPlatformSection";
+import { UnifiedPlatformSection } from "../../components/sections/UnifiedPlatformSection";
 import { ValueDeliverySection } from "./sections/ValueDeliverySection";
 
 export const FullWidth = (): JSX.Element => {
@@ -13,13 +13,13 @@ export const FullWidth = (): JSX.Element => {
       className="flex flex-col w-screen items-center relative bg-white overflow-x-hidden"
       data-model-id="37:486"
     >
-      <NavigationSection />
+      <Navigation variant="home" />
       <main id="main-content" role="main">
         <HeroBannerSection />
-      <ProblemStatementSection />
-      <UnifiedPlatformSection />
-      <ValueDeliverySection />
-      <ImplementationProcessSection />
+        <ProblemStatementSection />
+        <UnifiedPlatformSection />
+        <ValueDeliverySection />
+        <ImplementationProcessSection />
         <DepositBenefitsSection />
         <ContactFormSection />
       </main>

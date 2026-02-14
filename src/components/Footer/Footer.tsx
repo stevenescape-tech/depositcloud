@@ -14,7 +14,7 @@ export const Footer = (): JSX.Element => {
     <footer role="contentinfo" className="flex flex-col items-center gap-6 bg-transparent mt-auto pb-6 w-full">
       <Separator className="bg-[#51b0ff] h-[0.5px] w-full" />
 
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1128px] mx-auto px-4 py-2 gap-4 md:gap-0">
+      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1112px] mx-auto px-4 py-2 gap-4 md:gap-0">
         <div className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-[10px] md:text-sm leading-7">
           DepositCloud © 2017 - 2026
         </div>

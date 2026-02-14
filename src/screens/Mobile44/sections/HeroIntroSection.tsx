@@ -6,7 +6,7 @@ export const HeroIntroSection = (): JSX.Element => {
       <div className="flex flex-col items-center gap-6 relative w-full">
         <div className="flex flex-col w-full items-center gap-3.5 relative">
           <div className="flex flex-col items-center relative w-full translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-            <p className="relative [font-family:'Courier_Prime',Helvetica] font-normal text-white text-xs text-center tracking-[0] leading-7">
+            <p className="relative [font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm text-center tracking-[0] leading-7">
               Built for every one involved
             </p>
           </div>
@@ -26,7 +26,7 @@ export const HeroIntroSection = (): JSX.Element => {
         </div>
       </div>
 
-      <Separator className="w-full bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] h-px bg-[100%_100%] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]" />
+      <Separator className="w-full bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider.svg)] h-px bg-[100%_100%] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]" />
     </section>
   );
 };

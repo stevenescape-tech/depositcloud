@@ -3,12 +3,13 @@ import { Separator } from "../../../../components/ui/separator";
 export const ImplementationProcessSection = (): JSX.Element => {
   return (
     <section role="region" aria-labelledby="implementation-heading" className="flex flex-col w-screen items-center justify-center gap-2.5 px-4 py-14 xl:py-[85px] relative">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyhvu36aqUy0x/img/section---implement.png)] bg-cover bg-center opacity-15" />
-      <div className="relative z-10 w-full max-w-[1128px]">
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---implement.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-white/40" />
+      <div className="relative z-10 w-full max-w-[1112px]">
         <div className="flex flex-col w-full items-center justify-center relative">
           <div className="flex flex-col items-center gap-[26px] relative w-full">
             <div className="flex flex-col items-center justify-center w-full opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
-              <p className="relative flex items-center justify-center max-w-[408.5px] font-body font-[number:var(--body-font-weight)] text-[#595959] text-[length:var(--body-font-size)] text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
+              <p className="relative flex items-center justify-center max-w-[408.5px] font-body font-[number:var(--body-font-weight)] text-[#595959] text-[14px] text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
                 Retroactive Implementation
               </p>
             </div>

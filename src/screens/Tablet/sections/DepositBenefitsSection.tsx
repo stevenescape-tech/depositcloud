@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
-import { Card, CardContent } from "../../../../components/ui/card";
-import { useScrollAnimation } from "../../../../lib/useScrollAnimation";
+import { Card, CardContent } from "../../../components/ui/card";
+import { useScrollAnimation } from "../../../lib/useScrollAnimation";
 
 const leftCardFeatures = [
   "Integrates with major PMS platforms",
@@ -21,11 +21,11 @@ export const DepositBenefitsSection = (): JSX.Element => {
   const card2Ref = useScrollAnimation();
 
   return (
-    <section role="region" aria-labelledby="benefits-heading" className="relative w-screen py-14 xl:py-[85px] px-4">
+    <section className="relative w-full py-14 xl:py-[85px] px-4">
       <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---deposit-platform.png)] bg-cover bg-center opacity-[0.68]" />
       <div className="absolute inset-0 bg-black opacity-75" />
-      <div className="relative z-10 max-w-[1112px] mx-auto flex flex-col items-center gap-[52px]">
-        <header className="flex flex-col max-w-[768px] w-full items-center gap-[26px] translate-y-[-1rem] animate-fade-in opacity-0">
+      <div className="relative z-10 w-full flex flex-col items-center gap-[52px] px-[30px]">
+        <header className="flex flex-col w-full items-center gap-[26px] translate-y-[-1rem] animate-fade-in opacity-0">
           <div className="flex flex-col items-center gap-[26px] w-full">
             <div className="flex flex-col items-center w-full">
               <p className="font-body font-[number:var(--body-font-weight)] text-white text-[14px] text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
@@ -34,7 +34,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
             </div>
 
             <div className="flex flex-col items-center w-full">
-              <h2 id="benefits-heading" className="font-h2 font-[number:var(--h2-font-weight)] text-white text-[length:var(--h2-font-size)] text-center tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
+              <h2 className="font-h2 font-[number:var(--h2-font-weight)] text-white text-[length:var(--h2-font-size)] text-center tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]">
                 From friction to flow.
               </h2>
 
@@ -50,8 +50,12 @@ export const DepositBenefitsSection = (): JSX.Element => {
 
         <div className="w-full h-[0.5px] bg-[#51b0ff] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[21px] w-full">
-          <Card ref={card1Ref} data-animate="true" className="relative flex flex-col gap-4 p-12 bg-[rgba(0,0,0,0.3)] border border-[#51b0ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] backdrop-blur-[10px] [-webkit-backdrop-filter:blur(10px)] [backdrop-filter:blur(10px)] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] w-full">
+          <Card 
+            ref={card1Ref} 
+            data-animate="true" 
+            className="relative flex flex-col gap-4 p-12 bg-[rgba(0,0,0,0.3)] border border-[#51b0ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] backdrop-blur-[10px] [-webkit-backdrop-filter:blur(10px)] [backdrop-filter:blur(10px)] overflow-hidden"
+          >
             <CardContent className="flex flex-col gap-4 p-0">
               <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#DFDFDF] text-sm tracking-[-0.31px] leading-6">
                 Operational foundation
@@ -88,7 +92,12 @@ export const DepositBenefitsSection = (): JSX.Element => {
             </CardContent>
           </Card>
 
-          <Card ref={card2Ref} data-animate="true" style={{ animationDelay: '150ms' } as React.CSSProperties} className="relative flex flex-col gap-4 p-12 bg-[rgba(0,0,0,0.3)] border border-[#51b0ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] backdrop-blur-[10px] [-webkit-backdrop-filter:blur(10px)] [backdrop-filter:blur(10px)] overflow-hidden">
+          <Card 
+            ref={card2Ref} 
+            data-animate="true" 
+            style={{ animationDelay: '150ms' } as React.CSSProperties} 
+            className="relative flex flex-col gap-4 p-12 bg-[rgba(0,0,0,0.3)] border border-[#51b0ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] backdrop-blur-[10px] [-webkit-backdrop-filter:blur(10px)] [backdrop-filter:blur(10px)] overflow-hidden"
+          >
             <CardContent className="flex flex-col gap-4 p-0">
               <p className="font-caption-small font-[number:var(--caption-small-font-weight)] text-[#DFDFDF] text-[length:var(--caption-small-font-size)] tracking-[var(--caption-small-letter-spacing)] leading-[var(--caption-small-line-height)] [font-style:var(--caption-small-font-style)]">
                 Past, present, and future — handled
@@ -108,11 +117,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
               <div className="flex flex-col gap-4 pt-4">
                 {rightCardFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <img
-                      className="w-6 h-6 flex-shrink-0"
-                      alt="Check"
-                      src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/check-icon.png"
-                    />
+                    <Check className="w-6 h-6 flex-shrink-0 text-white" />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}
                     </p>
@@ -129,6 +134,6 @@ export const DepositBenefitsSection = (): JSX.Element => {
           </Card>
         </div>
       </div>
-      </section>
+    </section>
   );
 };

@@ -1,5 +1,8 @@
-const benefits = [
-  { text: "Mitigate compliance exposure" },
+    import { Check } from "lucide-react";
+    import { Separator } from "../components/ui/separator";
+
+    const benefits = [
+      { text: "Mitigate compliance exposure" },
   { text: "Negate operational burden" },
   { text: "Create true move in affordability" },
 ];
@@ -22,27 +25,27 @@ const statistics = [
 export const PlatformCapabilitiesSection = (): JSX.Element => {
   return (
     <section id="platform" className="relative w-full overflow-hidden">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/platform.png)] bg-cover bg-center opacity-15" />
-      <div className="relative z-10 flex flex-col px-6 py-[30px] gap-[60px]">
-        <div className="flex flex-col gap-[35px] w-full">
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-white/60" />
+      <div className="relative z-10 flex flex-col px-6 py-10 gap-12 md:gap-16 max-w-screen-sm mx-auto">
+        {/* Header Section */}
+        <div className="flex flex-col gap-8 w-full">
           <h2 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[28px] tracking-[-1.68px] leading-[normal]">
             Our Solution: A unified platform that does the work for you
           </h2>
 
-          <div className="flex flex-col gap-[34px]">
+          <div className="flex flex-col gap-8">
             <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-base tracking-[0] leading-7">
               Manages cash deposits, installment plans, and security deposit
               alternatives — all through a single platform.
             </p>
 
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-3">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <img
-                    className="w-4 h-4 flex-shrink-0"
-                    alt="Check"
-                    src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
-                  />
+                  <div className="flex items-center justify-center w-5 h-5 rounded-full bg-[#51b0ff] flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                  </div>
                   <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-sm tracking-[-0.31px] leading-6">
                     {benefit.text}
                   </span>
@@ -50,44 +53,49 @@ export const PlatformCapabilitiesSection = (): JSX.Element => {
               ))}
             </div>
 
-            <div className="bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider.svg)] h-px bg-[100%_100%]" />
+            <Separator className="bg-[#51b0ff] h-[0.5px] w-full" />
           </div>
         </div>
 
-        <div className="relative w-full max-w-[500px] mx-auto opacity-0 translate-y-[40px] animate-slide-up [--animation-delay:200ms]" style={{ aspectRatio: '1 / 1.5' }}>
+        {/* Phone Images Section - Responsive Layout */}
+        <div className="relative w-full max-w-[340px] mx-auto aspect-[340/520]">
           <img
-            className="absolute top-0 right-[10%] w-[45%] h-auto object-contain z-10"
-            alt="Phone back"
-            src="https://c.animaapp.com/mjyrmx59BNbwHP/img/phone-2-back-1-1.png"
-            style={{ imageRendering: 'crisp-edges' }}
+            className="absolute top-0 right-0 w-[65%] h-auto object-contain z-10 drop-shadow-xl"
+            alt="DepositCloud App Interface - Back"
+            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-2-back-1.png"
+            loading="eager"
           />
           <img
-            className="absolute bottom-0 left-[10%] w-[45%] h-auto object-contain z-20"
-            alt="Phone front"
-            src="https://c.animaapp.com/mjyrmx59BNbwHP/img/phone-front-1.png"
-            style={{ imageRendering: 'crisp-edges' }}
+            className="absolute bottom-0 left-0 w-[65%] h-auto object-contain z-20 drop-shadow-xl"
+            alt="DepositCloud App Interface - Front"
+            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-front.png"
+            loading="eager"
           />
         </div>
 
-        <div className="flex flex-col gap-[30px] w-full">
+        {/* Statistics Section */}
+        <div className="flex flex-col gap-8 w-full">
           <h2 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[28px] tracking-[-1.68px] leading-[normal]">
             Value delivered on <br />
             autopilot
           </h2>
 
-          {statistics.map((stat, index) => (
-            <div key={index} className="flex flex-col gap-1">
-              <div className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[40px] tracking-[-2.40px] leading-[normal]">
-                {stat.value}
+          <div className="flex flex-col gap-6">
+            {statistics.map((stat, index) => (
+              <div key={index} className="flex flex-col gap-1">
+                <div className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[40px] tracking-[-2.40px] leading-[normal]">
+                  {stat.value}
+                </div>
+                <div className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-sm tracking-[0] leading-7">
+                  {stat.description}
+                </div>
               </div>
-              <div className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-sm tracking-[0] leading-7">
-                {stat.description}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-col gap-[9px] w-full">
+        {/* Footer Section */}
+        <div className="flex flex-col gap-2 w-full">
           <h3 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-2xl tracking-[-1.44px] leading-[normal]">
             All your deposits in one place
           </h3>

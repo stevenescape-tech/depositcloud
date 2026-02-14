@@ -88,9 +88,9 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
   return (
     <>
-      <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyhvu36aqUy0x/img/header.png)] bg-cover bg-center py-4 border-b-[0.5px] border-b-[#51b0ff]">
+      <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/header.png)] bg-cover bg-center py-4 border-b-[0.5px] border-b-[#51b0ff]">
         {/* Desktop Navigation (1280px+) */}
-        <nav role="navigation" aria-label="Main navigation" className="hidden xl:flex w-full max-w-[1128px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
+        <nav role="navigation" aria-label="Main navigation" className="hidden xl:flex w-full max-w-[1112px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
           <button
             onClick={handleLogoClick}
             className="cursor-pointer bg-transparent border-0 p-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
@@ -99,7 +99,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             <img
               className="w-[262px] h-10"
               alt="DepositCloud"
-              src="https://c.animaapp.com/mjyhvu36aqUy0x/img/depositcloud-logo.svg"
+              src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/depositcloud-logo.svg"
             />
           </button>
 
@@ -122,7 +122,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         </nav>
 
         {/* Tablet Navigation (768px - 1279px) */}
-        <nav className="hidden md:flex xl:hidden w-full max-w-[694px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
+        <nav className="hidden md:flex xl:hidden w-full mx-auto px-[46px] items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
           <button
             onClick={handleLogoClick}
             className="cursor-pointer bg-transparent border-0 p-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
@@ -131,7 +131,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             <img
               className="w-[201px] h-[30.69px]"
               alt="DepositCloud"
-              src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/depositcloud-logo.svg"
+              src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/depositcloud-logo.svg"
             />
           </button>
 
@@ -172,7 +172,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
               <img
                 className="w-[150px] h-auto"
                 alt="DepositCloud"
-                src="https://c.animaapp.com/mjyhvu36aqUy0x/img/depositcloud-logo.svg"
+                src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/depositcloud-logo.svg"
               />
             </button>
 

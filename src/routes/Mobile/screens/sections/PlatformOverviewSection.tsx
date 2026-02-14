@@ -25,7 +25,7 @@ export const PlatformOverviewSection = (): JSX.Element => {
       className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          "url(https://c.animaapp.com/mjypy23dtQON2q/img/platform.png)",
+          "url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)",
       }}
     >
       <div className="flex flex-col gap-[60px] px-[37px] py-[60px]">
@@ -46,7 +46,7 @@ export const PlatformOverviewSection = (): JSX.Element => {
                   <img
                     className="flex-shrink-0"
                     alt="Icon"
-                    src="https://c.animaapp.com/mjypy23dtQON2q/img/icon.svg"
+                    src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/icon.svg"
                   />
                   <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-[11px] tracking-[-0.31px] leading-6">
                     {benefit.text}
@@ -55,7 +55,7 @@ export const PlatformOverviewSection = (): JSX.Element => {
               ))}
             </div>
 
-            <div className="bg-[url(https://c.animaapp.com/mjypy23dtQON2q/img/divider.svg)] h-px bg-[length:100%_100%]" />
+            <div className="bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider.svg)] h-px bg-[length:100%_100%]" />
           </div>
         </div>
 
@@ -63,12 +63,12 @@ export const PlatformOverviewSection = (): JSX.Element => {
           <img
             className="absolute top-0 right-0 w-[200px] h-[411px] object-cover"
             alt="Phone back"
-            src="https://c.animaapp.com/mjypy23dtQON2q/img/phone-2-back-1-1.png"
+            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-2-back-1-1.png"
           />
           <img
             className="absolute bottom-0 left-0 w-[200px] h-[411px] object-cover"
             alt="Phone front"
-            src="https://c.animaapp.com/mjypy23dtQON2q/img/phone-front-1.png"
+            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-front-1.png"
           />
         </div>
 

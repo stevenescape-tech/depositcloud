@@ -25,7 +25,7 @@ export const PlatformDetailsSection = (): JSX.Element => {
       id="platform"
       className="relative w-full overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/platform.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)] bg-cover bg-center opacity-15" />
       <div className="relative z-10 w-full mx-auto px-[30px] py-[60px]">
         {/* Header Section */}
         <div className="flex flex-col gap-[35px] mb-12">
@@ -48,7 +48,7 @@ export const PlatformDetailsSection = (): JSX.Element => {
                 <img
                   className="w-6 h-6 flex-shrink-0"
                   alt="Check"
-                  src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                  src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/check-icon.png"
                 />
                 <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-[11px] tracking-[-0.31px] leading-6">
                   {benefit}
@@ -60,16 +60,16 @@ export const PlatformDetailsSection = (): JSX.Element => {
           <div className="w-full h-px mb-12 bg-[#51b0ff]" />
 
           {/* Phone Images - Positioned Absolutely on Right, aligned with benefits */}
-          <div className="absolute top-0 right-0 w-[400px] h-[800px] opacity-0 translate-y-[40px] animate-slide-up [--animation-delay:200ms]">
+          <div className="absolute top-0 right-0 w-[400px] h-[800px]">
             <img
               className="absolute top-0 right-0 w-[234px] h-[482px] object-contain z-10"
               alt="Phone back"
-              src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/phone-2-back-1.png"
+              src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-2-back-1-1.png"
             />
             <img
               className="absolute top-[228px] right-[100px] w-[234px] h-[482px] object-contain z-20"
               alt="Phone front"
-              src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/phone-front.png"
+              src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-front-1.png"
             />
           </div>
 

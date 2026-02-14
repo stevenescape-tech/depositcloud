@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { FullWidth } from "./screens/FullWidth";
-import { Tablet } from "./routes/Tablet/screens/Tablet";
+import { Tablet } from "./screens/Tablet";
 import { Mobile44 } from "./screens/Mobile44";
 import { TermsOfService } from "./routes/TermsOfService/screens/TermsOfService";
 import { PrivacyPolicy } from "./routes/PrivacyPolicy/screens/PrivacyPolicy";

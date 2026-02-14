@@ -1,6 +1,6 @@
-import { CheckIcon } from "lucide-react";
-import { Card, CardContent } from "../../components/ui/card";
-import { useScrollAnimation } from "../../../../lib/useScrollAnimation";
+import { Card, CardContent } from "../../../components/ui/card";
+import { useScrollAnimation } from "../../../lib/useScrollAnimation";
+import { Check } from "lucide-react";
 
 const residentFeatures = [
   "Know what your deposit covers",
@@ -25,7 +25,7 @@ export const AutopilotValueSection = (): JSX.Element => {
       <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/features.png)] bg-cover bg-center opacity-[0.68]" />
       <div className="absolute inset-0 bg-black opacity-75" />
       <div className="relative z-10 flex flex-col w-full items-center gap-[26px] px-[30px]">
-        <p className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] text-center font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
+        <p className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] text-center font-body font-[number:var(--body-font-weight)] text-white text-[14px] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
           Built for every community, affordable, student, conventional, and
           single family.
         </p>
@@ -68,11 +68,7 @@ export const AutopilotValueSection = (): JSX.Element => {
                     key={index}
                     className="flex items-start gap-3 w-full"
                   >
-                    <img
-                      className="w-6 h-6 flex-shrink-0"
-                      alt="Check"
-                      src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/check-icon.png"
-                    />
+                    <Check className="w-6 h-6 flex-shrink-0 text-white" />
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}
                     </p>

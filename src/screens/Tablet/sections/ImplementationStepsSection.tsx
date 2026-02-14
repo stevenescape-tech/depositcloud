@@ -1,13 +1,16 @@
-import { Separator } from "../components/ui/separator";
+import { Separator } from "../../../components/ui/separator";
 
 export const ImplementationStepsSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col w-full items-center gap-2.5 px-0 py-14 relative [background:url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/section---implement.png)_50%_50%_/_cover]">
-      <div className="flex flex-col w-full max-w-[694px] items-center justify-center gap-3.5 px-4">
+    <section className="relative flex flex-col w-full items-center gap-2.5 px-0 py-14">
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---implement.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-white/40" />
+      
+      <div className="relative z-10 flex flex-col w-full max-w-[694px] items-center justify-center gap-3.5 px-4">
         <div className="flex flex-col w-full items-center gap-3.5">
           <div className="flex flex-col w-full items-start gap-3.5">
             <div className="flex flex-col items-center justify-center w-full">
-              <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#595959] text-xs text-center tracking-[0] leading-7">
+              <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#595959] text-[14px] text-center tracking-[0] leading-7">
                 Retroactive Implementation
               </p>
             </div>

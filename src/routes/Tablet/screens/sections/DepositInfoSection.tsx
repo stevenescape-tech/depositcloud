@@ -32,7 +32,7 @@ const featureCards = [
 
 export const DepositInfoSection = (): JSX.Element => {
   return (
-    <section className="flex flex-col items-center gap-3 px-0 py-14 w-full bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/section---deposit-platform.png)_50%_50%_/_cover]">
+    <section className="flex flex-col items-center gap-3 px-0 py-14 w-full bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---deposit-platform.png)_50%_50%_/_cover]">
       <div className="inline-flex flex-col items-start gap-3">
         <div className="flex flex-col w-[694px] items-center gap-7">
           <div className="flex flex-col max-w-screen-md items-center gap-6 w-full">
@@ -58,7 +58,7 @@ export const DepositInfoSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="w-[695px] h-px bg-[url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/divider-2.svg)] bg-[100%_100%]" />
+          <div className="w-[695px] h-px bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider-2.svg)] bg-[100%_100%]" />
         </div>
 
         <div className="grid grid-cols-2 gap-[21px] w-[694px] mt-3">
@@ -88,7 +88,7 @@ export const DepositInfoSection = (): JSX.Element => {
                       <img
                         className="w-6 h-6 flex-shrink-0"
                         alt="Check"
-                        src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
+                        src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/check-icon.png"
                       />
                       <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                         {feature}

@@ -13,7 +13,7 @@ export const Mobile = (): JSX.Element => {
         <img
           className="w-full h-10"
           alt="Header"
-          src="https://c.animaapp.com/mjyrmx59BNbwHP/img/header.png"
+          src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/header.png"
         />
       </header>
 
@@ -21,7 +21,7 @@ export const Mobile = (): JSX.Element => {
         <img
           className="w-full h-auto"
           alt="Hero"
-          src="https://c.animaapp.com/mjyrmx59BNbwHP/img/hero.png"
+          src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/hero.png"
         />
       </section>
 
@@ -34,7 +34,7 @@ export const Mobile = (): JSX.Element => {
           <img
             className="relative w-full h-auto"
             alt="Dsc"
-            src="https://c.animaapp.com/mjyrmx59BNbwHP/img/-dsc1222-1.png"
+            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/features.png"
           />
 
           <div className="flex flex-col w-[303px] items-center gap-[29px] absolute top-14 left-1/2 -translate-x-1/2">
@@ -59,7 +59,7 @@ export const Mobile = (): JSX.Element => {
                 </div>
               </div>
 
-              <div className="relative self-stretch w-full bg-[url(https://c.animaapp.com/mjyrmx59BNbwHP/img/divider-5.svg)] h-px bg-[100%_100%]" />
+              <div className="relative self-stretch w-full bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider-5.svg)] h-px bg-[100%_100%]" />
 
               <FeatureCardsSection />
             </div>
@@ -69,7 +69,7 @@ export const Mobile = (): JSX.Element => {
 
       <ImplementationDetailsSection />
 
-      <section className="flex flex-col w-full items-center gap-3 pt-14 pb-[45px] px-0 relative bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mjyrmx59BNbwHP/img/section---deposit-platform.png)] bg-center bg-cover">
+      <section className="flex flex-col w-full items-center gap-3 pt-14 pb-[45px] px-0 relative bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---deposit-platform.png)] bg-center bg-cover">
         <div className="inline-flex items-center gap-2.5 relative flex-[0_0_auto]">
           <div className="flex flex-col w-[301px] items-center gap-[29px] relative">
             <HeroIntroSection />

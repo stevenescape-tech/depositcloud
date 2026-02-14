@@ -96,7 +96,7 @@ export const ContactFormSection = (): JSX.Element => {
     <section id="contact" role="region" aria-labelledby="contact-heading" className="relative w-screen bg-[#161616] overflow-hidden">
       <Separator className="bg-[#51b0ff] h-[0.5px]" />
 
-      <div className="flex flex-col items-center justify-center max-w-[1128px] mx-auto px-4 pt-14 xl:pt-[85px] pb-14 xl:pb-[85px]">
+      <div className="flex flex-col items-center justify-center max-w-[1112px] mx-auto px-4 pt-14 xl:pt-[85px] pb-14 xl:pb-0">
         <header className="flex flex-col items-center gap-8 mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
           <h2 id="contact-heading" className="font-h2 font-[number:var(--h2-font-weight)] text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] text-white text-center [font-style:var(--h2-font-style)]">
             See what DepositCloud unlocks for your portfolio

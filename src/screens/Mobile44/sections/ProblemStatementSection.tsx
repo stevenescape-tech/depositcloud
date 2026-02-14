@@ -1,20 +1,21 @@
-import { Card, CardContent } from "../components/ui/card";
+import { Card, CardContent } from "../../../components/ui/card";
+import { XCircle, AlertCircle, AlertTriangle } from "lucide-react";
 
 const problemCards = [
   {
-    icon: "https://c.animaapp.com/mjyhvu36aqUy0x/img/frame-47.svg",
+    icon: XCircle,
     title: "Regulatory Drift",
     description:
       "A shifting compliance landscape creates chaos and legal risk when compliance aspects are not met, both in prospects and move-out.",
   },
   {
-    icon: "https://c.animaapp.com/mjyhvu36aqUy0x/img/frame-50.svg",
+    icon: AlertCircle,
     title: "Refund Bottleneck",
     description:
       "At move-out, teams waste time chasing renter info and defending charges, slowing refunds.",
   },
   {
-    icon: "https://c.animaapp.com/mjyhvu36aqUy0x/img/frame-49.svg",
+    icon: AlertTriangle,
     title: "High upfront costs",
     description:
       "A shifting compliance landscape increases legal risk when deposit rules aren't met at move-in or move-out.",
@@ -43,16 +44,16 @@ export const ProblemStatementSection = (): JSX.Element => {
           {problemCards.map((card, index) => (
             <Card
               key={index}
-              className="bg-[#00000033] border-[0.5px] border-solid border-[#fffefe]"
+              className="bg-transparent border border-white rounded-none"
             >
-              <CardContent className="flex flex-col items-start gap-4 p-[33px]">
-                <img className="w-6 h-6" alt={card.title} src={card.icon} />
+              <CardContent className="flex flex-col items-start gap-6 p-6">
+                <card.icon className="w-8 h-8 text-[#51b0ff]" strokeWidth={1.5} />
 
                 <h3 className="font-h3 font-[number:var(--h3-font-weight)] text-white text-[length:var(--h3-font-size)] tracking-[var(--h3-letter-spacing)] leading-[var(--h3-line-height)] whitespace-nowrap [font-style:var(--h3-font-style)]">
                   {card.title}
                 </h3>
 
-                <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
+                <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)] text-left">
                   {card.description}
                 </p>
               </CardContent>

@@ -1,5 +1,6 @@
 import { Card, CardContent } from "../components/ui/card";
 import { useScrollAnimation } from "../../../lib/useScrollAnimation";
+import { Check } from "lucide-react";
 
 const featureCards = [
   {
@@ -64,11 +65,7 @@ export const FeatureCardsSection = (): JSX.Element => {
                   key={featureIndex}
                   className="flex items-center gap-3 w-full"
                 >
-                  <img
-                    className="w-4 h-4 flex-shrink-0"
-                    alt="Check"
-                    src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
-                  />
+                  <Check className="w-4 h-4 flex-shrink-0 text-white" />
                   <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm tracking-[-0.31px] leading-[14px]">
                     {feature}
                   </p>
