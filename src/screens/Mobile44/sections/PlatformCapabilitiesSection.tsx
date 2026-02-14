@@ -1,5 +1,5 @@
     import { Check } from "lucide-react";
-    import { Separator } from "../components/ui/separator";
+    import { Separator } from "../../../components/ui/separator";
 
     const benefits = [
       { text: "Mitigate compliance exposure" },

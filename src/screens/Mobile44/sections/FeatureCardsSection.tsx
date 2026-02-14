@@ -1,4 +1,4 @@
-import { Card, CardContent } from "../components/ui/card";
+    import { Card, CardContent } from "../../../components/ui/card";
 import { useScrollAnimation } from "../../../lib/useScrollAnimation";
 import { Check } from "lucide-react";
 
