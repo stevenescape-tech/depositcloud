@@ -1,13 +1,7 @@
 import { Navigation } from "../../../components/Navigation";
 import { Footer } from "../../../components/Footer";
-import { useEffect } from "react";
 
 export const TermsOfService = (): JSX.Element => {
-  useEffect(() => {
-    console.log("__ANIMA_DBG__ TermsOfService component mounted");
-    console.log("__ANIMA_DBG__ Current timestamp:", new Date().toISOString());
-  }, []);
-
   return (
     <div className="flex flex-col min-h-screen items-center relative bg-white overflow-hidden">
       <a href="#main-content" className="skip-to-main">
@@ -16,7 +10,7 @@ export const TermsOfService = (): JSX.Element => {
       <Navigation variant="legal" />
 
       <main id="main-content" className="flex-col justify-center gap-2.5 pt-[100px] pb-0 px-4 self-stretch w-full flex items-center">
-        <article className="w-full max-w-[1112px] font-body font-[number:var(--body-font-weight)] text-black text-[14px] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
+        <article className="w-full max-w-[1128px] font-body font-[number:var(--body-font-weight)] text-black text-[14px] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
           <h1 className="font-bold text-2xl mb-4">TERMS OF USE</h1>
 
           <p className="mb-4">
