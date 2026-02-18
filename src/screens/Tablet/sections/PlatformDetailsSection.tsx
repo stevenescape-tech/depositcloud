@@ -1,3 +1,6 @@
+import { Check } from "lucide-react";
+import { Separator } from "../../../components/ui/separator";
+
 const benefits = [
   "Mitigate compliance exposure",
   "Negate operational burden",
@@ -23,64 +26,43 @@ export const PlatformDetailsSection = (): JSX.Element => {
   return (
     <section
       id="platform"
-      className="relative w-full overflow-hidden bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url(https://c.animaapp.com/mjyi28kyx0b5Zs/img/platform.png)",
-      }}
+      className="relative w-full overflow-hidden"
     >
-      <div className="w-full max-w-[768px] mx-auto px-[37px] py-[60px]">
-        <div className="flex flex-col gap-[35px]">
-          <h2 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[32px] tracking-[-1.92px] leading-normal">
-            Our Solution: A unified platform that does the work for you
-          </h2>
+      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)] bg-cover bg-center bg-no-repeat opacity-15" />
+      <div className="absolute inset-0 bg-white/60" />
+      
+      <div className="relative w-full max-w-[768px] mx-auto px-[37px] py-[60px]">
+        {/* Left Content Wrapper - Constrained width to allow space for phones */}
+        <div className="relative z-10 flex flex-col max-w-[55%]">
+          <div className="flex flex-col gap-[35px]">
+            <h2 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[32px] tracking-[-1.92px] leading-normal">
+              Our Solution: A unified platform that does the work for you
+            </h2>
 
-          <div className="flex flex-col gap-6">
-            <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-xs tracking-[0] leading-7">
-              Manages cash deposits, installment plans, and security deposit
-              alternatives — all through a single platform.
-            </p>
+            <div className="flex flex-col gap-6">
+              <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-xs tracking-[0] leading-7">
+                Manages cash deposits, installment plans, and security deposit
+                alternatives — all through a single platform.
+              </p>
 
-            <div className="flex flex-col gap-4 py-2">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <img
-                    className="w-6 h-6 flex-shrink-0"
-                    alt="Check"
-                    src="https://c.animaapp.com/mjyhvu36aqUy0x/img/check-icon.png"
-                  />
-                  <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-[11px] tracking-[-0.31px] leading-6">
-                    {benefit}
-                  </p>
-                </div>
-              ))}
-            </div>
+              <div className="flex flex-col gap-4 py-2">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="flex items-center justify-center w-5 h-5 rounded-full bg-[#51b0ff] flex-shrink-0">
+                      <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                    </div>
+                    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-[11px] tracking-[-0.31px] leading-6">
+                      {benefit}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
-            <div className="w-full max-w-[473px] h-px">
-              <img
-                className="w-full"
-                alt="Divider"
-                src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/divider.svg"
-              />
+              <Separator className="bg-[#51b0ff] h-[0.5px] w-full" />
             </div>
           </div>
 
-          <div className="relative w-full h-[710px] my-8 flex justify-center items-start opacity-0 translate-y-[40px] animate-slide-up [--animation-delay:200ms]">
-            <div className="relative w-[468px] h-[710px]">
-              <img
-                className="absolute top-0 right-0 w-[234px] h-[482px] object-contain z-10"
-                alt="Phone back"
-                src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/phone-2-back-1.png"
-              />
-              <img
-                className="absolute top-[228px] left-0 w-[234px] h-[482px] object-contain z-20"
-                alt="Phone front"
-                src="https://c.animaapp.com/mjyi28kyx0b5Zs/img/phone-front.png"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-8 mt-8">
+          <div className="flex flex-col gap-8 mt-12">
             <h3 className="[font-family:'Helvetica-Bold',Helvetica] font-bold text-[#2b2b2b] text-[35px] tracking-[-2.10px] leading-normal">
               Value delivered on <br />
               autopilot
@@ -106,6 +88,22 @@ export const PlatformDetailsSection = (): JSX.Element => {
               Built by property managers for owners, operators, and renters.
             </p>
           </div>
+        </div>
+
+        {/* Phone Container - Positioned Absolute Right */}
+        <div className="absolute top-[100px] right-[37px] w-[40%] max-w-[320px] aspect-[468/710] z-0 opacity-0 translate-y-[40px] animate-slide-up [--animation-delay:200ms]">
+          <img
+            className="absolute top-0 right-0 w-[70%] h-auto object-contain z-10 drop-shadow-xl"
+            alt="Phone back"
+            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-2-back-1.png"
+            loading="eager"
+          />
+          <img
+            className="absolute top-[32%] left-0 w-[70%] h-auto object-contain z-20 drop-shadow-xl"
+            alt="Phone front"
+            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-front-1.png"
+            loading="eager"
+          />
         </div>
       </div>
     </section>
