@@ -17,7 +17,7 @@ export const TermsOfService = (): JSX.Element => {
             PLEASE READ THESE TERMS OF USE CAREFULLY BEFORE ACCESSING OR USING THIS WEBSITE. DO NOT USE THE WEBSITE IF YOU DO NOT AGREE TO THESE TERMS.
           </p>
 
-          <p className="mb-4">Last Updated: May 5, 2020</p>
+          <p className="mb-4">Last Updated: January 15, 2025</p>
 
           <p className="mb-4">
             The following Terms of Use ("Terms of Use") govern your access to and use of websites owned and operated by DepositPal, LLC dba DepositCloud, dba EasyPay by DepositCloud, and their subsidiaries and affiliated companies (collectively, "DepositCloud," "we," "us," and "our"), including any content, functionality, products and services offered on or through such websites (collectively, the "Services"). Please note that if you are an account holder, these Terms of Use are not intended to, and do not, modify or alter the terms of your DepositCloud or EasyPay Unlimited Account Agreement, as applicable, which governs your use of your account, ("Account"). By accessing or using the Services, whether via computer, mobile device or other technology, you represent that you are 18 years of age or older and you have read and agree to be bound by these Terms of Use in their entirety and all applicable laws, rules and regulations governing your use of the Services. These Terms of Use may be amended by posting a new version on our Services which version will be effective upon posting. If you do not agree to the new version of these Terms of Use, do not use the Services.
