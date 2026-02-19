@@ -1,8 +1,8 @@
 import { Button } from "../../../components/ui/button";
 import { Input } from "../../../components/ui/input";
 import { Separator } from "../../../components/ui/separator";
+import { Footer } from "../../../components/Footer";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 
 const formFields = [
   { id: "fullName", placeholder: "Full Name", type: "text", required: true },
@@ -11,14 +11,7 @@ const formFields = [
   { id: "workEmail", placeholder: "Work email", type: "email", required: true },
 ];
 
-const footerLinks = [
-  { text: "Terms of Service", href: "/terms-of-service" },
-  { text: "Privacy policy", href: "/privacy-policy" },
-  { text: "Legal Notices", href: "/legal-notices" },
-];
-
 export const ContactFormSection = (): JSX.Element => {
-  const location = useLocation();
   const [formData, setFormData] = useState({
     fullName: "",
     companyName: "",
@@ -175,41 +168,7 @@ export const ContactFormSection = (): JSX.Element => {
         </p>
       </div>
 
-      <footer className="flex flex-col items-center gap-6 bg-transparent mt-auto pb-6">
-        <Separator className="bg-[#51b0ff] h-[0.5px] w-full" />
-
-        <div className="flex items-center justify-between w-full px-[30px] py-2">
-          <div className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-sm leading-7">
-            DepositCloud © 2017 - 2026
-          </div>
-
-          <nav className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#8C8C8C] text-[10px] text-right tracking-[0] leading-[10px]">
-            {footerLinks.map((link, index) => {
-              const isActive = location.pathname === link.href;
-              return (
-              <span key={link.text}>
-                <a
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = link.href;
-                  }}
-                  className={`leading-7 underline transition-colors cursor-pointer ${
-                    isActive ? 'text-white' : 'text-[#8C8C8C] hover:text-white'
-                  }`}
-                >
-                  {link.text}
-                </a>
-                {index < footerLinks.length - 1 && (
-                  <span className="leading-[0.1px]">
-                    &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;{" "}
-                  </span>
-                )}
-              </span>
-            )})}
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </section>
   );
 };

@@ -1,5 +1,7 @@
-    import { Button } from "../../../components/ui/button";
-    import { Input } from "../../../components/ui/input";
+import { Button } from "../../../components/ui/button";
+import { Input } from "../../../components/ui/input";
+import { Separator } from "../../../components/ui/separator";
+import { Footer } from "../../../components/Footer";
 import { useState, useEffect } from "react";
 
 const formFields = [
@@ -177,50 +179,7 @@ export const ContactFormSection = (): JSX.Element => {
         </div>
       </div>
 
-      <footer role="contentinfo" className="flex flex-col w-full items-center gap-[15px] mt-[58px] bg-transparent">
-        <div className="relative w-[1920px] bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider-5.svg)] h-px bg-[100%_100%]" />
-
-        <div className="flex w-full max-w-[408px] items-center justify-center px-6 pb-7">
-          <div className="flex flex-col w-full max-w-[266px] items-start">
-            <p className="w-full flex items-center justify-center mt-[-1.00px] [font-family:'Courier_Prime',Helvetica] font-normal text-[#dfdfdf] text-[8px] tracking-[0] leading-7">
-              DepositCloud © 2018 - 2026
-            </p>
-
-            <p className="w-full flex items-center justify-center [font-family:'Courier_Prime',Helvetica] font-normal text-[#dfdfdf] text-[8px] tracking-[0] leading-[8px]">
-              <a 
-                href="/terms-of-service" 
-                onClick={(e) => { e.preventDefault(); window.location.href = '/terms-of-service'; }}
-                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                aria-current={location.pathname === '/terms-of-service' ? 'page' : undefined}
-              >
-                Terms of Service
-              </a>
-              <span className="leading-[14px]">
-                &nbsp;|&nbsp;
-              </span>
-              <a 
-                href="/privacy-policy"
-                onClick={(e) => { e.preventDefault(); window.location.href = '/privacy-policy'; }}
-                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                aria-current={location.pathname === '/privacy-policy' ? 'page' : undefined}
-              >
-                Privacy policy
-              </a>
-              <span className="leading-[14px]">
-                &nbsp;|&nbsp;
-              </span>
-              <a 
-                href="/legal-notices"
-                onClick={(e) => { e.preventDefault(); window.location.href = '/legal-notices'; }}
-                className="leading-[14px] underline cursor-pointer hover:text-white transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                aria-current={location.pathname === '/legal-notices' ? 'page' : undefined}
-              >
-                Legal Notices
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </section>
   );
 };

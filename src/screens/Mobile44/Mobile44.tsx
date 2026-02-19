@@ -1,5 +1,5 @@
     import { Navigation } from "../../components/Navigation";
-    import { HeroSection } from "./sections/HeroSection";
+import { HeroSection } from "./sections/HeroSection";
 import { ProblemStatementSection } from "./sections/ProblemStatementSection";
 import { UnifiedPlatformSection } from "../../components/sections/UnifiedPlatformSection";
 import { FeatureCardsSection } from "./sections/FeatureCardsSection";
@@ -8,10 +8,10 @@ import { HeroIntroSection } from "./sections/HeroIntroSection";
 import { FeaturesOverviewSection } from "./sections/FeaturesOverviewSection";
 import { ContactFormSection } from "./sections/ContactFormSection";
 
-    export const Mobile44 = (): JSX.Element => {
-      return (
-        <div className="flex flex-col items-center relative bg-white overflow-hidden w-full">
-          <Navigation />
+export const Mobile44 = (): JSX.Element => {
+  return (
+    <div className="flex flex-col items-center relative bg-white overflow-hidden w-full">
+      <Navigation variant="home" />
           
           <HeroSection />
 

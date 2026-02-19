@@ -2,7 +2,7 @@ import { Separator } from "../ui/separator";
 import { useLocation } from "react-router-dom";
 
 const footerLinks = [
-  { text: "Terms of Service", href: "/terms-of-service" },
+  { text: "Terms of Use", href: "/terms-of-service" },
   { text: "Privacy policy", href: "/privacy-policy" },
   { text: "Legal Notices", href: "/legal-notices" },
 ];

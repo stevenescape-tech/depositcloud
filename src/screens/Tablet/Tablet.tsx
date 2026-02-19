@@ -13,7 +13,7 @@ import { UnifiedPlatformSection } from "../../components/sections/UnifiedPlatfor
           className="flex flex-col w-full items-center relative bg-white overflow-hidden"
           data-model-id="173:1043"
         >
-          <Navigation />
+          <Navigation variant="home" />
           <HeroBannerSection />
       <ProblemStatementSection />
       <UnifiedPlatformSection />
