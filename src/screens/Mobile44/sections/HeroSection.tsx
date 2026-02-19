@@ -3,7 +3,7 @@
 export const HeroSection = (): JSX.Element => {
   return (
     <section 
-      className="relative flex flex-col min-h-screen items-center justify-center gap-8 px-4 w-full overflow-hidden bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/hero.png)] bg-cover bg-center bg-no-repeat"
+      className="relative flex flex-col min-h-screen items-center justify-center gap-8 px-4 w-full overflow-hidden bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat"
       aria-label="Hero section"
     >
       <div className="absolute inset-0 bg-black/70 z-0" />
