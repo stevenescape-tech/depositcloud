@@ -60,7 +60,7 @@ export const MainHeaderSection = (): JSX.Element => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] flex flex-col w-full items-center justify-center gap-[11px] bg-black/60 backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] py-4 border-b-[0.5px] border-[#51b0ff]">
+    <header className="fixed top-0 left-0 right-0 z-[100] flex flex-col w-full items-center justify-center gap-[11px] bg-black/70 backdrop-blur-md backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] py-4 border-b-[0.5px] border-[#51b0ff]">
       <nav className="flex w-full max-w-[694px] items-center justify-between px-4 translate-y-[-1rem] animate-fade-in opacity-0">
         <img
           className="w-[201px] h-[30.69px] cursor-pointer"

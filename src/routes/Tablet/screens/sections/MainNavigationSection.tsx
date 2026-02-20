@@ -71,7 +71,7 @@ export const MainNavigationSection = (): JSX.Element => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex flex-col w-full items-center justify-center gap-[11px] bg-black/60 backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] py-4 border-b-[0.5px] border-[#51b0ff]">
+    <header className="fixed top-0 left-0 right-0 z-50 flex flex-col w-full items-center justify-center gap-[11px] bg-black/70 backdrop-blur-md backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] py-4 border-b-[0.5px] border-[#51b0ff]">
       <nav className="flex w-full items-center justify-between px-[30px]">
         <img
           className="w-[201px] h-[30.69px] cursor-pointer"
