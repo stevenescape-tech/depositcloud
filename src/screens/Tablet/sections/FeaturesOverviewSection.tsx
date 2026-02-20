@@ -49,7 +49,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
                 For residents
               </p>
 
-              <h3 className="h-[25px] flex items-center font-h5 font-[number:var(--h5-font-weight)] text-white text-[length:var(--h5-font-size)] tracking-[var(--h5-letter-spacing)] leading-[var(--h5-line-height)] whitespace-nowrap [font-style:var(--h5-font-style)]">
+              <h3 className="flex items-center font-h5 font-[number:var(--h5-font-weight)] text-white text-[length:var(--h5-font-size)] tracking-[var(--h5-letter-spacing)] leading-[var(--h5-line-height)] [font-style:var(--h5-font-style)]">
                 Clarity from move-in to move-out.
               </h3>
 
@@ -89,7 +89,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
                 For owners &amp; operators
               </p>
 
-              <h3 className="h-[25px] flex items-center font-h5 font-[number:var(--h5-font-weight)] text-white text-[length:var(--h5-font-size)] tracking-[var(--h5-letter-spacing)] leading-[var(--h5-line-height)] whitespace-nowrap [font-style:var(--h5-font-style)]">
+              <h3 className="flex items-center font-h5 font-[number:var(--h5-font-weight)] text-white text-[length:var(--h5-font-size)] tracking-[var(--h5-letter-spacing)] leading-[var(--h5-line-height)] [font-style:var(--h5-font-style)]">
                 Every deposit. One system.
               </h3>
 
