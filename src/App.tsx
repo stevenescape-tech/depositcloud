@@ -41,7 +41,9 @@ function HomePage() {
         <DepositBenefitsSection />
         <ContactFormSection />
       </main>
-      <Footer />
+      <div className="w-full bg-[#161616]">
+        <Footer />
+      </div>
     </div>
   );
 }
