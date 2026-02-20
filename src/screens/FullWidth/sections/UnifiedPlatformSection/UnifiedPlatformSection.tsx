@@ -25,7 +25,7 @@ const statistics = [
 export const UnifiedPlatformSection = (): JSX.Element => {
   return (
     <section id="platform" role="region" aria-labelledby="platform-heading" className="relative w-screen py-[86px] xl:py-[85px]">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/platform.png)] bg-cover bg-center opacity-15" />
       <div className="absolute inset-0 bg-white/60" />
       <div className="container mx-auto max-w-[1128px] px-4 relative z-10">
         {/* Mobile/Tablet: Stacked Layout */}
@@ -157,7 +157,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
           {/* Right Column - Phone Images */}
           <div className="relative flex-shrink-0 -ml-12" style={{ width: '628px', height: '958px' }}>
             <img
-              src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-2-back-1.png"
+              src="/img/phone-2-back-1.png"
               alt="Phone back"
               style={{
                 position: 'absolute',
@@ -170,7 +170,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
               }}
             />
             <img
-              src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-front.png"
+              src="/img/phone-front.png"
               alt="Phone front"
               style={{
                 position: 'absolute',

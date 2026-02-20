@@ -38,7 +38,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
 
   return (
     <section className="relative w-full py-14 xl:py-[85px] px-4">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---deposit-platform.png)] bg-cover bg-center opacity-[0.68]" />
+      <div className="absolute inset-0 bg-[url(/img/section---deposit-platform.png)] bg-cover bg-center opacity-[0.68]" />
       <div className="absolute inset-0 bg-black opacity-75" />
       <div className="relative z-10 w-full flex flex-col items-center gap-[52px] px-[30px]">
         <header className="flex flex-col w-full items-center gap-[26px] translate-y-[-1rem] animate-fade-in opacity-0">
@@ -96,7 +96,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
                       <img
                         className="w-6 h-6 flex-shrink-0"
                         alt="Check"
-                        src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/check-icon.png"
+                        src="/img/check-icon.png"
                       />
                       <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                         {bullet}

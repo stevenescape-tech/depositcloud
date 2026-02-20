@@ -28,7 +28,7 @@ export const PlatformDetailsSection = (): JSX.Element => {
       id="platform"
       className="relative w-full overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)] bg-cover bg-center bg-no-repeat opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/platform.png)] bg-cover bg-center bg-no-repeat opacity-15" />
       <div className="absolute inset-0 bg-white/60" />
       
       <div className="relative w-full max-w-[768px] mx-auto px-[37px] py-[60px]">
@@ -95,13 +95,13 @@ export const PlatformDetailsSection = (): JSX.Element => {
           <img
             className="absolute top-0 right-0 w-[70%] h-auto object-contain z-10 drop-shadow-xl"
             alt="Phone back"
-            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-2-back-1.png"
+            src="/img/phone-2-back-1.png"
             loading="eager"
           />
           <img
             className="absolute top-[32%] left-0 w-[70%] h-auto object-contain z-20 drop-shadow-xl"
             alt="Phone front"
-            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-front-1.png"
+            src="/img/phone-front-1.png"
             loading="eager"
           />
         </div>

@@ -67,7 +67,7 @@ export const FeatureCardsSection = (): JSX.Element => {
                   <img
                     className="w-4 h-4 flex-shrink-0"
                     alt="Check"
-                    src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/check-icon.png"
+                    src="/img/check-icon.png"
                   />
                   <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm tracking-[-0.31px] leading-[14px]">
                     {feature}

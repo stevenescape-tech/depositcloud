@@ -6,7 +6,7 @@ export const ImplementationDetailsSection = (): JSX.Element => {
       className="flex flex-col items-center gap-2.5 pt-11 pb-14 px-4 relative w-full bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
-          "url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---implement.png)",
+          "url(/img/section---implement.png)",
       }}
     >
       <div className="flex flex-col items-center justify-center gap-3.5 w-full max-w-[303px]">
@@ -30,7 +30,7 @@ export const ImplementationDetailsSection = (): JSX.Element => {
             </p>
           </div>
 
-          <Separator className="w-full bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider.svg)] bg-[length:100%_100%] h-px" />
+          <Separator className="w-full bg-[url(/img/divider.svg)] bg-[length:100%_100%] h-px" />
 
           <div className="flex items-center justify-center w-full">
             <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2b2b2b] text-xs text-center tracking-[0] leading-7">

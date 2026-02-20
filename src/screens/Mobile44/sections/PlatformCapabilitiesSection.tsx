@@ -25,7 +25,7 @@ const statistics = [
 export const PlatformCapabilitiesSection = (): JSX.Element => {
   return (
     <section id="platform" className="relative w-full overflow-hidden">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/platform.png)] bg-cover bg-center opacity-15" />
       <div className="absolute inset-0 bg-white/60" />
       <div className="relative z-10 flex flex-col px-6 py-10 gap-12 md:gap-16 max-w-screen-sm mx-auto">
         {/* Header Section */}
@@ -62,13 +62,13 @@ export const PlatformCapabilitiesSection = (): JSX.Element => {
           <img
             className="absolute top-0 right-0 w-[65%] h-auto object-contain z-10 drop-shadow-xl"
             alt="DepositCloud App Interface - Back"
-            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-2-back-1.png"
+            src="/img/phone-2-back-1.png"
             loading="eager"
           />
           <img
             className="absolute bottom-0 left-0 w-[65%] h-auto object-contain z-20 drop-shadow-xl"
             alt="DepositCloud App Interface - Front"
-            src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/phone-front.png"
+            src="/img/phone-front.png"
             loading="eager"
           />
         </div>

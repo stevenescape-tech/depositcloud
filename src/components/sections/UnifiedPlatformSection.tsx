@@ -26,7 +26,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
   return (
     <section id="platform" className="relative w-full overflow-hidden py-10 md:py-[60px] xl:py-[85px]">
       {/* Background Image & Overlay */}
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/platform.png)] bg-cover bg-center bg-no-repeat opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/platform.png)] bg-cover bg-center bg-no-repeat opacity-15" />
       <div className="absolute inset-0 bg-white/40" />
       
       <div className="relative z-10 container mx-auto px-6 md:px-[37px] xl:px-4 max-w-[1112px]">
@@ -70,14 +70,14 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                <img
                  className="absolute top-0 right-0 w-[65%] h-auto object-contain z-10 drop-shadow-xl"
                  alt="Phone back"
-                 src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/uploaded-asset-1771098261908-1.png"
+                 src="/img/uploaded-asset-1771098261908-1.png"
                  loading="lazy"
                  decoding="async"
                />
                <img
                  className="absolute bottom-0 left-0 w-[65%] h-auto object-contain z-20 drop-shadow-xl"
                  alt="Phone front"
-                 src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/uploaded-asset-1771098261907-0.png"
+                 src="/img/uploaded-asset-1771098261907-0.png"
                  loading="lazy"
                  decoding="async"
                />
@@ -126,14 +126,14 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                 <img
                   className="absolute top-0 right-0 w-[70%] h-auto object-contain z-10 drop-shadow-xl"
                   alt="Phone back"
-                  src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/uploaded-asset-1771098261908-1.png"
+                  src="/img/uploaded-asset-1771098261908-1.png"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
                   className="absolute top-[32%] left-0 w-[70%] h-auto object-contain z-20 drop-shadow-xl"
                   alt="Phone front"
-                  src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/uploaded-asset-1771098261907-0.png"
+                  src="/img/uploaded-asset-1771098261907-0.png"
                   loading="lazy"
                   decoding="async"
                 />
@@ -142,14 +142,14 @@ export const UnifiedPlatformSection = (): JSX.Element => {
              {/* Desktop Images */}
              <div className="hidden xl:block relative w-full h-full">
                 <img
-                  src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/uploaded-asset-1771098261908-1.png"
+                  src="/img/uploaded-asset-1771098261908-1.png"
                   alt="Phone back"
                   className="absolute top-0 right-0 w-[360px] h-[741px] object-contain z-10 drop-shadow-2xl"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
-                  src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/uploaded-asset-1771098261907-0.png"
+                  src="/img/uploaded-asset-1771098261907-0.png"
                   alt="Phone front"
                   className="absolute top-[217px] left-0 w-[360px] h-[741px] object-contain z-20 drop-shadow-2xl"
                   loading="lazy"

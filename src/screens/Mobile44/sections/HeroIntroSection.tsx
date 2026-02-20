@@ -26,7 +26,7 @@ export const HeroIntroSection = (): JSX.Element => {
         </div>
       </div>
 
-      <Separator className="w-full bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider.svg)] h-px bg-[100%_100%] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]" />
+      <Separator className="w-full bg-[url(/img/divider.svg)] h-px bg-[100%_100%] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]" />
     </section>
   );
 };

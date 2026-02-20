@@ -3,7 +3,7 @@ import { Separator } from "../../../../components/ui/separator";
 export const ImplementationProcessSection = (): JSX.Element => {
   return (
     <section role="region" aria-labelledby="implementation-heading" className="flex flex-col w-screen items-center justify-center gap-2.5 px-4 py-14 xl:py-[85px] relative">
-      <div className="absolute inset-0 bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---implement.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/section---implement.png)] bg-cover bg-center opacity-15" />
       <div className="absolute inset-0 bg-white/40" />
       <div className="relative z-10 w-full max-w-[1112px]">
         <div className="flex flex-col w-full items-center justify-center relative">

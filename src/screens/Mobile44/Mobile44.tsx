@@ -23,7 +23,7 @@ export const Mobile44 = (): JSX.Element => {
         <img
           className="absolute inset-0 w-full h-full object-cover"
           alt="Background"
-          src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/features.png"
+          src="/img/features.png"
         />
         <div className="absolute inset-0 bg-black/[0.43]" />
 
@@ -44,7 +44,7 @@ export const Mobile44 = (): JSX.Element => {
             plans, and security deposit alternatives.
           </p>
 
-          <div className="w-full bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/divider-5.svg)] h-px bg-[100%_100%] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]" />
+          <div className="w-full bg-[url(/img/divider-5.svg)] h-px bg-[100%_100%] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]" />
 
           <FeatureCardsSection />
         </div>
@@ -52,7 +52,7 @@ export const Mobile44 = (): JSX.Element => {
 
       <ImplementationDetailsSection />
 
-      <section className="flex flex-col w-full items-center gap-3 pt-7 pb-[22px] px-6 relative bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/section---deposit-platform.png)] bg-center bg-cover">
+      <section className="flex flex-col w-full items-center gap-3 pt-7 pb-[22px] px-6 relative bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(/img/section---deposit-platform.png)] bg-center bg-cover">
         <div className="flex flex-col items-center gap-[29px] w-full">
           <HeroIntroSection />
           <FeaturesOverviewSection />
