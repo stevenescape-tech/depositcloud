@@ -64,7 +64,7 @@ export const MainHeaderSection = (): JSX.Element => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-[10000] flex w-full items-center justify-between bg-[linear-gradient(0deg,rgba(0,0,0,0.75)_0%,rgba(0,0,0,0.75)_100%),url(/img/header.png)] bg-cover bg-center backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] py-4 px-4 border-b-[0.5px] border-[#51b0ff]">
+      <header className="fixed top-0 left-0 right-0 z-[10000] flex w-full items-center justify-between bg-black/60 backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] py-4 px-4 border-b-[0.5px] border-[#51b0ff]">
         <img
           className="w-[150px] h-auto cursor-pointer"
           alt="Depositcloud logo"
