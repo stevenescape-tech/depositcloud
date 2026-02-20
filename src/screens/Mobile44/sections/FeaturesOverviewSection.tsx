@@ -1,10 +1,9 @@
-    import { Card, CardContent } from "../../../components/ui/card";
+import { FeatureCard } from "../../../components/ui/feature-card";
 import { useScrollAnimation } from "../../../lib/useScrollAnimation";
-import { Check } from "lucide-react";
 
 const featureCards = [
   {
-    subtitle: "Operational foundation",
+    category: "Operational foundation",
     title: "Integrated. Automated. Always on.",
     description:
       "DepositCloud integrates into your operating stack, standardizing deposits across the portfolio without manual work.",
@@ -17,7 +16,7 @@ const featureCards = [
     footer: "No confusion. No guessing. No surprises.",
   },
   {
-    subtitle: "Past, present, and future — handled",
+    category: "Past, present, and future — handled",
     title: "One system across the lifecycle.",
     description:
       "DepositCloud removes fragmentation by taking responsibility for deposits at every stage — not just going forward.",
@@ -39,46 +38,16 @@ export const FeaturesOverviewSection = (): JSX.Element => {
   return (
     <section className="w-full grid grid-cols-1 gap-[21px]">
       {featureCards.map((card, index) => (
-        <Card
+        <FeatureCard
           key={index}
           ref={cardRefs[index]}
-          data-animate="true"
-          style={{ animationDelay: `${index * 150}ms` } as React.CSSProperties}
-          className="relative flex flex-col gap-6 p-7 bg-[rgba(0,0,0,0.3)] border border-[#51b0ff] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] backdrop-blur-[10px] [-webkit-backdrop-filter:blur(10px)] [backdrop-filter:blur(10px)] overflow-hidden"
-        >
-          <CardContent className="flex flex-col gap-6 p-0">
-            <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#DFDFDF] text-sm tracking-[-0.31px] leading-6">
-              {card.subtitle}
-            </p>
-
-            <h3 className="font-h5 font-[number:var(--h5-font-weight)] text-white text-[length:var(--h5-font-size)] tracking-[var(--h5-letter-spacing)] leading-[var(--h5-line-height)] [font-style:var(--h5-font-style)]">
-              {card.title}
-            </h3>
-
-            <div className="pt-2">
-              <p className="text-[#DFDFDF] text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] font-caption font-[number:var(--caption-font-weight)] [font-style:var(--caption-font-style)]">
-                {card.description}
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-4 pt-4">
-              {card.features.map((feature, featureIndex) => (
-                <div key={featureIndex} className="flex items-start gap-3">
-                  <Check className="w-6 h-6 flex-shrink-0 text-white" />
-                  <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm tracking-[-0.31px] leading-6">
-                    {feature}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="pt-4">
-              <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#DFDFDF] text-sm tracking-[-0.31px] leading-6">
-                {card.footer}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+          category={card.category}
+          title={card.title}
+          description={card.description}
+          features={card.features}
+          footer={card.footer}
+          animationDelay={index * 150}
+        />
       ))}
     </section>
   );
