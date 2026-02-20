@@ -1,1 +1,0 @@
-export { ValueDeliverySection } from "./ValueDeliverySection";

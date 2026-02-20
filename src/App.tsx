@@ -1,19 +1,22 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import { FullWidth } from "./screens/FullWidth";
-import { Tablet } from "./screens/Tablet";
-import { Mobile44 } from "./screens/Mobile44";
+import { Navigation } from "./components/Navigation";
+import { HeroSection } from "./sections/HeroSection";
+import { ProblemStatementSection } from "./sections/ProblemStatementSection";
+import { UnifiedPlatformSection } from "./components/sections/UnifiedPlatformSection";
+import { ValueDeliverySection } from "./sections/ValueDeliverySection";
+import { ImplementationSection } from "./sections/ImplementationSection";
+import { DepositBenefitsSection } from "./sections/DepositBenefitsSection";
+import { ContactFormSection } from "./sections/ContactFormSection";
 import { TermsOfService } from "./routes/TermsOfService/screens/TermsOfService";
 import { PrivacyPolicy } from "./routes/PrivacyPolicy/screens/PrivacyPolicy";
 import { LegalNotices } from "./routes/LegalNotices/screens/LegalNotices";
 
-function ResponsiveHome() {
+function HomePage() {
   const location = useLocation();
-  const [screenSize, setScreenSize] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
 
   useEffect(() => {
-    // Handle hash navigation on mount and location change
     if (location.hash) {
       setTimeout(() => {
         const id = location.hash.replace('#', '');
@@ -25,30 +28,20 @@ function ResponsiveHome() {
     }
   }, [location]);
 
-  useEffect(() => {
-    const checkScreenSize = () => {
-      const width = window.innerWidth;
-      if (width < 768) {
-        setScreenSize('mobile');
-      } else if (width < 1280) {
-        setScreenSize('tablet');
-      } else {
-        setScreenSize('desktop');
-      }
-    };
-
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize);
-  }, []);
-
-  if (screenSize === 'mobile') {
-    return <Mobile44 />;
-  } else if (screenSize === 'tablet') {
-    return <Tablet />;
-  } else {
-    return <FullWidth />;
-  }
+  return (
+    <div className="flex flex-col w-full items-center relative bg-white overflow-x-hidden">
+      <Navigation variant="home" />
+      <main id="main-content" role="main">
+        <HeroSection />
+        <ProblemStatementSection />
+        <UnifiedPlatformSection />
+        <ValueDeliverySection />
+        <ImplementationSection />
+        <DepositBenefitsSection />
+        <ContactFormSection />
+      </main>
+    </div>
+  );
 }
 
 function App() {
@@ -58,7 +51,7 @@ function App() {
         Skip to main content
       </a>
       <Routes>
-        <Route path="/" element={<ResponsiveHome />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/legal-notices" element={<LegalNotices />} />

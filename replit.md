@@ -13,13 +13,26 @@ DepositCloud is a modern deposit management platform marketing website built wit
 
 ## Project Structure
 - `src/` - Source code
-  - `components/` - Reusable UI components (Navigation, Footer, sections, ui)
-  - `routes/` - Page route components (Platform, Mobile, Tablet, LegalNotices, etc.)
-  - `screens/` - Screen layout components
-  - `lib/` - Utility functions and hooks
-- `static/` - Static assets (served via Vite publicDir)
-- `api/` - Serverless API functions (email sending, originally for Vercel)
+  - `sections/` - Unified responsive page sections (Hero, ProblemStatement, ValueDelivery, Implementation, DepositBenefits, ContactForm)
+  - `components/` - Reusable UI components (Navigation, Footer, sections/UnifiedPlatformSection, ui)
+  - `routes/` - Legal page route components (TermsOfService, PrivacyPolicy, LegalNotices)
+  - `lib/` - Utility functions and hooks (useScrollAnimation, utils)
+- `static/` - Static assets served via Vite publicDir (images in /img/)
 - `index.html` - Entry HTML file
+
+## Architecture
+- Single responsive codebase using Tailwind CSS breakpoints (mobile-first: base, md: 768px+, xl: 1280px+)
+- App.tsx renders a single HomePage component with all sections
+- No JavaScript screen-size detection - pure CSS responsive design
+- Shared FeatureCard component used across ValueDelivery and DepositBenefits sections
+- Footer component shared across all pages
+
+## Design Decisions
+- Header: bg-black/70 backdrop-blur-md for frosted glass effect
+- Body font size: 14px (CSS variable --body-font-size)
+- Feature cards use blue circle check icons (#51B1FF)
+- Contact form submits to Formspree (https://formspree.io/f/xaqnzljo)
+- All external images localized to /img/ directory
 
 ## Development
 - **Dev server**: `npm run dev` (runs on port 5000, host 0.0.0.0)
@@ -32,5 +45,6 @@ DepositCloud is a modern deposit management platform marketing website built wit
 - Public directory: `dist`
 
 ## Recent Changes
-- Configured Vite for Replit environment (port 5000, allowedHosts)
-- Set up static deployment configuration
+- 2026-02-20: Consolidated three separate breakpoint codebases (FullWidth, Tablet, Mobile44) into single responsive implementation
+- Removed all duplicate screen/route code - single set of sections in src/sections/
+- Eliminated JavaScript screen-size detection in favor of Tailwind responsive classes
