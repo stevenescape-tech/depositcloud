@@ -5,6 +5,12 @@ export default defineConfig({
   plugins: [react()],
   publicDir: "./static",
   base: "./",
+  server: {
+    host: "0.0.0.0",
+    port: 5000,
+    // @ts-ignore - allowedHosts needed for Replit proxy
+    allowedHosts: true,
+  },
   build: {
     minify: 'esbuild',
     cssMinify: true,
