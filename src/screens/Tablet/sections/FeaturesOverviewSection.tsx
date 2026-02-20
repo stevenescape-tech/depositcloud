@@ -67,11 +67,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
                     key={index}
                     className="flex items-start gap-3 w-full"
                   >
-                    <img
-                      className="w-6 h-6 flex-shrink-0"
-                      alt="Check"
-                      src="/img/check-icon.png"
-                    />
+                    <svg className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C13.9672 18 18 13.9672 18 9C18 4.03276 13.9672 0 9 0C4.03276 0 0 4.03276 0 9C0 13.9672 4.03276 18 9 18ZM12.9727 7.34766L8.47266 11.8477C8.14219 12.1781 7.60781 12.1781 7.28086 11.8477L5.03086 9.59766C4.70039 9.26719 4.70039 8.73281 5.03086 8.40586C5.36133 8.07539 5.89570 8.07539 6.22266 8.40586L7.875 10.0582L11.7773 6.15234C12.1078 5.82188 12.6422 5.82188 12.9691 6.15234C13.2996 6.48281 13.2996 7.01719 12.9691 7.34414L12.9727 7.34766Z" fill="#51B1FF"/></svg>
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}
                     </p>
@@ -111,11 +107,7 @@ export const FeaturesOverviewSection = (): JSX.Element => {
                     key={index}
                     className="flex items-start gap-3 w-full"
                   >
-                    <img
-                      className="w-6 h-6 flex-shrink-0"
-                      alt="Check"
-                      src="/img/check-icon.png"
-                    />
+                    <svg className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18C13.9672 18 18 13.9672 18 9C18 4.03276 13.9672 0 9 0C4.03276 0 0 4.03276 0 9C0 13.9672 4.03276 18 9 18ZM12.9727 7.34766L8.47266 11.8477C8.14219 12.1781 7.60781 12.1781 7.28086 11.8477L5.03086 9.59766C4.70039 9.26719 4.70039 8.73281 5.03086 8.40586C5.36133 8.07539 5.89570 8.07539 6.22266 8.40586L7.875 10.0582L11.7773 6.15234C12.1078 5.82188 12.6422 5.82188 12.9691 6.15234C13.2996 6.48281 13.2996 7.01719 12.9691 7.34414L12.9727 7.34766Z" fill="#51B1FF"/></svg>
                     <p className="font-caption font-[number:var(--caption-font-weight)] text-white text-[length:var(--caption-font-size)] tracking-[var(--caption-letter-spacing)] leading-[var(--caption-line-height)] [font-style:var(--caption-font-style)]">
                       {feature}
                     </p>
