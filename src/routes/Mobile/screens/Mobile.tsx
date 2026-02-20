@@ -21,7 +21,7 @@ export const Mobile = (): JSX.Element => {
         <img
           className="w-full h-auto"
           alt="Hero"
-          src="https://c.animaapp.com/mlmpqe9tsgQxxy/img/hero.png"
+          src="/img/hero.png"
         />
       </section>
 

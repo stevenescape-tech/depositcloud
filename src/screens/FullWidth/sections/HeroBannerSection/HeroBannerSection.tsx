@@ -5,7 +5,7 @@ export const HeroBannerSection = (): JSX.Element => {
     <section 
       role="region" 
       aria-label="Hero banner" 
-      className="relative flex flex-col min-h-screen items-center justify-center gap-20 py-32 px-4 w-screen overflow-hidden bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat"
+      className="relative flex flex-col min-h-screen items-center justify-center gap-20 py-32 px-4 w-screen overflow-hidden bg-[url(/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat"
     >
       <div className="absolute inset-0 bg-black/70 z-0" />
 

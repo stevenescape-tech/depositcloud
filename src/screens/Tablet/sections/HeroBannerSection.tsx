@@ -3,7 +3,7 @@ import { Button } from "../../../components/ui/button";
 export const HeroBannerSection = (): JSX.Element => {
   return (
     <section 
-      className="relative flex flex-col items-center justify-center gap-20 min-h-screen px-6 w-full overflow-hidden bg-[url(https://c.animaapp.com/mlmpqe9tsgQxxy/img/hero.png)] bg-cover bg-center bg-fixed bg-no-repeat"
+      className="relative flex flex-col items-center justify-center gap-20 min-h-screen px-6 w-full overflow-hidden bg-[url(/img/hero.png)] bg-cover bg-center bg-no-repeat"
       aria-label="Hero banner"
     >
       <div className="absolute inset-0 bg-black/70 z-0" />
