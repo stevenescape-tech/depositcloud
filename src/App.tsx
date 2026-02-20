@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { Navigation } from "./components/Navigation";
+import { Footer } from "./components/Footer";
 import { HeroSection } from "./sections/HeroSection";
 import { ProblemStatementSection } from "./sections/ProblemStatementSection";
 import { UnifiedPlatformSection } from "./components/sections/UnifiedPlatformSection";
@@ -40,6 +41,7 @@ function HomePage() {
         <DepositBenefitsSection />
         <ContactFormSection />
       </main>
+      <Footer />
     </div>
   );
 }
