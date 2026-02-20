@@ -1,7 +1,6 @@
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Separator } from "../components/ui/separator";
-import { Footer } from "../components/Footer";
 import { useState, useEffect } from "react";
 
 const formFields = [
@@ -174,7 +173,6 @@ export const ContactFormSection = (): JSX.Element => {
         </p>
       </div>
 
-      <Footer />
     </section>
   );
 };
