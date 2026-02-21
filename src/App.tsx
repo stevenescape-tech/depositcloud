@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import { Navigation } from "./components/Navigation";
-import { Footer } from "./components/Footer";
+import { PageLayout } from "./components/PageLayout";
 import { HeroSection } from "./sections/HeroSection";
 import { ProblemStatementSection } from "./sections/ProblemStatementSection";
 import { UnifiedPlatformSection } from "./components/sections/UnifiedPlatformSection";
@@ -30,8 +29,7 @@ function HomePage() {
   }, [location]);
 
   return (
-    <div className="flex flex-col w-full items-center relative bg-white overflow-x-hidden">
-      <Navigation variant="home" />
+    <PageLayout variant="home">
       <main id="main-content" role="main">
         <HeroSection />
         <ProblemStatementSection />
@@ -41,19 +39,13 @@ function HomePage() {
         <DepositBenefitsSection />
         <ContactFormSection />
       </main>
-      <div className="w-full bg-[#161616]">
-        <Footer />
-      </div>
-    </div>
+    </PageLayout>
   );
 }
 
 function App() {
   return (
     <Router>
-      <a href="#main-content" className="skip-to-main">
-        Skip to main content
-      </a>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />

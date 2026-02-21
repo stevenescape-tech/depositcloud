@@ -30,7 +30,7 @@ export const ProblemStatementSection = (): JSX.Element => {
   const cardRefs = [card1Ref, card2Ref, card3Ref];
 
   return (
-    <section role="region" aria-labelledby="problem-heading" className="relative w-full bg-[#161616] overflow-hidden">
+    <section role="region" aria-labelledby="problem-heading" className="relative w-full bg-brand-dark overflow-hidden">
       <div className="flex flex-col w-full xl:max-w-[1112px] mx-auto items-center justify-center gap-[63px] px-6 py-[44px] md:px-[30px] md:py-[88px] xl:px-4 xl:py-[85px]">
         <div className="flex flex-col items-center gap-[13px] w-full opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:200ms]">
           <h2 id="problem-heading" className="w-full font-h2 font-[number:var(--h2-font-weight)] text-[28px] tracking-[-1.68px] md:text-[length:var(--h2-font-size)] md:tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] text-white text-center [font-style:var(--h2-font-style)]">
@@ -58,7 +58,7 @@ export const ProblemStatementSection = (): JSX.Element => {
               }
             >
               <CardContent className="flex flex-col items-start gap-6 p-6 md:p-[33px] xl:p-12 h-full">
-                <card.icon className="w-8 h-8 text-[#51b0ff]" strokeWidth={1.5} />
+                <card.icon className="w-8 h-8 text-brand-blue" strokeWidth={1.5} />
 
                 <h3 className="font-h3 font-[number:var(--h3-font-weight)] text-white text-[length:var(--h3-font-size)] tracking-[var(--h3-letter-spacing)] leading-[var(--h3-line-height)] whitespace-nowrap [font-style:var(--h3-font-style)]">
                   {card.title}
@@ -73,7 +73,7 @@ export const ProblemStatementSection = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="absolute top-0 left-0 w-full h-[0.5px] bg-[#51b0ff]" />
+      <div className="absolute top-0 left-0 w-full h-[0.5px] bg-brand-blue" />
     </section>
   );
 };

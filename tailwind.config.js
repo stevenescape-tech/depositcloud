@@ -29,6 +29,10 @@ module.exports = {
         "header-card": "var(--header-card)",
       },
       colors: {
+        brand: {
+          blue: "#51b0ff",
+          dark: "#161616",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

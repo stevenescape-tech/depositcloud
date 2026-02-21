@@ -29,7 +29,7 @@ export const ImplementationSection = (): JSX.Element => {
             </div>
 
             <div className="relative w-full max-w-[450px] opacity-0 animate-fade-in [--animation-delay:800ms] my-6">
-              <Separator className="w-full bg-[#51b0ff] h-[0.5px]" />
+              <Separator className="w-full bg-brand-blue h-[0.5px]" />
             </div>
 
             <div className="flex items-center justify-center w-full max-w-[948px] opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:1000ms]">

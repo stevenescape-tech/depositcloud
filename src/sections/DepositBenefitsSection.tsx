@@ -47,7 +47,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
           </div>
         </header>
 
-        <div className="w-full h-[0.5px] bg-[#51b0ff] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]" />
+        <div className="w-full h-[0.5px] bg-brand-blue translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[21px] w-full">
           <FeatureCard

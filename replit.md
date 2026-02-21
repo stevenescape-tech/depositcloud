@@ -14,24 +14,25 @@ DepositCloud is a modern deposit management platform marketing website built wit
 ## Project Structure
 - `src/` - Source code
   - `sections/` - Unified responsive page sections (Hero, ProblemStatement, ValueDelivery, Implementation, DepositBenefits, ContactForm)
-  - `components/` - Reusable UI components (Navigation, Footer, sections/UnifiedPlatformSection, ui)
-  - `routes/` - Legal page route components (TermsOfService, PrivacyPolicy, LegalNotices)
-  - `lib/` - Utility functions and hooks (useScrollAnimation, utils)
+  - `components/` - Reusable UI components (PageLayout, Navigation, Footer, sections/UnifiedPlatformSection, ui)
+  - `routes/` - Legal page route components (TermsOfService, PrivacyPolicy, LegalNotices) - each contains only a screen component
+  - `lib/` - Utility functions, hooks, and constants (useScrollAnimation, utils, constants)
 - `static/` - Static assets served via Vite publicDir (images in /img/)
 - `index.html` - Entry HTML file
 
 ## Architecture
 - Single responsive codebase using Tailwind CSS breakpoints (mobile-first: base, md: 768px+, xl: 1280px+)
+- Shared `PageLayout` component wraps all pages with consistent Navigation + Footer + dark footer background
 - App.tsx renders a single HomePage component with all sections
 - No JavaScript screen-size detection - pure CSS responsive design
 - Shared FeatureCard component used across ValueDelivery and DepositBenefits sections
-- Footer component shared across all pages
 
 ## Design Decisions
+- Brand colors centralized in Tailwind config: `brand-blue` (#51b0ff), `brand-dark` (#161616)
 - Header: bg-black/70 backdrop-blur-md for frosted glass effect
 - Body font size: 14px (CSS variable --body-font-size)
-- Feature cards use blue circle check icons (#51B1FF)
-- Contact form submits to Formspree (https://formspree.io/f/xaqnzljo)
+- Feature cards use blue circle check icons (brand-blue)
+- Constants centralized in `src/lib/constants.ts` (Formspree endpoint, Login URL)
 - All external images localized to /img/ directory
 
 ## Development
@@ -45,6 +46,7 @@ DepositCloud is a modern deposit management platform marketing website built wit
 - Public directory: `dist`
 
 ## Recent Changes
+- 2026-02-20: Code cleanup - centralized brand colors in Tailwind config, created shared PageLayout component, removed duplicate ui/lib files from legal routes, centralized constants (Formspree URL, Login URL)
 - 2026-02-20: Consolidated three separate breakpoint codebases (FullWidth, Tablet, Mobile44) into single responsive implementation
 - Removed all duplicate screen/route code - single set of sections in src/sections/
 - Eliminated JavaScript screen-size detection in favor of Tailwind responsive classes

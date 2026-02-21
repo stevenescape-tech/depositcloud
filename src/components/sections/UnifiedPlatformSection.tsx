@@ -51,7 +51,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                 <div className="flex flex-col gap-3 md:gap-4">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center gap-3">
-                      <div className="flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-[#51b0ff] flex-shrink-0">
+                      <div className="flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-brand-blue flex-shrink-0">
                         <Check className="w-3 h-3 md:w-3.5 md:h-3.5 text-white" strokeWidth={3} />
                       </div>
                       <p className="font-caption font-[number:var(--caption-font-weight)] text-[#2b2b2b] text-sm md:text-[11px] xl:text-base tracking-[-0.31px] leading-6">
@@ -61,7 +61,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                   ))}
                 </div>
 
-                <Separator className="bg-[#51b0ff] h-[0.5px] w-full" />
+                <Separator className="bg-brand-blue h-[0.5px] w-full" />
               </div>
             </div>
 

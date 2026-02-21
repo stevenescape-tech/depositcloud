@@ -40,7 +40,7 @@ export const ValueDeliverySection = (): JSX.Element => {
           security deposit alternatives.
         </p>
 
-        <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] w-full h-[0.5px] bg-[#51b0ff] my-6" />
+        <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] w-full h-[0.5px] bg-brand-blue my-6" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[21px] w-full">
           <FeatureCard

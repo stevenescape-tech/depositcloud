@@ -31,7 +31,7 @@ export const HeroSection = (): JSX.Element => {
             }
           }}
           aria-label="Book a demo - scroll to contact form"
-          className="h-auto w-auto px-6 py-4 bg-transparent rounded-[5px] border border-solid border-[#51b0ff] backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] hover:bg-[#51b0ff]/10 transition-colors opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:800ms] cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+          className="h-auto w-auto px-6 py-4 bg-transparent rounded-[5px] border border-solid border-brand-blue backdrop-blur-[2.0px] backdrop-brightness-[110%] [-webkit-backdrop-filter:blur(2.0px)_brightness(110%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.40),inset_1px_0_0_rgba(255,255,255,0.32),inset_0_-1px_1px_rgba(0,0,0,0.13),inset_-1px_0_1px_rgba(0,0,0,0.11)] hover:bg-brand-blue/10 transition-colors opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:800ms] cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
         >
           <span className="font-body font-[number:var(--body-font-weight)] text-white text-base text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] whitespace-nowrap [font-style:var(--body-font-style)]">
             Book a demo

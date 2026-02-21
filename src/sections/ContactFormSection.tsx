@@ -2,6 +2,7 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Separator } from "../components/ui/separator";
 import { useState, useEffect } from "react";
+import { FORMSPREE_ENDPOINT } from "../lib/constants";
 
 const formFields = [
   { id: "fullName", placeholder: "Full Name", type: "text", required: true },
@@ -55,7 +56,7 @@ export const ContactFormSection = (): JSX.Element => {
     setShowError(false);
 
     try {
-      const response = await fetch('https://formspree.io/f/xaqnzljo', {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,8 +91,8 @@ export const ContactFormSection = (): JSX.Element => {
   };
 
   return (
-    <section id="contact" role="region" aria-labelledby="contact-heading" className="relative w-full bg-[#161616] overflow-hidden">
-      <Separator className="bg-[#51b0ff] h-[0.5px]" />
+    <section id="contact" role="region" aria-labelledby="contact-heading" className="relative w-full bg-brand-dark overflow-hidden">
+      <Separator className="bg-brand-blue h-[0.5px]" />
 
       <div className="flex flex-col items-center justify-center xl:max-w-[1112px] mx-auto px-6 pt-[30px] md:px-[30px] md:pt-14 xl:px-4 xl:pt-[85px] pb-0 md:pb-14 xl:pb-0">
         <header className="flex flex-col items-center gap-8 mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
@@ -122,10 +123,10 @@ export const ContactFormSection = (): JSX.Element => {
                 aria-required={field.required}
                 aria-invalid={touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()}
                 aria-describedby={touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim() ? `${field.id}-error` : undefined}
-                className={`h-12 md:h-16 bg-white text-[#595959] font-body font-[number:var(--body-font-weight)] text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] px-7 disabled:opacity-50 focus:outline-2 focus:outline-offset-2 focus:outline-[#51b0ff] ${
+                className={`h-12 md:h-16 bg-white text-[#595959] font-body font-[number:var(--body-font-weight)] text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] px-7 disabled:opacity-50 focus:outline-2 focus:outline-offset-2 focus:outline-brand-blue ${
                   touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim()
                     ? 'border-red-500'
-                    : 'border-[#51b0ff]'
+                    : 'border-brand-blue'
                 }`}
               />
               {touchedFields[field.id] && !formData[field.id as keyof typeof formData].trim() && (
@@ -149,7 +150,7 @@ export const ContactFormSection = (): JSX.Element => {
             className={`w-auto min-w-[239px] h-auto mt-8 px-[23px] py-4 rounded-[5px] border bg-transparent transition-colors font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] disabled:opacity-100 focus:outline-2 focus:outline-offset-2 focus:outline-white ${
               submitStatus === "success"
                 ? 'border-green-500 hover:bg-green-500/10'
-                : 'border-[#51b0ff] hover:bg-[#51b0ff]/10'
+                : 'border-brand-blue hover:bg-brand-blue/10'
             }`}
           >
             {submitStatus === "success" ? "success! thank you" : isSubmitting ? "Sending..." : "Submit demo request"}
@@ -166,7 +167,7 @@ export const ContactFormSection = (): JSX.Element => {
           You can also email us at{" "}
           <a
             href="mailto:sales@depositcloud.com"
-            className="text-[#51b0ff] underline font-body [font-style:var(--body-font-style)] font-[number:var(--body-font-weight)] tracking-[var(--body-letter-spacing)] text-[length:var(--body-font-size)] leading-[var(--body-line-height)] hover:text-[#51b0ff]/80 transition-colors"
+            className="text-brand-blue underline font-body [font-style:var(--body-font-style)] font-[number:var(--body-font-weight)] tracking-[var(--body-letter-spacing)] text-[length:var(--body-font-size)] leading-[var(--body-line-height)] hover:text-brand-blue/80 transition-colors"
           >
             sales@depositcloud.com
           </a>
