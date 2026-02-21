@@ -50,7 +50,7 @@ export const ProblemStatementSection = (): JSX.Element => {
               key={index}
               ref={cardRefs[index]}
               data-animate="true"
-              className="bg-transparent border border-white h-full rounded-none"
+              className="bg-transparent border-[0.5px] border-white h-full rounded-none"
               style={
                 {
                   animationDelay: `${index * 150}ms`,
