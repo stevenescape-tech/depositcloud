@@ -8,7 +8,7 @@ interface PageLayoutProps {
 
 export const PageLayout = ({ variant, children }: PageLayoutProps): JSX.Element => {
   return (
-    <div className="flex flex-col min-h-screen w-full items-center relative bg-white overflow-x-hidden">
+    <div className="flex flex-col min-h-screen w-full items-stretch relative bg-white overflow-x-hidden">
       <a href="#main-content" className="skip-to-main">
         Skip to main content
       </a>
