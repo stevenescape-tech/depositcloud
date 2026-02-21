@@ -54,7 +54,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
                       <div className="flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-brand-blue flex-shrink-0">
                         <Check className="w-3 h-3 md:w-3.5 md:h-3.5 text-white" strokeWidth={3} />
                       </div>
-                      <p className="font-caption font-[number:var(--caption-font-weight)] text-[#2b2b2b] text-sm md:text-[11px] xl:text-base tracking-[-0.31px] leading-6">
+                      <p className="font-caption font-[number:var(--caption-font-weight)] text-[#2b2b2b] text-xs md:text-[13px] xl:text-sm tracking-[-0.31px] leading-6">
                         {benefit}
                       </p>
                     </div>
