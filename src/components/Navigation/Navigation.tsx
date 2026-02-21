@@ -89,7 +89,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
   return (
     <>
-      <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-black/70 backdrop-blur-md py-4 border-b-[0.5px] border-b-brand-blue">
+      <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-black/50 py-4 border-b-[0.5px] border-b-brand-blue/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_32px_rgba(0,0,0,0.3)] [-webkit-backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)] [backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)]">
         {/* Desktop Navigation (1280px+) */}
         <nav role="navigation" aria-label="Main navigation" className="hidden xl:flex w-full max-w-[1112px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
           <button
