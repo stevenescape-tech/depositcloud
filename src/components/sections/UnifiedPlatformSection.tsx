@@ -26,7 +26,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
   return (
     <section id="platform" className="relative w-full overflow-hidden py-10 md:py-[60px] xl:py-[85px]">
       {/* Background Image & Overlay */}
-      <div className="absolute inset-0 bg-[url(/img/platform.png)] bg-cover bg-center bg-no-repeat bg-fixed opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/platform.png)] bg-cover bg-center bg-no-repeat opacity-15" />
       <div className="absolute inset-0 bg-white/40" />
       
       <div className="relative z-10 container mx-auto px-6 md:px-[37px] xl:px-4 max-w-[1112px]">
