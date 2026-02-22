@@ -6,7 +6,7 @@
   "description": "DepositCloud - Modern deposit management platform",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && bash scripts/spa-fallback.sh",
     "preview": "vite preview"
   },
   "dependencies": {
