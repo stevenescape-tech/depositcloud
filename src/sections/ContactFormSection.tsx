@@ -1,4 +1,4 @@
-import { Button } from "../components/ui/button";
+import { MainButton } from "../components/ui/main-button";
 import { Input } from "../components/ui/input";
 import { Separator } from "../components/ui/separator";
 import { useState, useEffect } from "react";
@@ -143,18 +143,19 @@ export const ContactFormSection = (): JSX.Element => {
             </p>
           )}
 
-          <Button
+          <MainButton
+            variant="outline"
             type="submit"
             disabled={isSubmitting || submitStatus === "success"}
             aria-label={submitStatus === "success" ? "Form submitted successfully" : isSubmitting ? "Submitting form" : "Submit demo request"}
-            className={`w-auto min-w-[239px] h-auto mt-8 px-[23px] py-4 rounded-[5px] border bg-transparent transition-colors font-body font-[number:var(--body-font-weight)] text-white text-[length:var(--body-font-size)] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)] disabled:opacity-100 focus:outline-2 focus:outline-offset-2 focus:outline-white ${
+            className={`min-w-[239px] mt-8 disabled:opacity-100 ${
               submitStatus === "success"
                 ? 'border-green-500 hover:bg-green-500/10'
-                : 'border-brand-blue hover:bg-brand-blue/10'
+                : ''
             }`}
           >
             {submitStatus === "success" ? "success! thank you" : isSubmitting ? "Sending..." : "Submit demo request"}
-          </Button>
+          </MainButton>
 
           {submitStatus === "error" && (
             <p role="alert" className="text-red-400 text-center font-body">

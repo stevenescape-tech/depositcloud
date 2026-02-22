@@ -1,4 +1,4 @@
-import { Button } from "../components/ui/button";
+import { MainButton } from "../components/ui/main-button";
 
 export const HeroSection = (): JSX.Element => {
   return (
@@ -23,7 +23,8 @@ export const HeroSection = (): JSX.Element => {
           </p>
         </div>
 
-        <Button
+        <MainButton
+          variant="glass"
           onClick={() => {
             const element = document.querySelector('#contact');
             if (element) {
@@ -31,12 +32,10 @@ export const HeroSection = (): JSX.Element => {
             }
           }}
           aria-label="Book a demo - scroll to contact form"
-          className="h-auto w-auto px-6 py-4 bg-white/[0.06] rounded-[5px] border-[0.5px] border-solid border-brand-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.15),inset_0_-1px_0_rgba(255,255,255,0.05),0_4px_16px_rgba(0,0,0,0.2)] [-webkit-backdrop-filter:blur(16px)_saturate(180%)_brightness(115%)] [backdrop-filter:blur(16px)_saturate(180%)_brightness(115%)] hover:bg-white/[0.12] hover:border-white/30 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.2),inset_0_-1px_0_rgba(255,255,255,0.08),0_4px_20px_rgba(81,176,255,0.15)] transition-all duration-300 opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:800ms] cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+          className="opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:800ms]"
         >
-          <span className="font-body font-[number:var(--body-font-weight)] text-white text-base text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] whitespace-nowrap [font-style:var(--body-font-style)]">
-            Book a demo
-          </span>
-        </Button>
+          Book a demo
+        </MainButton>
       </div>
     </section>
   );
