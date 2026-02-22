@@ -164,7 +164,7 @@ export const ContactFormSection = (): JSX.Element => {
           )}
         </form>
 
-        <p className="text-center font-body text-[#DFDFDF] text-lg leading-none mb-16 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+        <p className="text-center font-body text-[#DFDFDF] text-lg leading-none mb-8 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
           You can also email us at{" "}
           <a
             href="mailto:sales@depositcloud.com"
