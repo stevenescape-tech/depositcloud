@@ -20,9 +20,8 @@ export const DepositBenefitsSection = (): JSX.Element => {
   const card2Ref = useScrollAnimation();
 
   return (
-    <section role="region" aria-labelledby="benefits-heading" className="relative w-full px-6 py-7 md:px-[30px] md:py-14 xl:px-4 xl:py-[85px]">
-      <div className="absolute inset-0 bg-[url(/img/section---deposit-platform.png)] bg-cover bg-center opacity-[0.68]" />
-      <div className="absolute inset-0 bg-black opacity-75" />
+    <section role="region" aria-labelledby="benefits-heading" className="relative w-full px-6 py-7 md:px-[30px] md:py-14 xl:px-4 xl:py-[85px] bg-[url(/img/section---deposit-platform.png)] bg-cover bg-center bg-scroll md:bg-fixed">
+      <div className="absolute inset-0 bg-black/75" />
       <div className="relative z-10 xl:max-w-[1112px] mx-auto flex flex-col items-center gap-[29px] md:gap-[52px]">
         <header className="flex flex-col max-w-[768px] w-full items-center gap-[26px] translate-y-[-1rem] animate-fade-in opacity-0">
           <div className="flex flex-col items-center gap-[26px] w-full">
