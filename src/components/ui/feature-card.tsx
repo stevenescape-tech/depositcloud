@@ -23,7 +23,7 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
         ref={ref}
         data-animate="true"
         style={animationDelay ? { animationDelay: `${animationDelay}ms` } as React.CSSProperties : undefined}
-        className="relative flex flex-col items-start gap-4 p-7 md:p-12 bg-black/40 border-[0.25px] border-solid border-brand-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.06),inset_0_-1px_0_rgba(255,255,255,0.02),0_8px_32px_rgba(0,0,0,0.35)] [-webkit-backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] overflow-hidden hover:bg-black/50 hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),inset_0_-1px_0_rgba(255,255,255,0.03),0_8px_40px_rgba(0,0,0,0.4)] transition-all duration-300"
+        className="relative flex flex-col items-start gap-4 p-7 md:p-12 bg-black/30 border-[0.25px] border-solid border-brand-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.06),inset_0_-1px_0_rgba(255,255,255,0.02),0_8px_32px_rgba(0,0,0,0.35)] [-webkit-backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] overflow-hidden"
       >
         <CardContent className="flex flex-col items-start gap-4 p-0 w-full">
           <p className="font-caption-small font-[number:var(--caption-small-font-weight)] text-[#DFDFDF] text-[length:var(--caption-small-font-size)] tracking-[var(--caption-small-letter-spacing)] leading-[var(--caption-small-line-height)] [font-style:var(--caption-small-font-style)]">
