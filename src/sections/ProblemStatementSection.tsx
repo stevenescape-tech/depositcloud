@@ -17,7 +17,7 @@ const problemCards = [
   },
   {
     icon: AlertTriangle,
-    title: "High upfront costs",
+    title: "High Upfront Costs",
     description:
       "A shifting compliance landscape increases legal risk when deposit rules aren't met at move-in or move-out.",
   },
