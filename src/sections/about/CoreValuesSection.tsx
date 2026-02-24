@@ -57,7 +57,7 @@ export const CoreValuesSection = (): JSX.Element => {
       <div className="absolute inset-0 bg-[url(/img/about-corevalues-bg.jpg)] bg-cover bg-center bg-scroll md:bg-fixed" />
       <div className="absolute inset-0 bg-[rgba(22,22,22,0.7)]" />
 
-      <div className="relative z-10 flex flex-col items-center gap-[65px] pt-[186px] pb-5 px-6 xl:px-[78px]">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-[65px] min-h-[1050px] py-10 px-6 xl:px-[78px]">
         <h2 className="font-h2 font-bold text-white text-[28px] md:text-[42px] text-center tracking-[-2.52px]">
           Our core values
         </h2>
