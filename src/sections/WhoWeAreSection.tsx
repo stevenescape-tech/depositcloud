@@ -66,6 +66,13 @@ export const WhoWeAreSection = (): JSX.Element => {
         </p>
 
         <Carousel items={carouselItems} />
+
+        <a
+          href="/about"
+          className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2c2c2c] text-base tracking-[-0.31px] leading-6 border border-brand-blue px-8 py-3 hover:bg-brand-blue/10 transition-colors"
+        >
+          Learn more about us
+        </a>
       </div>
     </section>
   );
