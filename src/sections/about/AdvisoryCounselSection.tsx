@@ -48,9 +48,9 @@ const advisors: Advisor[] = [
 
 const AdvisorCard = ({ advisor }: { advisor: Advisor }): JSX.Element => (
   <div
-    className="shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border-[0.5px] border-brand-blue bg-black/20 [-webkit-backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)] [backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)]"
+    className="shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] bg-black/20 [-webkit-backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)] [backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)]"
     style={{
-      boxShadow: "-20px 20px 26.5px 0px rgba(0,0,0,0.05)",
+      boxShadow: "inset 0 0 0 0.5px #51b0ff, -20px 20px 26.5px 0px rgba(0,0,0,0.05)",
     }}
   >
     <img
