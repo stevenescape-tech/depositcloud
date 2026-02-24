@@ -246,15 +246,44 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         className={`md:hidden fixed inset-0 bg-black transition-all duration-300 ${
           isMenuOpen ? 'opacity-95 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
-        style={{ zIndex: 10000 }}
+        style={{ zIndex: 10003 }}
         onClick={toggleMenu}
       >
+        {/* Repeat mobile header bar inside overlay so it stays visible */}
+        <div className="flex w-full px-4 py-4">
+          <div className="flex w-full items-center justify-between">
+            <button
+              onClick={(e) => { e.stopPropagation(); setIsMenuOpen(false); handleLogoClick(); }}
+              className="cursor-pointer bg-transparent border-0 p-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
+              aria-label={variant === 'legal' ? 'Return to homepage' : 'Return to top of page'}
+            >
+              <img
+                className="w-[150px] h-auto"
+                alt="DepositCloud"
+                src="/img/depositcloud-logo.svg"
+              />
+            </button>
+
+            <button
+              onClick={toggleMenu}
+              className="relative w-10 h-10 flex items-center justify-center text-white hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white"
+              aria-label="Close menu"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
         <nav
           role="navigation"
           aria-label="Mobile menu"
-          className={`flex flex-col items-center justify-center h-full gap-8 transition-all duration-300 delay-100 ${
+          className={`flex flex-col items-center justify-center flex-1 gap-8 transition-all duration-300 delay-100 ${
             isMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
           }`}
+          style={{ height: 'calc(100% - 72px)' }}
           onClick={(e) => e.stopPropagation()}
         >
           {navLinks.map((item, index) => (
