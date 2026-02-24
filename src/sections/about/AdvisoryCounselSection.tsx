@@ -73,7 +73,7 @@ export const AdvisoryCounselSection = (): JSX.Element => {
             Our advisory counsel
           </h2>
 
-          <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center leading-7 max-w-[752px]">
+          <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm text-center leading-7 max-w-[752px]">
             Experienced industry leaders providing strategic guidance and independent perspective.
           </p>
         </div>

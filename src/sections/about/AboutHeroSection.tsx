@@ -15,7 +15,7 @@ export const AboutHeroSection = (): JSX.Element => {
           <h1 className="font-h2 font-bold text-white text-[28px] md:text-[42px] text-center tracking-[-2.52px]">
             About us
           </h1>
-          <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center leading-7 max-w-[822px]">
+          <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm text-center leading-7 max-w-[822px]">
             Leading the future of security deposit management with transparency, innovation, and unwavering commitment to our clients and their residents.
           </p>
         </div>
