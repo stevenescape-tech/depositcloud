@@ -236,7 +236,7 @@ export const Carousel = ({
       <div className="flex items-center justify-between w-[193px]">
         <button
           onClick={() => navigate(-1)}
-          className={`w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all cursor-pointer ${
+          className={`w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all cursor-pointer active:scale-90 active:shadow-none ${
             variant === "dark"
               ? "bg-[#2c2c2c] border border-[#444] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.5)]"
               : "bg-white border border-[#f2f2f2] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]"
@@ -248,7 +248,7 @@ export const Carousel = ({
 
         <button
           onClick={() => navigate(1)}
-          className={`w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all cursor-pointer ${
+          className={`w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all cursor-pointer active:scale-90 active:shadow-none ${
             variant === "dark"
               ? "bg-[#2c2c2c] border border-[#444] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.5)]"
               : "bg-white border border-[#f2f2f2] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]"
