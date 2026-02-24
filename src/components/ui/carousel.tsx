@@ -31,7 +31,9 @@ export const Carousel = ({
   const [cardWidth, setCardWidth] = useState(cardWidthDesktop);
   const [visibleCount, setVisibleCount] = useState(visibleCountDesktop);
   const [containerWidth, setContainerWidth] = useState(1280);
+  const [containerHeight, setContainerHeight] = useState(cardWidthDesktop + containerHeightOffset);
   const containerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isTransitioning = useRef(false);
   const count = items.length;
 
@@ -59,6 +61,20 @@ export const Carousel = ({
     window.addEventListener("resize", updateDimensions);
     return () => window.removeEventListener("resize", updateDimensions);
   }, [updateDimensions]);
+
+  useEffect(() => {
+    const measure = () => {
+      const heights = cardRefs.current
+        .filter((el): el is HTMLDivElement => el !== null)
+        .map((el) => el.offsetHeight);
+      if (heights.length > 0) {
+        setContainerHeight(Math.max(...heights));
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [cardWidth, items]);
 
   const getRelativePos = useCallback((index: number, fromIndex: number) => {
     let rel = index - fromIndex;
@@ -168,13 +184,14 @@ export const Carousel = ({
 
   return (
     <div className="flex flex-col items-center gap-[52px] w-full">
-      <div ref={containerRef} className="w-full relative" style={{ height: cardWidth + containerHeightOffset }}>
+      <div ref={containerRef} className="w-full relative" style={{ height: containerHeight }}>
         {items.map((item, index) => {
           const style = cardStyles[index] || { left: 0, opacity: 0, transition: "none" };
 
           return (
             <div
               key={index}
+              ref={(el) => { cardRefs.current[index] = el; }}
               className="absolute top-0"
               style={{
                 width: `${cardWidth}px`,
