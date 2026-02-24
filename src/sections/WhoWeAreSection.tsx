@@ -85,8 +85,17 @@ export const WhoWeAreSection = (): JSX.Element => {
         <div ref={containerRef} className="w-full relative" style={{ height: cardWidth + 150 }}>
           {executives.map((exec, index) => {
             const left = getCardOffset(index);
-            const isActive =
-              ((index - currentIndex + count) % count) < visibleCount;
+            let relativePos = index - currentIndex;
+            if (relativePos > count / 2) relativePos -= count;
+            if (relativePos < -count / 2) relativePos += count;
+
+            const isActive = relativePos >= 0 && relativePos < visibleCount;
+            const isAdjacent =
+              relativePos === -1 || relativePos === visibleCount;
+
+            let cardOpacity = 0;
+            if (isActive) cardOpacity = 1;
+            else if (isAdjacent) cardOpacity = 0.3;
 
             return (
               <div
@@ -95,7 +104,7 @@ export const WhoWeAreSection = (): JSX.Element => {
                 style={{
                   width: `${cardWidth}px`,
                   left: `${left}px`,
-                  opacity: isActive ? 1 : 0.3,
+                  opacity: cardOpacity,
                   boxShadow: "-20px 20px 26.5px 0px rgba(0,0,0,0.05)",
                 }}
               >
