@@ -20,7 +20,7 @@ export const WhoWeAreSection = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(551.5);
   const [visibleCount, setVisibleCount] = useState(2);
-  const [containerWidth, setContainerWidth] = useState(1124);
+  const [containerWidth, setContainerWidth] = useState(1280);
   const containerRef = useRef<HTMLDivElement>(null);
   const gap = 21;
   const count = executives.length;
@@ -58,26 +58,15 @@ export const WhoWeAreSection = (): JSX.Element => {
     setCurrentIndex((prev) => (prev + 1) % count);
   };
 
-  const getVisibleIndices = () => {
-    const indices: number[] = [];
-    for (let i = 0; i < visibleCount; i++) {
-      indices.push((currentIndex + i) % count);
-    }
-    return indices;
-  };
-
-  const visibleIndices = getVisibleIndices();
-
-  const renderOrder: number[] = [];
-  const totalToShow = Math.min(count, visibleCount + 4);
-  const startOffset = Math.floor((totalToShow - visibleCount) / 2);
-  for (let i = -startOffset; i < totalToShow - startOffset; i++) {
-    renderOrder.push(((currentIndex + i) % count + count) % count);
-  }
-
   const activeGroupWidth = visibleCount * cardWidth + (visibleCount - 1) * gap;
-  const centerOffset = (containerWidth - activeGroupWidth) / 2;
-  const trackOffset = centerOffset - startOffset * (cardWidth + gap);
+  const centerStart = (containerWidth - activeGroupWidth) / 2;
+
+  const getCardOffset = (index: number) => {
+    let relativePos = index - currentIndex;
+    if (relativePos > count / 2) relativePos -= count;
+    if (relativePos < -count / 2) relativePos += count;
+    return centerStart + relativePos * (cardWidth + gap);
+  };
 
   return (
     <section id="about" className="relative w-full overflow-hidden scroll-mt-[72px]">
@@ -93,45 +82,39 @@ export const WhoWeAreSection = (): JSX.Element => {
           The team behind DepositCloud
         </p>
 
-        <div ref={containerRef} className="w-full overflow-visible">
-          <div
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(${trackOffset}px)`,
-              gap: `${gap}px`,
-            }}
-          >
-            {renderOrder.map((execIndex, i) => {
-              const isActive = visibleIndices.includes(execIndex);
-              const exec = executives[execIndex];
+        <div ref={containerRef} className="w-full relative" style={{ height: cardWidth + 150 }}>
+          {executives.map((exec, index) => {
+            const left = getCardOffset(index);
+            const isActive =
+              ((index - currentIndex + count) % count) < visibleCount;
 
-              return (
+            return (
+              <div
+                key={index}
+                className="absolute top-0 shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border border-brand-blue bg-white/0 transition-all duration-500 ease-in-out"
+                style={{
+                  width: `${cardWidth}px`,
+                  left: `${left}px`,
+                  opacity: isActive ? 1 : 0.3,
+                  boxShadow: "-20px 20px 26.5px 0px rgba(0,0,0,0.05)",
+                }}
+              >
                 <div
-                  key={`${currentIndex}-${i}`}
-                  className="shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border border-brand-blue bg-transparent transition-opacity duration-500"
-                  style={{
-                    width: `${cardWidth}px`,
-                    opacity: isActive ? 1 : 0.3,
-                    boxShadow: "-20px 20px 26.5px 0px rgba(0,0,0,0.05)",
-                  }}
-                >
-                  <div
-                    className="w-full bg-[#d9d9d9]"
-                    style={{ aspectRatio: "1 / 1" }}
-                  />
+                  className="w-full bg-[#d9d9d9]"
+                  style={{ aspectRatio: "1 / 1" }}
+                />
 
-                  <div className="flex flex-col gap-[9px]">
-                    <h3 className="font-bold text-[#2c2c2c] text-xl md:text-[24px] tracking-[-1.44px] leading-normal">
-                      {exec.name}
-                    </h3>
-                    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#5a5a5a] text-sm tracking-[-0.31px] leading-6">
-                      {exec.title}
-                    </p>
-                  </div>
+                <div className="flex flex-col gap-[9px]">
+                  <h3 className="font-bold text-[#2c2c2c] text-xl md:text-[24px] tracking-[-1.44px] leading-normal">
+                    {exec.name}
+                  </h3>
+                  <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#5a5a5a] text-sm tracking-[-0.31px] leading-6">
+                    {exec.title}
+                  </p>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
 
         <div className="flex items-center justify-between w-[193px]">
