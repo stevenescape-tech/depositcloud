@@ -45,7 +45,7 @@ const CoreValueCard = ({ value }: { value: CoreValue }): JSX.Element => (
         {value.subtitle}
       </p>
     </div>
-    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base tracking-[-0.31px] leading-6">
+    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm tracking-[-0.31px] leading-6">
       {value.description}
     </p>
   </div>
