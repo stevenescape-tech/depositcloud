@@ -83,7 +83,7 @@ export const MeetExecutiveTeamSection = (): JSX.Element => {
       <div className="absolute inset-0 bg-white" />
       <div className="absolute inset-0 bg-[url(/img/whoweare-bg.png)] bg-cover bg-center bg-no-repeat opacity-15" />
 
-      <div className="relative z-10 flex flex-col items-center gap-[52px] pt-[85px] pb-[52px] px-0">
+      <div className="relative z-10 flex flex-col items-center gap-[52px] pt-[85px] pb-[85px] px-0">
         <div className="flex flex-col items-center gap-[13px]">
           <h2 className="font-h2 font-bold text-[#2c2c2c] text-[28px] md:text-[42px] text-center tracking-[-2.52px]">
             Meet our executive team
