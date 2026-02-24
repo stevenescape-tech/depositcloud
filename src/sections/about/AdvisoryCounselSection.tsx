@@ -68,7 +68,7 @@ export const AdvisoryCounselSection = (): JSX.Element => {
       <div className="absolute inset-0 bg-black/75" />
 
       <div className="relative z-10 flex flex-col items-center pt-[85px] pb-[65px] px-0">
-        <div className="flex flex-col items-center gap-[52px] w-full max-w-[1160px]">
+        <div className="flex flex-col items-center gap-[13px] w-full max-w-[1160px]">
           <h2 className="font-h2 font-bold text-white text-[28px] md:text-[42px] text-center tracking-[-2.52px]">
             Our advisory counsel
           </h2>
