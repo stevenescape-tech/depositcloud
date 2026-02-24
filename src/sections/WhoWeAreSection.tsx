@@ -100,7 +100,7 @@ export const WhoWeAreSection = (): JSX.Element => {
             return (
               <div
                 key={index}
-                className="absolute top-0 shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border-[0.25px] border-brand-blue bg-white/40 [-webkit-backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] transition-all duration-500 ease-in-out"
+                className="absolute top-0 shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border-[0.25px] border-brand-blue bg-white/35 [-webkit-backdrop-filter:blur(10px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(10px)_saturate(180%)_brightness(105%)] transition-all duration-500 ease-in-out"
                 style={{
                   width: `${cardWidth}px`,
                   left: `${left}px`,
