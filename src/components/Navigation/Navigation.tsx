@@ -24,7 +24,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogoClick = () => {
-    if (variant === 'legal') {
+    if (variant === 'legal' || window.location.pathname !== '/') {
       window.location.href = '/';
     } else {
       const startPosition = window.pageYOffset;
