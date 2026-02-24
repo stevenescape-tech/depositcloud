@@ -91,7 +91,7 @@ export const ContactFormSection = (): JSX.Element => {
   };
 
   return (
-    <section id="contact" role="region" aria-labelledby="contact-heading" className="relative w-full bg-brand-dark overflow-hidden">
+    <section id="contact" role="region" aria-labelledby="contact-heading" className="relative w-full bg-brand-dark overflow-hidden scroll-mt-[72px]">
       <Separator className="bg-brand-blue h-[0.5px]" />
 
       <div className="flex flex-col items-center justify-center xl:max-w-[1112px] mx-auto px-6 pt-[30px] md:px-[30px] md:pt-14 xl:px-4 xl:pt-[85px] pb-0 md:pb-14 xl:pb-0">

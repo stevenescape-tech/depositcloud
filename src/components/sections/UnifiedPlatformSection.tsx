@@ -24,7 +24,7 @@ const statistics = [
 
 export const UnifiedPlatformSection = (): JSX.Element => {
   return (
-    <section id="platform" className="relative w-full overflow-hidden py-10 md:py-[60px] xl:py-[85px]">
+    <section id="platform" className="relative w-full overflow-hidden py-10 md:py-[60px] xl:py-[85px] scroll-mt-[72px]">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 bg-[url(/img/platform.png)] bg-cover bg-center bg-no-repeat opacity-15 rotate-180" />
       <div className="absolute inset-0 bg-white/40" />
