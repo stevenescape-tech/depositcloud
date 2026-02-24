@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Executive {
@@ -18,10 +18,12 @@ const executives: Executive[] = [
 
 export const WhoWeAreSection = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [cardWidth, setCardWidth] = useState(554);
+  const [cardWidth, setCardWidth] = useState(551.5);
   const [visibleCount, setVisibleCount] = useState(2);
+  const [containerWidth, setContainerWidth] = useState(1124);
+  const containerRef = useRef<HTMLDivElement>(null);
   const gap = 21;
+  const count = executives.length;
 
   const updateDimensions = useCallback(() => {
     const width = window.innerWidth;
@@ -35,6 +37,11 @@ export const WhoWeAreSection = (): JSX.Element => {
       setVisibleCount(2);
       setCardWidth(551.5);
     }
+    if (containerRef.current) {
+      setContainerWidth(containerRef.current.offsetWidth);
+    } else {
+      setContainerWidth(width);
+    }
   }, []);
 
   useEffect(() => {
@@ -43,24 +50,41 @@ export const WhoWeAreSection = (): JSX.Element => {
     return () => window.removeEventListener("resize", updateDimensions);
   }, [updateDimensions]);
 
-  const maxIndex = Math.max(0, executives.length - visibleCount);
-
   const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - 1));
+    setCurrentIndex((prev) => (prev - 1 + count) % count);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+    setCurrentIndex((prev) => (prev + 1) % count);
   };
 
-  const translateX = -(currentIndex * (cardWidth + gap));
+  const getVisibleIndices = () => {
+    const indices: number[] = [];
+    for (let i = 0; i < visibleCount; i++) {
+      indices.push((currentIndex + i) % count);
+    }
+    return indices;
+  };
+
+  const visibleIndices = getVisibleIndices();
+
+  const renderOrder: number[] = [];
+  const totalToShow = Math.min(count, visibleCount + 4);
+  const startOffset = Math.floor((totalToShow - visibleCount) / 2);
+  for (let i = -startOffset; i < totalToShow - startOffset; i++) {
+    renderOrder.push(((currentIndex + i) % count + count) % count);
+  }
+
+  const activeGroupWidth = visibleCount * cardWidth + (visibleCount - 1) * gap;
+  const centerOffset = (containerWidth - activeGroupWidth) / 2;
+  const trackOffset = centerOffset - startOffset * (cardWidth + gap);
 
   return (
     <section id="about" className="relative w-full overflow-hidden scroll-mt-[72px]">
       <div className="absolute inset-0 bg-white" />
       <div className="absolute inset-0 bg-[url(/img/whoweare-bg.png)] bg-cover bg-center bg-no-repeat opacity-15" />
 
-      <div className="relative z-10 flex flex-col items-center gap-[52px] pt-[85px] pb-[52px] px-6 md:px-[46px] xl:px-0">
+      <div className="relative z-10 flex flex-col items-center gap-[52px] pt-[85px] pb-[52px] px-0">
         <h2 className="font-h2 font-bold text-[#2c2c2c] text-[28px] md:text-[42px] text-center tracking-[-2.52px]">
           Who we are
         </h2>
@@ -69,22 +93,21 @@ export const WhoWeAreSection = (): JSX.Element => {
           The team behind DepositCloud
         </p>
 
-        <div className="w-full xl:max-w-[1124px] mx-auto overflow-visible">
+        <div ref={containerRef} className="w-full overflow-visible">
           <div
-            ref={trackRef}
             className="flex transition-transform duration-500 ease-in-out"
             style={{
-              transform: `translateX(${translateX}px)`,
+              transform: `translateX(${trackOffset}px)`,
               gap: `${gap}px`,
             }}
           >
-            {executives.map((exec, index) => {
-              const isActive =
-                index >= currentIndex && index < currentIndex + visibleCount;
+            {renderOrder.map((execIndex, i) => {
+              const isActive = visibleIndices.includes(execIndex);
+              const exec = executives[execIndex];
 
               return (
                 <div
-                  key={index}
+                  key={`${currentIndex}-${i}`}
                   className="shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border border-brand-blue bg-transparent transition-opacity duration-500"
                   style={{
                     width: `${cardWidth}px`,
@@ -114,8 +137,7 @@ export const WhoWeAreSection = (): JSX.Element => {
         <div className="flex items-center justify-between w-[193px]">
           <button
             onClick={handlePrev}
-            disabled={currentIndex === 0}
-            className="w-[60px] h-[60px] rounded-full bg-white border border-[#f2f2f2] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all disabled:opacity-40 cursor-pointer disabled:cursor-not-allowed"
+            className="w-[60px] h-[60px] rounded-full bg-white border border-[#f2f2f2] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all cursor-pointer"
             aria-label="Previous"
           >
             <ChevronLeft className="w-6 h-6 text-[#2c2c2c]" />
@@ -123,8 +145,7 @@ export const WhoWeAreSection = (): JSX.Element => {
 
           <button
             onClick={handleNext}
-            disabled={currentIndex >= maxIndex}
-            className="w-[60px] h-[60px] rounded-full bg-white border border-[#f2f2f2] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all disabled:opacity-40 cursor-pointer disabled:cursor-not-allowed"
+            className="w-[60px] h-[60px] rounded-full bg-white border border-[#f2f2f2] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all cursor-pointer"
             aria-label="Next"
           >
             <ChevronRight className="w-6 h-6 text-[#2c2c2c]" />
