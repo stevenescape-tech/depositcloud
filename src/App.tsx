@@ -33,8 +33,8 @@ function HomePage() {
       <main id="main-content" role="main">
         <HeroSection />
         <ProblemStatementSection />
-        <UnifiedPlatformSection />
         <ValueDeliverySection />
+        <UnifiedPlatformSection />
         <ImplementationSection />
         <DepositBenefitsSection />
         <ContactFormSection />
