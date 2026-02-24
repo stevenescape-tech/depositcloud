@@ -8,12 +8,11 @@ interface Executive {
 }
 
 const executives: Executive[] = [
-  { name: "Executive Name", title: "Title" },
-  { name: "Executive Name", title: "Title" },
-  { name: "Executive Name", title: "Title" },
-  { name: "Executive Name", title: "Title" },
-  { name: "Executive Name", title: "Title" },
-  { name: "Executive Name", title: "Title" },
+  { name: "Michael Bowman", title: "Founder & CEO", image: "/img/michael-bowman.png" },
+  { name: "Ash Bell", title: "President & COO", image: "/img/ash-bell.png" },
+  { name: "Hannah Crompton", title: "SVP of Finance", image: "/img/hannah-crompton.png" },
+  { name: "Niki Trimble", title: "SVP of Client Success", image: "/img/niki-trimble.png" },
+  { name: "Daria Davis", title: "SVP of Design", image: "/img/daria-davis.png" },
 ];
 
 export const WhoWeAreSection = (): JSX.Element => {
@@ -188,10 +187,19 @@ export const WhoWeAreSection = (): JSX.Element => {
                   transition: style.transition,
                 }}
               >
-                <div
-                  className="w-full bg-[#d9d9d9]"
-                  style={{ aspectRatio: "1 / 1" }}
-                />
+                {exec.image ? (
+                  <img
+                    src={exec.image}
+                    alt={exec.name}
+                    className="w-full object-cover bg-[#d9d9d9]"
+                    style={{ aspectRatio: "1 / 1" }}
+                  />
+                ) : (
+                  <div
+                    className="w-full bg-[#d9d9d9]"
+                    style={{ aspectRatio: "1 / 1" }}
+                  />
+                )}
 
                 <div className="flex flex-col gap-[9px]">
                   <h3 className="font-bold text-[#2c2c2c] text-xl md:text-[24px] tracking-[-1.44px] leading-normal">

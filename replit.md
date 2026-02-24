@@ -56,7 +56,7 @@ DepositCloud is a modern deposit management platform marketing website built wit
 8. ContactFormSection
 
 ## Recent Changes
-- 2026-02-24: Added WhoWeAreSection with executive carousel (desktop: 2 visible, mobile: 1, overflow at 70% opacity)
+- 2026-02-24: Added WhoWeAreSection with executive carousel (desktop: 2 visible, mobile: 1, overflow at 30% opacity) — populated with real team data: Michael Bowman (CEO), Ash Bell (COO), Hannah Crompton (SVP Finance), Niki Trimble (SVP Client Success), Daria Davis (SVP Design)
 - 2026-02-24: Updated Navigation - added "About" link, styled Login button with blue outline + user icon
 - 2026-02-24: Created shared MainButton component (glass/outline variants) for CTA buttons
 - 2026-02-24: Reordered sections, added blue divider between sections 3-4
