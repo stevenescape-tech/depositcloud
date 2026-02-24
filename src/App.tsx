@@ -33,10 +33,10 @@ function HomePage() {
       <main id="main-content" role="main">
         <HeroSection />
         <ProblemStatementSection />
-        <ValueDeliverySection />
         <UnifiedPlatformSection />
         <div className="h-[0.5px] bg-brand-blue w-full" />
         <ImplementationSection />
+        <ValueDeliverySection />
         <DepositBenefitsSection />
         <ContactFormSection />
       </main>
