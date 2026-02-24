@@ -101,7 +101,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       rel="noopener noreferrer"
       className="inline-flex items-center justify-center gap-[9px] h-10 w-[102px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
     >
-      <UserIcon className="w-[15px] h-[14px] shrink-0" />
+      <UserIcon className="w-[15px] h-[14px] shrink-0 text-brand-blue" />
       Login
     </a>
   );
@@ -113,7 +113,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       rel="noopener noreferrer"
       className="inline-flex items-center justify-center gap-[9px] h-9 w-[90px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
     >
-      <UserIcon className="w-[13px] h-[12px] shrink-0" />
+      <UserIcon className="w-[13px] h-[12px] shrink-0 text-brand-blue" />
       Login
     </a>
   );
@@ -128,7 +128,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         transitionDelay: isMenuOpen ? `${(navLinks.length + 1) * 50}ms` : "0ms",
       }}
     >
-      <UserIcon className="w-[15px] h-[14px] shrink-0" />
+      <UserIcon className="w-[15px] h-[14px] shrink-0 text-brand-blue" />
       Login
     </a>
   );
