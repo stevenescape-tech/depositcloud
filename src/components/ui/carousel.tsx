@@ -35,6 +35,8 @@ export const Carousel = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isTransitioning = useRef(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
   const count = items.length;
 
   const updateDimensions = useCallback(() => {
@@ -191,9 +193,25 @@ export const Carousel = ({
     }, 550);
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+      navigate(deltaX < 0 ? 1 : -1);
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
   return (
     <div className="flex flex-col items-center gap-[52px] w-full">
-      <div ref={containerRef} className="w-full relative" style={{ height: containerHeight }}>
+      <div ref={containerRef} className="w-full relative touch-pan-y" style={{ height: containerHeight }} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
         {items.map((item, index) => {
           const style = cardStyles[index] || { left: 0, opacity: 0, transition: "none" };
 
