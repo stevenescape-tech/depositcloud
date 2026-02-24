@@ -12,7 +12,7 @@ const executives: Executive[] = [
   { name: "Ash Bell", title: "President & COO", image: "/img/ash-bell.png" },
   { name: "Hannah Crompton", title: "SVP of Finance", image: "/img/hannah-crompton.png" },
   { name: "Niki Trimble", title: "SVP of Client Success", image: "/img/niki-trimble.png" },
-  { name: "Daria Davis", title: "SVP of Design", image: "/img/daria-davis.png" },
+  { name: "Daria Davis", title: "SVP of DevOps", image: "/img/daria-davis.png" },
 ];
 
 export const WhoWeAreSection = (): JSX.Element => {
