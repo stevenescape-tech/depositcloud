@@ -74,7 +74,7 @@ DepositCloud is a modern deposit management platform marketing website built wit
 
 ## Team Data
 - **Executives**: Michael Bowman (Founder & CEO), Ash Bell (President & COO), Hannah Crompton (SVP of Finance), Niki Trimble (SVP of Client Success), Daria Davis (SVP of DevOps)
-- **Advisory Counsel**: David Walther (CRO, Asset Living), Mark Stringer (EVP, Avenue5 Residential)
+- **Advisory Counsel**: David Walther (CRO, Asset Living), Mark Stringer (EVP, Avenue5 Residential), Kesha Fisher (SVP, Asset Living), Melissa Bartolucci (Principal, TRE Asset Partners), Erica Fedeczko (Director, F&F Properties), Scott Bishop (EVP, Asset Living)
 
 ## Recent Changes
 - 2026-02-24: Built About page (/about) with AboutHero, MeetExecutiveTeam (reuses Carousel), CoreValues (5 cards), AdvisoryCounsel (dark Carousel variant), and reused ContactForm

@@ -20,6 +20,30 @@ const advisors: Advisor[] = [
     image: "/img/mark-stringer.jpg",
     bio: "Mark leads revenue-focused services at Avenue5, drawing on multifamily experience dating to 1992. A licensed broker and former Greystar managing director, he provides practical insight on operational efficiency and portfolio performance.",
   },
+  {
+    name: "Kesha Fisher",
+    title: "SVP, Asset Living",
+    image: "/img/kesha-fisher.jpg",
+    bio: "Kesha brings more than two decades of multifamily leadership experience across large portfolios. Her background includes senior roles at FPI, April Housing, and Greystar, with expertise in procurement, construction, and performance optimization.",
+  },
+  {
+    name: "Melissa Bartolucci",
+    title: "Principal, TRE Asset Partners",
+    image: "/img/melissa-bartolucci.jpg",
+    bio: "Founding Principal of TRE Asset Partners, Melissa brings nearly twenty years of multifamily asset management and strategy experience. Former leadership roles at Tides Equities, CityView, TruAmerica, and Kennedy Wilson inform her focus on high-impact owner-operator collaboration.",
+  },
+  {
+    name: "Erica Fedeczko",
+    title: "Director, F&F Properties",
+    image: "/img/erica-fedeczko.jpg",
+    bio: "Erica has over twenty years of operational experience spanning mixed-use, development, student, and senior housing. Rising from on-site management to leadership, she focuses on operational excellence and strong client outcomes.",
+  },
+  {
+    name: "Scott Bishop",
+    title: "EVP, Asset Living",
+    image: "/img/scott-bishop.jpg",
+    bio: "Scott contributes nearly two decades of property management expertise. Formerly CFO at FPI for nearly twenty years, he provided financial and operational leadership and holds both CPA and CPM designations.",
+  },
 ];
 
 const AdvisorCard = ({ advisor }: { advisor: Advisor }): JSX.Element => (
@@ -45,7 +69,7 @@ const AdvisorCard = ({ advisor }: { advisor: Advisor }): JSX.Element => (
       </p>
     </div>
 
-    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base tracking-[-0.31px] leading-6">
+    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm tracking-[-0.31px] leading-6">
       {advisor.bio}
     </p>
   </div>
@@ -61,7 +85,7 @@ export const AdvisoryCounselSection = (): JSX.Element => {
       <div className="absolute inset-0 opacity-[0.68] bg-[url(/img/about-advisory-bg.jpg)] bg-cover bg-center bg-scroll md:bg-fixed" />
       <div className="absolute inset-0 bg-black/75" />
 
-      <div className="relative z-10 flex flex-col items-center pt-[85px] pb-[65px] px-0">
+      <div className="relative z-10 flex flex-col items-center pt-[85px] pb-[85px] px-0">
         <div className="flex flex-col items-center gap-[13px] w-full max-w-[1160px]">
           <h2 className="font-h2 font-bold text-white text-[28px] md:text-[42px] text-center tracking-[-2.52px]">
             Our advisory counsel
@@ -76,7 +100,6 @@ export const AdvisoryCounselSection = (): JSX.Element => {
           <Carousel
             items={carouselItems}
             variant="dark"
-            containerHeightOffset={350}
           />
         </div>
       </div>
