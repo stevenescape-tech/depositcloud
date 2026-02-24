@@ -14,7 +14,7 @@ DepositCloud is a modern deposit management platform marketing website built wit
 ## Project Structure
 - `src/` - Source code
   - `sections/` - Unified responsive page sections (Hero, ProblemStatement, ValueDelivery, Implementation, DepositBenefits, WhoWeAre, ContactForm)
-  - `components/` - Reusable UI components (PageLayout, Navigation, Footer, sections/UnifiedPlatformSection, ui)
+  - `components/` - Reusable UI components (PageLayout, Navigation, Footer, sections/UnifiedPlatformSection, ui including Carousel)
   - `routes/` - Legal page route components (TermsOfService, PrivacyPolicy, LegalNotices) - each contains only a screen component
   - `lib/` - Utility functions, hooks, and constants (useScrollAnimation, utils, constants)
 - `static/` - Static assets served via Vite publicDir (images in /img/)
