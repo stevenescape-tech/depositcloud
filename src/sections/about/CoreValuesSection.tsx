@@ -34,8 +34,7 @@ const coreValues: CoreValue[] = [
 
 const CoreValueCard = ({ value }: { value: CoreValue }): JSX.Element => (
   <div
-    className="bg-black/20 border-[0.5px] border-white flex flex-col gap-2 p-[33px]"
-    style={{ boxShadow: "-20px 20px 26.5px 0px rgba(0,0,0,0.05)" }}
+    className="bg-black/10 border-[0.25px] border-brand-blue flex flex-col gap-2 p-[33px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),inset_0_-1px_0_rgba(255,255,255,0.02),0_8px_32px_rgba(0,0,0,0.35)] [-webkit-backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)]"
   >
     <div className="flex flex-col">
       <h3 className="font-bold text-white text-xl tracking-[-1.2px] leading-[27px]">
