@@ -16,7 +16,7 @@ interface NavigationProps {
 const navLinks = [
   { label: "Platform", href: "#platform", external: false },
   { label: "Features", href: "#features", external: false },
-  { label: "About", href: "#about", external: false },
+  { label: "About", href: "/about", external: false },
   { label: "Book a demo", href: "#contact", external: false },
 ];
 
@@ -60,9 +60,12 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
     
     if (variant === 'legal') {
       window.location.href = '/' + href;
+    } else if (href.startsWith('/')) {
+      window.location.href = href;
     } else {
       const element = document.querySelector(href);
       if (element) {
+        setIsMenuOpen(false);
         const targetPosition = element.getBoundingClientRect().top + window.pageYOffset;
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
@@ -85,6 +88,8 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         };
 
         requestAnimationFrame(animation);
+      } else {
+        window.location.href = '/' + href;
       }
     }
     setIsMenuOpen(false);

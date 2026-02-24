@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface CarouselProps {
   items: ReactNode[];
+  variant?: "light" | "dark";
   visibleCountDesktop?: number;
   visibleCountMobile?: number;
   cardWidthDesktop?: number;
@@ -15,6 +16,7 @@ interface CarouselProps {
 
 export const Carousel = ({
   items,
+  variant = "light",
   visibleCountDesktop = 2,
   visibleCountMobile = 1,
   cardWidthDesktop = 551.5,
@@ -190,18 +192,26 @@ export const Carousel = ({
       <div className="flex items-center justify-between w-[193px]">
         <button
           onClick={() => navigate(-1)}
-          className="w-[60px] h-[60px] rounded-full bg-white border border-[#f2f2f2] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all cursor-pointer"
+          className={`w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all cursor-pointer ${
+            variant === "dark"
+              ? "bg-[#2c2c2c] border border-[#444] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.5)]"
+              : "bg-white border border-[#f2f2f2] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]"
+          }`}
           aria-label="Previous"
         >
-          <ChevronLeft className="w-6 h-6 text-[#2c2c2c]" />
+          <ChevronLeft className={`w-6 h-6 ${variant === "dark" ? "text-white" : "text-[#2c2c2c]"}`} />
         </button>
 
         <button
           onClick={() => navigate(1)}
-          className="w-[60px] h-[60px] rounded-full bg-white border border-[#f2f2f2] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] transition-all cursor-pointer"
+          className={`w-[60px] h-[60px] rounded-full flex items-center justify-center transition-all cursor-pointer ${
+            variant === "dark"
+              ? "bg-[#2c2c2c] border border-[#444] shadow-[0_4px_10px_rgba(0,0,0,0.3)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.5)]"
+              : "bg-white border border-[#f2f2f2] shadow-[0_4px_10px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)]"
+          }`}
           aria-label="Next"
         >
-          <ChevronRight className="w-6 h-6 text-[#2c2c2c]" />
+          <ChevronRight className={`w-6 h-6 ${variant === "dark" ? "text-white" : "text-[#2c2c2c]"}`} />
         </button>
       </div>
     </div>

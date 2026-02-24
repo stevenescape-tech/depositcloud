@@ -1,5 +1,5 @@
 #!/bin/bash
-for route in terms-of-service privacy-policy legal-notices; do
+for route in terms-of-service privacy-policy legal-notices about; do
   mkdir -p "dist/$route"
   cp dist/index.html "dist/$route/index.html"
 done

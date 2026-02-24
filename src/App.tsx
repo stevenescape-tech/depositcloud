@@ -10,6 +10,10 @@ import { ImplementationSection } from "./sections/ImplementationSection";
 import { DepositBenefitsSection } from "./sections/DepositBenefitsSection";
 import { WhoWeAreSection } from "./sections/WhoWeAreSection";
 import { ContactFormSection } from "./sections/ContactFormSection";
+import { AboutHeroSection } from "./sections/about/AboutHeroSection";
+import { MeetExecutiveTeamSection } from "./sections/about/MeetExecutiveTeamSection";
+import { CoreValuesSection } from "./sections/about/CoreValuesSection";
+import { AdvisoryCounselSection } from "./sections/about/AdvisoryCounselSection";
 import { TermsOfService } from "./routes/TermsOfService/screens/TermsOfService";
 import { PrivacyPolicy } from "./routes/PrivacyPolicy/screens/PrivacyPolicy";
 import { LegalNotices } from "./routes/LegalNotices/screens/LegalNotices";
@@ -46,11 +50,26 @@ function HomePage() {
   );
 }
 
+function AboutPage() {
+  return (
+    <PageLayout variant="home">
+      <main id="main-content" role="main">
+        <AboutHeroSection />
+        <MeetExecutiveTeamSection />
+        <CoreValuesSection />
+        <AdvisoryCounselSection />
+        <ContactFormSection />
+      </main>
+    </PageLayout>
+  );
+}
+
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/legal-notices" element={<LegalNotices />} />
