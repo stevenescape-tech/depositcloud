@@ -8,6 +8,7 @@ import { UnifiedPlatformSection } from "./components/sections/UnifiedPlatformSec
 import { ValueDeliverySection } from "./sections/ValueDeliverySection";
 import { ImplementationSection } from "./sections/ImplementationSection";
 import { DepositBenefitsSection } from "./sections/DepositBenefitsSection";
+import { WhoWeAreSection } from "./sections/WhoWeAreSection";
 import { ContactFormSection } from "./sections/ContactFormSection";
 import { TermsOfService } from "./routes/TermsOfService/screens/TermsOfService";
 import { PrivacyPolicy } from "./routes/PrivacyPolicy/screens/PrivacyPolicy";
@@ -38,6 +39,7 @@ function HomePage() {
         <ImplementationSection />
         <ValueDeliverySection />
         <DepositBenefitsSection />
+        <WhoWeAreSection />
         <ContactFormSection />
       </main>
     </PageLayout>

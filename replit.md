@@ -13,7 +13,7 @@ DepositCloud is a modern deposit management platform marketing website built wit
 
 ## Project Structure
 - `src/` - Source code
-  - `sections/` - Unified responsive page sections (Hero, ProblemStatement, ValueDelivery, Implementation, DepositBenefits, ContactForm)
+  - `sections/` - Unified responsive page sections (Hero, ProblemStatement, ValueDelivery, Implementation, DepositBenefits, WhoWeAre, ContactForm)
   - `components/` - Reusable UI components (PageLayout, Navigation, Footer, sections/UnifiedPlatformSection, ui)
   - `routes/` - Legal page route components (TermsOfService, PrivacyPolicy, LegalNotices) - each contains only a screen component
   - `lib/` - Utility functions, hooks, and constants (useScrollAnimation, utils, constants)
@@ -45,8 +45,21 @@ DepositCloud is a modern deposit management platform marketing website built wit
 - Build command: `npm run build`
 - Public directory: `dist`
 
+## Section Order (Homepage)
+1. HeroSection
+2. ProblemStatementSection
+3. UnifiedPlatformSection
+4. ImplementationSection
+5. ValueDeliverySection
+6. DepositBenefitsSection
+7. WhoWeAreSection (carousel - "Who we are" team section with executive cards)
+8. ContactFormSection
+
 ## Recent Changes
+- 2026-02-24: Added WhoWeAreSection with executive carousel (desktop: 2 visible, mobile: 1, overflow at 70% opacity)
+- 2026-02-24: Updated Navigation - added "About" link, styled Login button with blue outline + user icon
+- 2026-02-24: Created shared MainButton component (glass/outline variants) for CTA buttons
+- 2026-02-24: Reordered sections, added blue divider between sections 3-4
+- 2026-02-22: Fixed SPA routing, updated Terms of Service to Jan 2026 version, removed CDN dependencies
 - 2026-02-20: Code cleanup - centralized brand colors in Tailwind config, created shared PageLayout component, removed duplicate ui/lib files from legal routes, centralized constants (Formspree URL, Login URL)
 - 2026-02-20: Consolidated three separate breakpoint codebases (FullWidth, Tablet, Mobile44) into single responsive implementation
-- Removed all duplicate screen/route code - single set of sections in src/sections/
-- Eliminated JavaScript screen-size detection in favor of Tailwind responsive classes
