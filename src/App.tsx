@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { PageLayout } from "./components/PageLayout";
 import { HeroSection } from "./sections/HeroSection";
@@ -64,9 +64,22 @@ function AboutPage() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  const prevPathname = useRef(pathname);
+  useEffect(() => {
+    if (prevPathname.current !== pathname) {
+      window.scrollTo(0, 0);
+      prevPathname.current = pathname;
+    }
+  }, [pathname]);
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />

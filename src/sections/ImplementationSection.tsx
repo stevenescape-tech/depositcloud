@@ -3,7 +3,7 @@ import { Separator } from "../components/ui/separator";
 export const ImplementationSection = (): JSX.Element => {
   return (
     <section role="region" aria-labelledby="implementation-heading" className="flex flex-col w-full items-center justify-center gap-2.5 px-6 pt-[22px] pb-7 md:px-4 md:py-14 xl:py-[85px] relative">
-      <div className="absolute inset-0 bg-[url(/img/section---implement.png)] bg-cover bg-center opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/section---implement.jpg)] bg-cover bg-center opacity-15" />
       <div className="absolute inset-0 bg-white/40" />
       <div className="relative z-10 w-full md:max-w-[694px] xl:max-w-[1112px]">
         <div className="flex flex-col w-full items-center justify-center relative">

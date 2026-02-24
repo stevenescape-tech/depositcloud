@@ -1,5 +1,5 @@
 import { Separator } from "../ui/separator";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const footerLinks = [
   { text: "Terms of Use", href: "/terms-of-service" },
@@ -9,6 +9,7 @@ const footerLinks = [
 
 export const Footer = (): JSX.Element => {
   const location = useLocation();
+  const footerNavigate = useNavigate();
 
   return (
     <footer role="contentinfo" className="flex flex-col items-center gap-6 bg-transparent mt-auto pb-6 w-full">
@@ -28,7 +29,7 @@ export const Footer = (): JSX.Element => {
                   href={link.href}
                   onClick={(e) => {
                     e.preventDefault();
-                    window.location.href = link.href;
+                    footerNavigate(link.href);
                   }}
                   aria-current={isActive ? 'page' : undefined}
                   className={`leading-7 underline transition-colors cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white ${

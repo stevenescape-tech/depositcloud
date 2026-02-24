@@ -21,7 +21,7 @@ export const ValueDeliverySection = (): JSX.Element => {
 
   return (
     <section id="features" role="region" aria-labelledby="features-heading" className="relative w-full flex items-center justify-center px-6 py-7 md:px-[30px] md:py-12 xl:px-4 xl:py-[85px] scroll-mt-[72px]">
-      <div className="absolute inset-0 bg-[url(/img/features.png)] bg-cover bg-center bg-scroll md:bg-fixed" />
+      <div className="absolute inset-0 bg-[url(/img/features.jpg)] bg-cover bg-center bg-scroll md:bg-fixed" />
       <div className="absolute inset-0 bg-black/[0.43]" />
       <div className="relative z-10 flex flex-col w-full xl:max-w-[1112px] items-center gap-[26px]">
         <p className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] text-center font-body font-[number:var(--body-font-weight)] text-white text-[14px] tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">

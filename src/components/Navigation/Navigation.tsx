@@ -1,5 +1,6 @@
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { LOGIN_URL } from "../../lib/constants";
 
 const UserIcon = ({ className }: { className?: string }) => (
@@ -22,10 +23,11 @@ const navLinks = [
 
 export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogoClick = () => {
     if (variant === 'legal' || window.location.pathname !== '/') {
-      window.location.href = '/';
+      navigate('/');
     } else {
       const startPosition = window.pageYOffset;
       const distance = -startPosition;
@@ -59,9 +61,9 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
     e.preventDefault();
     
     if (variant === 'legal') {
-      window.location.href = '/' + href;
+      navigate('/' + href);
     } else if (href.startsWith('/')) {
-      window.location.href = href;
+      navigate(href);
     } else {
       const element = document.querySelector(href);
       if (element) {
@@ -89,7 +91,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
         requestAnimationFrame(animation);
       } else {
-        window.location.href = '/' + href;
+        navigate('/' + href);
       }
     }
     setIsMenuOpen(false);

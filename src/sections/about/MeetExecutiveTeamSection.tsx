@@ -29,7 +29,7 @@ const executives: Executive[] = [
   {
     name: "Niki Trimble",
     title: "SVP of Client Success",
-    image: "/img/niki-trimble.png",
+    image: "/img/niki-trimble.jpg",
     bio: "Niki drives implementation and long-term partner outcomes across major client portfolios. Her work focuses on adoption, operational performance, and delivering measurable value while reducing administrative burden for clients.",
   },
   {
@@ -81,7 +81,7 @@ export const MeetExecutiveTeamSection = (): JSX.Element => {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="absolute inset-0 bg-white" />
-      <div className="absolute inset-0 bg-[url(/img/whoweare-bg.png)] bg-cover bg-center bg-no-repeat opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/whoweare-bg.jpg)] bg-cover bg-center bg-no-repeat opacity-15" />
 
       <div className="relative z-10 flex flex-col items-center gap-[52px] pt-[85px] pb-[85px] px-0">
         <div className="flex flex-col items-center gap-[13px]">

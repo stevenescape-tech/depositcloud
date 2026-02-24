@@ -5,7 +5,7 @@ export const HeroSection = (): JSX.Element => {
     <section
       role="region"
       aria-label="Hero banner"
-      className="relative flex flex-col min-h-screen items-center justify-center gap-8 md:gap-20 px-4 md:px-6 xl:px-4 w-full overflow-hidden bg-[url(/img/hero.png)] bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
+      className="relative flex flex-col min-h-screen items-center justify-center gap-8 md:gap-20 px-4 md:px-6 xl:px-4 w-full overflow-hidden bg-[url(/img/hero.jpg)] bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
     >
       <div className="absolute inset-0 bg-black/70 z-0" />
 

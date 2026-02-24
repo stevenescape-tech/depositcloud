@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Carousel } from "../components/ui/carousel";
 import { MainButton } from "../components/ui/main-button";
 
@@ -11,7 +12,7 @@ const executives: Executive[] = [
   { name: "Michael Bowman", title: "Founder & CEO", image: "/img/michael-bowman.jpg" },
   { name: "Ash Bell", title: "President & COO", image: "/img/ash-bell.jpg" },
   { name: "Hannah Crompton", title: "SVP of Finance", image: "/img/hannah-crompton.jpg" },
-  { name: "Niki Trimble", title: "SVP of Client Success", image: "/img/niki-trimble.png" },
+  { name: "Niki Trimble", title: "SVP of Client Success", image: "/img/niki-trimble.jpg" },
   { name: "Daria Davis", title: "SVP of DevOps", image: "/img/daria-davis.jpg" },
 ];
 
@@ -55,7 +56,7 @@ export const WhoWeAreSection = (): JSX.Element => {
   return (
     <section id="about" className="relative w-full overflow-hidden scroll-mt-[72px]">
       <div className="absolute inset-0 bg-white" />
-      <div className="absolute inset-0 bg-[url(/img/whoweare-bg.png)] bg-cover bg-center bg-no-repeat opacity-15" />
+      <div className="absolute inset-0 bg-[url(/img/whoweare-bg.jpg)] bg-cover bg-center bg-no-repeat opacity-15" />
 
       <div className="relative z-10 flex flex-col items-center gap-[52px] pt-[85px] pb-[52px] px-0">
         <div className="flex flex-col items-center gap-[13px]">
@@ -70,11 +71,11 @@ export const WhoWeAreSection = (): JSX.Element => {
 
         <Carousel items={carouselItems} />
 
-        <a href="/about">
+        <Link to="/about">
           <MainButton variant="outline" className="text-[#2c2c2c] hover:text-[#2c2c2c]">
             Learn more about us
           </MainButton>
-        </a>
+        </Link>
       </div>
     </section>
   );
