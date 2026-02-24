@@ -58,13 +58,7 @@ export const AdvisoryCounselSection = (): JSX.Element => {
 
   return (
     <section className="relative w-full overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden opacity-[0.68]">
-        <img
-          src="/img/about-advisory-bg.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
+      <div className="absolute inset-0 opacity-[0.68] bg-[url(/img/about-advisory-bg.jpg)] bg-cover bg-center bg-scroll md:bg-fixed" />
       <div className="absolute inset-0 bg-black/75" />
 
       <div className="relative z-10 flex flex-col items-center pt-[85px] pb-[65px] px-0">
