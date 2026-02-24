@@ -64,12 +64,21 @@ export const Carousel = ({
 
   useEffect(() => {
     const measure = () => {
-      const heights = cardRefs.current
-        .filter((el): el is HTMLDivElement => el !== null)
-        .map((el) => el.offsetHeight);
-      if (heights.length > 0) {
-        setContainerHeight(Math.max(...heights));
-      }
+      cardRefs.current.forEach((el) => {
+        if (el) el.style.height = "auto";
+      });
+      requestAnimationFrame(() => {
+        const heights = cardRefs.current
+          .filter((el): el is HTMLDivElement => el !== null)
+          .map((el) => el.offsetHeight);
+        if (heights.length > 0) {
+          const maxH = Math.max(...heights);
+          setContainerHeight(maxH);
+          cardRefs.current.forEach((el) => {
+            if (el) el.style.height = `${maxH}px`;
+          });
+        }
+      });
     };
     measure();
     window.addEventListener("resize", measure);
@@ -192,7 +201,7 @@ export const Carousel = ({
             <div
               key={index}
               ref={(el) => { cardRefs.current[index] = el; }}
-              className="absolute top-0"
+              className="absolute top-0 [&>*]:h-full"
               style={{
                 width: `${cardWidth}px`,
                 left: `${style.left}px`,
