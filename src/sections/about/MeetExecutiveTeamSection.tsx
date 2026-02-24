@@ -22,19 +22,19 @@ const executives: Executive[] = [
   },
   {
     name: "Hannah Crompton",
-    title: "SVP of Finance",
+    title: "EVP of Finance",
     image: "/img/hannah-crompton.jpg",
     bio: "Hannah oversees financial strategy, governance, and performance. She manages enterprise accounting systems, capital planning, and risk controls to ensure transparency, compliance, and long-term financial stability as the company scales.",
   },
   {
     name: "Niki Trimble",
-    title: "SVP of Client Success",
+    title: "EVP of Client Success",
     image: "/img/niki-trimble.jpg",
     bio: "Niki drives implementation and long-term partner outcomes across major client portfolios. Her work focuses on adoption, operational performance, and delivering measurable value while reducing administrative burden for clients.",
   },
   {
     name: "Daria Davis",
-    title: "SVP of DevOps",
+    title: "EVP of DevOps",
     image: "/img/daria-davis.jpg",
     bio: "Daria directs platform architecture, security, and scalability. She oversees infrastructure and system integrations that ensure reliable performance and secure data exchange across large multifamily portfolios.",
   },

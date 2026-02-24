@@ -11,9 +11,9 @@ interface Executive {
 const executives: Executive[] = [
   { name: "Michael Bowman", title: "Founder & CEO", image: "/img/michael-bowman.jpg" },
   { name: "Ash Bell", title: "President & COO", image: "/img/ash-bell.jpg" },
-  { name: "Hannah Crompton", title: "SVP of Finance", image: "/img/hannah-crompton.jpg" },
-  { name: "Niki Trimble", title: "SVP of Client Success", image: "/img/niki-trimble.jpg" },
-  { name: "Daria Davis", title: "SVP of DevOps", image: "/img/daria-davis.jpg" },
+  { name: "Hannah Crompton", title: "EVP of Finance", image: "/img/hannah-crompton.jpg" },
+  { name: "Niki Trimble", title: "EVP of Client Success", image: "/img/niki-trimble.jpg" },
+  { name: "Daria Davis", title: "EVP of DevOps", image: "/img/daria-davis.jpg" },
 ];
 
 const ExecutiveCard = ({ exec }: { exec: Executive }): JSX.Element => (
