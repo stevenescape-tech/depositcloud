@@ -171,7 +171,7 @@ export const WhoWeAreSection = (): JSX.Element => {
           The team behind DepositCloud
         </p>
 
-        <div ref={containerRef} className="w-full relative" style={{ height: cardWidth + 150 }}>
+        <div ref={containerRef} className="w-full relative" style={{ height: cardWidth + 90 }}>
           {executives.map((exec, index) => {
             const style = cardStyles[index] || { left: 0, opacity: 0, transition: "none" };
 
