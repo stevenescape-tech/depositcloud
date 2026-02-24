@@ -67,7 +67,7 @@ const ExecutiveCard = ({ exec }: { exec: Executive }): JSX.Element => (
       </p>
     </div>
 
-    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2c2c2c] text-base tracking-[-0.31px] leading-6">
+    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2c2c2c] text-sm tracking-[-0.31px] leading-6">
       {exec.bio}
     </p>
   </div>
