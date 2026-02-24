@@ -1,4 +1,5 @@
 import { Carousel } from "../components/ui/carousel";
+import { MainButton } from "../components/ui/main-button";
 
 interface Executive {
   name: string;
@@ -67,11 +68,10 @@ export const WhoWeAreSection = (): JSX.Element => {
 
         <Carousel items={carouselItems} />
 
-        <a
-          href="/about"
-          className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2c2c2c] text-base tracking-[-0.31px] leading-6 border border-brand-blue px-8 py-3 hover:bg-brand-blue/10 transition-colors"
-        >
-          Learn more about us
+        <a href="/about">
+          <MainButton variant="outline" className="text-[#2c2c2c] hover:text-[#2c2c2c]">
+            Learn more about us
+          </MainButton>
         </a>
       </div>
     </section>
