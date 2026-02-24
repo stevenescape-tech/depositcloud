@@ -21,16 +21,16 @@ const advisors: Advisor[] = [
     bio: "Mark leads revenue-focused services at Avenue5, drawing on multifamily experience dating to 1992. A licensed broker and former Greystar managing director, he provides practical insight on operational efficiency and portfolio performance.",
   },
   {
-    name: "Kesha Fisher",
-    title: "SVP, Asset Living",
-    image: "/img/kesha-fisher.jpg",
-    bio: "Kesha brings more than two decades of multifamily leadership experience across large portfolios. Her background includes senior roles at FPI, April Housing, and Greystar, with expertise in procurement, construction, and performance optimization.",
-  },
-  {
     name: "Melissa Bartolucci",
     title: "Principal, TRE Asset Partners",
     image: "/img/melissa-bartolucci.jpg",
     bio: "Founding Principal of TRE Asset Partners, Melissa brings nearly twenty years of multifamily asset management and strategy experience. Former leadership roles at Tides Equities, CityView, TruAmerica, and Kennedy Wilson inform her focus on high-impact owner-operator collaboration.",
+  },
+  {
+    name: "Kesha Fisher",
+    title: "SVP, Asset Living",
+    image: "/img/kesha-fisher.jpg",
+    bio: "Kesha brings more than two decades of multifamily leadership experience across large portfolios. Her background includes senior roles at FPI, April Housing, and Greystar, with expertise in procurement, construction, and performance optimization.",
   },
   {
     name: "Erica Fedeczko",
@@ -48,7 +48,7 @@ const advisors: Advisor[] = [
 
 const AdvisorCard = ({ advisor }: { advisor: Advisor }): JSX.Element => (
   <div
-    className="shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border border-brand-blue bg-black/20 [-webkit-backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)] [backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)]"
+    className="shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border-[0.5px] border-brand-blue bg-black/20 [-webkit-backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)] [backdrop-filter:blur(10px)_saturate(180%)_brightness(80%)]"
     style={{
       boxShadow: "-20px 20px 26.5px 0px rgba(0,0,0,0.05)",
     }}
