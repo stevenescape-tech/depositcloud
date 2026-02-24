@@ -54,11 +54,7 @@ const CoreValueCard = ({ value }: { value: CoreValue }): JSX.Element => (
 export const CoreValuesSection = (): JSX.Element => {
   return (
     <section className="relative w-full overflow-hidden">
-      <img
-        src="/img/about-corevalues-bg.jpg"
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+      <div className="absolute inset-0 bg-[url(/img/about-corevalues-bg.jpg)] bg-cover bg-center bg-scroll md:bg-fixed" />
       <div className="absolute inset-0 bg-[rgba(22,22,22,0.7)]" />
 
       <div className="relative z-10 flex flex-col items-center gap-[65px] pt-[186px] pb-5 px-6 xl:px-[78px]">
