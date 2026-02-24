@@ -1,16 +1,17 @@
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { User } from "lucide-react";
 import { LOGIN_URL } from "../../lib/constants";
 
 interface NavigationProps {
   variant?: 'home' | 'legal';
 }
 
-const navigationItems = [
+const navLinks = [
   { label: "Platform", href: "#platform", external: false },
   { label: "Features", href: "#features", external: false },
   { label: "Book a demo", href: "#contact", external: false },
-  { label: "Login", href: LOGIN_URL, external: true },
+  { label: "About", href: "#about", external: false },
 ];
 
 export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element => {
@@ -87,6 +88,45 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const loginButtonDesktop = (
+    <a
+      href={LOGIN_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-[9px] h-10 w-[102px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+    >
+      <User className="w-[15px] h-[14px] shrink-0" />
+      Login
+    </a>
+  );
+
+  const loginButtonTablet = (
+    <a
+      href={LOGIN_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-[9px] h-9 w-[90px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+    >
+      <User className="w-[13px] h-[12px] shrink-0" />
+      Login
+    </a>
+  );
+
+  const loginButtonMobile = (
+    <a
+      href={LOGIN_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center justify-center gap-[9px] h-10 px-5 py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+      style={{
+        transitionDelay: isMenuOpen ? `${(navLinks.length + 1) * 50}ms` : "0ms",
+      }}
+    >
+      <User className="w-[15px] h-[14px] shrink-0" />
+      Login
+    </a>
+  );
+
   return (
     <>
       <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-black/50 py-4 border-b-[0.5px] border-b-brand-blue/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_32px_rgba(0,0,0,0.3)] [-webkit-backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)] [backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)]">
@@ -105,20 +145,17 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           </button>
 
           <div className="inline-flex items-center justify-center gap-[63px]">
-            {navigationItems.map((item) => (
+            {navLinks.map((item) => (
               <Button
                 key={item.label}
                 variant="ghost"
                 className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-transparent hover:text-white/80 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
                 asChild
               >
-                {item.external ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
-                ) : (
-                  <a href={item.href} onClick={(e) => handleClick(e, item.href, item.external)}>{item.label}</a>
-                )}
+                <a href={item.href} onClick={(e) => handleClick(e, item.href, item.external)}>{item.label}</a>
               </Button>
             ))}
+            {loginButtonDesktop}
           </div>
         </nav>
 
@@ -137,28 +174,17 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           </button>
 
           <div className="inline-flex items-center justify-center gap-[50px]">
-            {navigationItems.map((item) => (
-              item.external ? (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                >
-                  {item.label}
-                </a>
-              ) : (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => handleClick(e, item.href, item.external)}
-                  className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                >
-                  {item.label}
-                </a>
-              )
+            {navLinks.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleClick(e, item.href, item.external)}
+                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+              >
+                {item.label}
+              </a>
             ))}
+            {loginButtonTablet}
           </div>
         </nav>
 
@@ -218,34 +244,20 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           }`}
           onClick={(e) => e.stopPropagation()}
         >
-          {navigationItems.map((item, index) => (
-            item.external ? (
-              <a
-                key={item.label}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                style={{
-                  transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
-                }}
-              >
-                {item.label}
-              </a>
-            ) : (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleClick(e, item.href, item.external)}
-                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                style={{
-                  transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
-                }}
-              >
-                {item.label}
-              </a>
-            )
+          {navLinks.map((item, index) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={(e) => handleClick(e, item.href, item.external)}
+              className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white"
+              style={{
+                transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
+              }}
+            >
+              {item.label}
+            </a>
           ))}
+          {loginButtonMobile}
         </nav>
       </div>
     </>
