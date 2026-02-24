@@ -4,14 +4,40 @@ interface Executive {
   name: string;
   title: string;
   image?: string;
+  bio: string;
 }
 
 const executives: Executive[] = [
-  { name: "Michael Bowman", title: "Founder & CEO", image: "/img/michael-bowman.jpg" },
-  { name: "Ash Bell", title: "President & COO", image: "/img/ash-bell.jpg" },
-  { name: "Hannah Crompton", title: "SVP of Finance", image: "/img/hannah-crompton.jpg" },
-  { name: "Niki Trimble", title: "SVP of Client Success", image: "/img/niki-trimble.png" },
-  { name: "Daria Davis", title: "SVP of DevOps", image: "/img/daria-davis.jpg" },
+  {
+    name: "Michael Bowman",
+    title: "Founder & CEO",
+    image: "/img/michael-bowman.jpg",
+    bio: "Founder of DepositCloud, Michael sets the company's strategic direction and long-term vision. With a background in accounting, business science, and property management, he launched the platform to modernize security deposit processes and reduce operational burden for owners and operators.",
+  },
+  {
+    name: "Ash Bell",
+    title: "President & COO",
+    image: "/img/ash-bell.jpg",
+    bio: "Ash leads operational execution across the organization. With more than twenty years in PropTech and FinTech, he specializes in deploying complex financial solutions at scale while maintaining stability, regulatory compliance, and service reliability.",
+  },
+  {
+    name: "Hannah Crompton",
+    title: "SVP of Finance",
+    image: "/img/hannah-crompton.jpg",
+    bio: "Hannah oversees financial strategy, governance, and performance. She manages enterprise accounting systems, capital planning, and risk controls to ensure transparency, compliance, and long-term financial stability as the company scales.",
+  },
+  {
+    name: "Niki Trimble",
+    title: "SVP of Client Success",
+    image: "/img/niki-trimble.png",
+    bio: "Niki drives implementation and long-term partner outcomes across major client portfolios. Her work focuses on adoption, operational performance, and delivering measurable value while reducing administrative burden for clients.",
+  },
+  {
+    name: "Daria Davis",
+    title: "SVP of DevOps",
+    image: "/img/daria-davis.jpg",
+    bio: "Daria directs platform architecture, security, and scalability. She oversees infrastructure and system integrations that ensure reliable performance and secure data exchange across large multifamily portfolios.",
+  },
 ];
 
 const ExecutiveCard = ({ exec }: { exec: Executive }): JSX.Element => (
@@ -40,6 +66,10 @@ const ExecutiveCard = ({ exec }: { exec: Executive }): JSX.Element => (
         {exec.title}
       </p>
     </div>
+
+    <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2c2c2c] text-base tracking-[-0.31px] leading-6">
+      {exec.bio}
+    </p>
   </div>
 );
 
@@ -59,7 +89,7 @@ export const MeetExecutiveTeamSection = (): JSX.Element => {
             Meet our executive team
           </h2>
 
-          <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2c2c2c] text-lg text-center leading-7">
+          <p className="[font-family:'Courier_Prime',Helvetica] font-normal text-[#2c2c2c] text-sm text-center leading-7">
             The team behind DepositCloud
           </p>
         </div>
