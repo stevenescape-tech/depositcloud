@@ -1,3 +1,6 @@
+import React from "react";
+import { useScrollAnimation } from "../../lib/useScrollAnimation";
+
 interface CoreValue {
   title: string;
   subtitle: string;
@@ -32,8 +35,13 @@ const coreValues: CoreValue[] = [
   },
 ];
 
-const CoreValueCard = ({ value }: { value: CoreValue }): JSX.Element => (
+const CoreValueCard = ({ value, animationDelay }: { value: CoreValue; animationDelay?: number }): JSX.Element => {
+  const ref = useScrollAnimation();
+  return (
   <div
+    ref={ref}
+    data-animate="true"
+    style={animationDelay ? { animationDelay: `${animationDelay}ms` } as React.CSSProperties : undefined}
     className="bg-black/10 border-[0.25px] border-brand-blue flex flex-col gap-2 p-[33px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),inset_0_-1px_0_rgba(255,255,255,0.02),0_8px_32px_rgba(0,0,0,0.35)] [-webkit-backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(18px)_saturate(180%)_brightness(105%)]"
   >
     <div className="flex flex-col">
@@ -48,7 +56,8 @@ const CoreValueCard = ({ value }: { value: CoreValue }): JSX.Element => (
       {value.description}
     </p>
   </div>
-);
+  );
+};
 
 export const CoreValuesSection = (): JSX.Element => {
   return (
@@ -64,12 +73,12 @@ export const CoreValuesSection = (): JSX.Element => {
         <div className="flex flex-col gap-[22px] w-full max-w-[1124px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
             {coreValues.slice(0, 2).map((value, i) => (
-              <CoreValueCard key={i} value={value} />
+              <CoreValueCard key={i} value={value} animationDelay={i * 150} />
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[26px]">
             {coreValues.slice(2).map((value, i) => (
-              <CoreValueCard key={i} value={value} />
+              <CoreValueCard key={i} value={value} animationDelay={(i + 2) * 150} />
             ))}
           </div>
         </div>
