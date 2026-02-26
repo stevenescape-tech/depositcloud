@@ -106,7 +106,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       href={LOGIN_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-[9px] h-10 w-[102px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+      className="inline-flex items-center justify-center gap-[9px] h-10 w-[102px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-0 shadow-[inset_0_0_0_0.5px_#51b0ff] [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
     >
       <UserIcon className="w-[15px] h-[14px] shrink-0 text-brand-blue" />
       Login
@@ -118,7 +118,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       href={LOGIN_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-[9px] h-9 w-[90px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+      className="inline-flex items-center justify-center gap-[9px] h-9 w-[90px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border-0 shadow-[inset_0_0_0_0.5px_#51b0ff] [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
     >
       <UserIcon className="w-[13px] h-[12px] shrink-0 text-brand-blue" />
       Login
@@ -130,7 +130,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       href={LOGIN_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-[9px] h-10 px-5 py-[7px] rounded-[6px] border-[0.5px] border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+      className="inline-flex items-center justify-center gap-[9px] h-10 px-5 py-[7px] rounded-[6px] border-0 shadow-[inset_0_0_0_0.5px_#51b0ff] [font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
       style={{
         transitionDelay: isMenuOpen ? `${(navLinks.length + 1) * 50}ms` : "0ms",
       }}
