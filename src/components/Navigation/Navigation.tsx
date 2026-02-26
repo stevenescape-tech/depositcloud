@@ -176,23 +176,23 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         <nav className="hidden md:flex xl:hidden w-full mx-auto px-[46px] items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
           <button
             onClick={handleLogoClick}
-            className="cursor-pointer bg-transparent border-0 p-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
+            className="cursor-pointer bg-transparent border-0 p-0 shrink-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
             aria-label={variant === 'legal' ? 'Return to homepage' : 'Return to top of page'}
           >
             <img
-              className="w-[201px] h-[30.69px]"
+              className="w-[262px] h-10"
               alt="DepositCloud"
               src="/img/depositcloud-logo.svg"
             />
           </button>
 
-          <div className="inline-flex items-center justify-center gap-[50px]">
+          <div className="inline-flex items-center justify-center gap-[24px] lg:gap-[40px]">
             {navLinks.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href, item.external)}
-                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm lg:text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
               >
                 {item.label}
               </a>
