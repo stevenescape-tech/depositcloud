@@ -42,7 +42,7 @@ const executives: Executive[] = [
 
 const ExecutiveCard = ({ exec }: { exec: Executive }): JSX.Element => (
   <div
-    className="shrink-0 flex flex-col gap-[29px] p-6 md:p-[49px] border-[0.25px] border-brand-blue bg-white/35 [-webkit-backdrop-filter:blur(10px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(10px)_saturate(180%)_brightness(105%)]"
+    className="shrink-0 flex flex-col gap-[20px] p-6 md:p-[30px] border-[0.25px] border-brand-blue bg-white/35 [-webkit-backdrop-filter:blur(10px)_saturate(180%)_brightness(105%)] [backdrop-filter:blur(10px)_saturate(180%)_brightness(105%)]"
     style={{
       boxShadow: "inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(255,255,255,0.2), -20px 20px 26.5px 0px rgba(0,0,0,0.05)",
     }}
@@ -94,7 +94,7 @@ export const MeetExecutiveTeamSection = (): JSX.Element => {
           </p>
         </div>
 
-        <Carousel items={carouselItems} />
+        <Carousel items={carouselItems} cardWidthDesktop={440} />
       </div>
     </section>
   );
