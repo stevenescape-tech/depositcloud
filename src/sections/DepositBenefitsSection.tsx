@@ -27,7 +27,7 @@ export const DepositBenefitsSection = (): JSX.Element => {
           <div className="flex flex-col items-center gap-[26px] w-full">
             <div className="flex flex-col items-center w-full">
               <p className="font-body font-[number:var(--body-font-weight)] text-white text-[14px] text-center tracking-[var(--body-letter-spacing)] leading-[var(--body-line-height)] [font-style:var(--body-font-style)]">
-                Built for every one involved
+                Built for everyone involved
               </p>
             </div>
 
