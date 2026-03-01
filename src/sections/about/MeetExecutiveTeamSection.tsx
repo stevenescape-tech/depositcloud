@@ -12,7 +12,7 @@ const executives: Executive[] = [
     name: "Michael Bowman",
     title: "Founder & CEO",
     image: "/img/michael-bowman.jpg",
-    bio: "Founder of DepositCloud, Michael sets the company's strategic direction and long-term vision. With a background in accounting, business science, and property management, he launched the platform to modernize security deposit processes and reduce operational burden for owners and operators.",
+    bio: "Founder of DepositCloud, Michael sets the company's strategic direction and long-term vision. With a background in finance, business science, and property management, he launched the platform to modernize security deposit processes and reduce operational burden for owners and operators.",
   },
   {
     name: "Ash Bell",
