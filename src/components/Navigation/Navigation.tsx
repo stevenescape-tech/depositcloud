@@ -18,7 +18,7 @@ const navLinks = [
   { label: "Platform", href: "#platform", external: false },
   { label: "Features", href: "#features", external: false },
   { label: "Book a demo", href: "#contact", external: false },
-  { label: "About", href: "#about", external: false },
+  { label: "About", href: "/about", external: false },
 ];
 
 export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element => {
