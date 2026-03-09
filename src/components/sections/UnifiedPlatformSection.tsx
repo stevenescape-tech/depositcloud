@@ -25,18 +25,14 @@ const statistics = [
 export const UnifiedPlatformSection = (): JSX.Element => {
   return (
     <section id="platform" className="relative w-full overflow-hidden py-10 md:py-[60px] xl:py-[85px] scroll-mt-[72px]">
-      {/* Background Image & Overlay */}
       <div className="absolute inset-0 bg-[url(/img/platform.jpg)] bg-cover bg-center bg-no-repeat opacity-15 rotate-180" />
       <div className="absolute inset-0 bg-white/40" />
       
       <div className="relative z-10 container mx-auto px-6 md:px-[37px] xl:px-4 max-w-[1112px]">
         <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-12 xl:gap-8">
           
-          {/* Left Content Column */}
-          {/* On Tablet (md), constrain width to 55% to avoid overlap with absolute images */}
           <div className="flex flex-col gap-8 md:gap-12 xl:gap-[35px] flex-1 md:max-w-[55%] xl:max-w-[500px] relative z-20">
             
-            {/* Header Group */}
             <div className="flex flex-col gap-6 md:gap-[35px]">
               <h2 className="font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[28px] md:text-[32px] tracking-[-1.68px] md:tracking-[-1.92px] leading-normal">
                 Our Solution: A unified platform that does the work for you
@@ -65,25 +61,16 @@ export const UnifiedPlatformSection = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Mobile Phone Placement (Inline) - Visible only on Mobile */}
-            <div className="md:hidden relative w-full max-w-[340px] mx-auto aspect-[340/520] my-4">
-               <img
-                 className="absolute top-0 right-0 w-[65%] h-auto object-contain z-10 drop-shadow-xl"
-                 alt="Phone back"
-                 src="/img/uploaded-asset-1771098261908-1.png"
-                 loading="lazy"
-                 decoding="async"
-               />
-               <img
-                 className="absolute bottom-0 left-0 w-[65%] h-auto object-contain z-20 drop-shadow-xl"
-                 alt="Phone front"
-                 src="/img/uploaded-asset-1771098261907-0.png"
-                 loading="lazy"
-                 decoding="async"
-               />
+            <div className="md:hidden relative w-full max-w-[340px] mx-auto my-4">
+              <img
+                className="w-full h-auto object-contain"
+                alt="DepositCloud app screens"
+                src="/img/phones-v1.png"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
-            {/* Stats */}
             <div className="flex flex-col gap-8 md:gap-[30px]">
               <h3 className="font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[28px] md:text-[35px] tracking-[-1.68px] md:tracking-[-2.10px] leading-normal">
                 Value delivered on <br />
@@ -104,7 +91,6 @@ export const UnifiedPlatformSection = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Footer Text */}
             <div className="flex flex-col gap-2 md:gap-4">
               <h5 className="font-h5 font-[number:var(--h5-font-weight)] text-[#2b2b2b] text-2xl tracking-[-1.44px] leading-normal">
                 All your deposits in one place
@@ -115,47 +101,14 @@ export const UnifiedPlatformSection = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Tablet/Desktop Phone Images */}
-          {/* Tablet: Absolute positioned right */}
-          {/* Desktop: Flex item right */}
-          
-          {/* Container for Tablet/Desktop images */}
-          <div className="hidden md:block absolute top-[100px] right-[37px] w-[40%] max-w-[320px] aspect-[468/710] z-10 xl:static xl:block xl:w-[628px] xl:h-[958px] xl:max-w-none xl:aspect-auto xl:flex-shrink-0">
-             {/* Tablet Images */}
-             <div className="xl:hidden w-full h-full relative">
-                <img
-                  className="absolute top-0 right-0 w-[70%] h-auto object-contain z-10 drop-shadow-xl"
-                  alt="Phone back"
-                  src="/img/uploaded-asset-1771098261908-1.png"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  className="absolute top-[32%] left-0 w-[70%] h-auto object-contain z-20 drop-shadow-xl"
-                  alt="Phone front"
-                  src="/img/uploaded-asset-1771098261907-0.png"
-                  loading="lazy"
-                  decoding="async"
-                />
-             </div>
-
-             {/* Desktop Images */}
-             <div className="hidden xl:block relative w-full h-full">
-                <img
-                  src="/img/uploaded-asset-1771098261908-1.png"
-                  alt="Phone back"
-                  className="absolute top-0 right-0 w-[360px] h-[741px] object-contain z-10 drop-shadow-2xl"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src="/img/uploaded-asset-1771098261907-0.png"
-                  alt="Phone front"
-                  className="absolute top-[217px] left-0 w-[360px] h-[741px] object-contain z-20 drop-shadow-2xl"
-                  loading="lazy"
-                  decoding="async"
-                />
-             </div>
+          <div className="hidden md:block absolute top-[100px] right-[37px] w-[40%] max-w-[380px] z-10 xl:static xl:block xl:w-[628px] xl:max-w-none xl:flex-shrink-0 xl:mt-[80px]">
+            <img
+              className="w-full h-auto object-contain"
+              alt="DepositCloud app screens"
+              src="/img/phones-v1.png"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
         </div>

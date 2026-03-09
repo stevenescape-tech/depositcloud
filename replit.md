@@ -77,6 +77,7 @@ DepositCloud is a modern deposit management platform marketing website built wit
 - **Advisory Counsel**: David Walther (CRO, Asset Living), Mark Stringer (EVP, Avenue5 Residential), Kesha Fisher (SVP, Asset Living), Melissa Bartolucci (Principal, TRE Asset Partners), Erica Fedeczko (Director, F&F Properties), Scott Bishop (EVP, Asset Living)
 
 ## Recent Changes
+- 2026-03-09: Replaced two separate phone images in UnifiedPlatformSection with single combined phones-v1.png from Figma; removed old phone-front/phone-back assets
 - 2026-02-24: Built About page (/about) with AboutHero, MeetExecutiveTeam (reuses Carousel), CoreValues (5 cards), AdvisoryCounsel (dark Carousel variant), and reused ContactForm
 - 2026-02-24: Extracted reusable Carousel component with light/dark variants from WhoWeAreSection
 - 2026-02-24: Added WhoWeAreSection with executive carousel (desktop: 2 visible, mobile: 1, overflow at 30% opacity)
