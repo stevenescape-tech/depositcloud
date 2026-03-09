@@ -101,9 +101,9 @@ export const UnifiedPlatformSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="hidden md:block absolute top-[200px] right-0 w-[55%] z-10 xl:absolute xl:top-[140px] xl:right-0 xl:w-[50%]">
+          <div className="hidden md:flex absolute top-0 bottom-0 right-0 w-[48%] xl:w-[50%] z-10 items-center justify-end">
             <img
-              className="w-full h-auto object-contain"
+              className="w-full max-h-full h-auto object-contain object-right"
               alt="DepositCloud app screens"
               src="/img/phones-v1.png"
               loading="lazy"
