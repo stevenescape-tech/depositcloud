@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Check } from "lucide-react";
 import { Separator } from "../ui/separator";
 
@@ -23,8 +24,41 @@ const statistics = [
 ];
 
 export const UnifiedPlatformSection = (): JSX.Element => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const phoneRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (isMobile) return;
+
+    const section = sectionRef.current;
+    const phone = phoneRef.current;
+    if (!section || !phone) return;
+
+    let ticking = false;
+
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const rect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const sectionCenter = rect.top + rect.height / 2;
+        const viewCenter = windowHeight / 2;
+        const offset = (viewCenter - sectionCenter) * 0.12;
+        phone.style.transform = `translateY(${offset}px)`;
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section id="platform" className="relative w-full overflow-x-clip py-10 md:py-[60px] xl:py-[85px] scroll-mt-[72px]">
+    <section ref={sectionRef} id="platform" className="relative w-full overflow-x-clip py-10 md:py-[60px] xl:py-[85px] scroll-mt-[72px]">
       <div className="absolute inset-0 bg-[url(/img/platform.jpg)] bg-cover bg-center bg-no-repeat opacity-15 rotate-180" />
       <div className="absolute inset-0 bg-white/40" />
       
@@ -103,7 +137,8 @@ export const UnifiedPlatformSection = (): JSX.Element => {
 
           <div className="hidden md:flex absolute top-0 bottom-0 right-0 w-[48%] xl:w-[50%] z-10 items-center justify-end">
             <img
-              className="w-full max-h-full h-auto object-contain object-right drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+              ref={phoneRef}
+              className="w-full max-h-full h-auto object-contain object-right drop-shadow-[0_4px_12px_rgba(0,0,0,0.15)] will-change-transform transition-transform duration-100 ease-out"
               alt="DepositCloud app screens"
               src="/img/phones-v1.png"
               loading="lazy"
