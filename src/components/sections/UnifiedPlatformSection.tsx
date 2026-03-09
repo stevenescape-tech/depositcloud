@@ -31,7 +31,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
       <div className="relative z-10 container mx-auto px-6 md:px-[37px] xl:px-4 max-w-[1112px]">
         <div className="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-12 xl:gap-8">
           
-          <div className="flex flex-col gap-8 md:gap-12 xl:gap-[35px] flex-1 md:max-w-[55%] xl:max-w-[500px] relative z-20">
+          <div className="flex flex-col gap-8 md:gap-12 xl:gap-[35px] flex-1 md:max-w-[50%] xl:max-w-[500px] relative z-20">
             
             <div className="flex flex-col gap-6 md:gap-[35px]">
               <h2 className="font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[28px] md:text-[32px] tracking-[-1.68px] md:tracking-[-1.92px] leading-normal">
@@ -63,7 +63,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
 
             <div className="md:hidden relative w-full max-w-[340px] mx-auto my-4">
               <img
-                className="w-full h-auto object-contain drop-shadow-2xl"
+                className="w-full h-auto object-contain"
                 alt="DepositCloud app screens"
                 src="/img/phones-v1.png"
                 loading="lazy"
@@ -101,9 +101,9 @@ export const UnifiedPlatformSection = (): JSX.Element => {
             </div>
           </div>
 
-          <div className="hidden md:block absolute top-[100px] right-[37px] w-[40%] max-w-[380px] z-10 xl:static xl:block xl:w-[628px] xl:max-w-none xl:flex-shrink-0 xl:mt-[80px]">
+          <div className="hidden md:block absolute top-[60px] right-0 w-[55%] z-10 xl:static xl:block xl:w-[580px] xl:max-w-none xl:flex-shrink-0 xl:mt-[40px]">
             <img
-              className="w-full h-auto object-contain drop-shadow-2xl"
+              className="w-full h-auto object-contain"
               alt="DepositCloud app screens"
               src="/img/phones-v1.png"
               loading="lazy"
