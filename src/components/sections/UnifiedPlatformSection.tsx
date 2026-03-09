@@ -63,7 +63,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
 
             <div className="md:hidden relative w-full max-w-[340px] mx-auto my-4">
               <img
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain drop-shadow-2xl"
                 alt="DepositCloud app screens"
                 src="/img/phones-v1.png"
                 loading="lazy"
@@ -103,7 +103,7 @@ export const UnifiedPlatformSection = (): JSX.Element => {
 
           <div className="hidden md:block absolute top-[100px] right-[37px] w-[40%] max-w-[380px] z-10 xl:static xl:block xl:w-[628px] xl:max-w-none xl:flex-shrink-0 xl:mt-[80px]">
             <img
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain drop-shadow-2xl"
               alt="DepositCloud app screens"
               src="/img/phones-v1.png"
               loading="lazy"
