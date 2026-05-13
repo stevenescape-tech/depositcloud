@@ -264,11 +264,6 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
                   <button className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-xs lg:text-sm text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white hover:text-brand-blue">
                     {item.label}
                   </button>
-                  {supportOpen && (
-                    <div onMouseEnter={openSupport} onMouseLeave={closeSupport}>
-                      <SupportDropdown />
-                    </div>
-                  )}
                 </div>
               ) : (
                 <a
