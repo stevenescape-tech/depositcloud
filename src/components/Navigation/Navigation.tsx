@@ -50,16 +50,22 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
   const supportTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const headerRef = useRef<HTMLElement>(null);
   const loginBtnRef = useRef<HTMLAnchorElement>(null);
+  const loginTabletRef = useRef<HTMLAnchorElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (supportOpen && headerRef.current && loginBtnRef.current) {
+    if (supportOpen && headerRef.current) {
       const headerRect = headerRef.current.getBoundingClientRect();
-      const loginRect = loginBtnRef.current.getBoundingClientRect();
-      setDropdownPos({
-        top: headerRect.bottom,
-        right: window.innerWidth - loginRect.right,
-      });
+      // Use whichever login button is currently visible (non-zero width)
+      const desktopRect = loginBtnRef.current?.getBoundingClientRect();
+      const tabletRect = loginTabletRef.current?.getBoundingClientRect();
+      const loginRect = (desktopRect && desktopRect.width > 0) ? desktopRect : tabletRect;
+      if (loginRect) {
+        setDropdownPos({
+          top: headerRect.bottom,
+          right: window.innerWidth - loginRect.right,
+        });
+      }
     }
   }, [supportOpen]);
 
@@ -162,6 +168,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
   const loginButtonTablet = (
     <a
+      ref={loginTabletRef}
       href={LOGIN_URL}
       target="_blank"
       rel="noopener noreferrer"
@@ -401,7 +408,6 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       {/* Support dropdown rendered via portal — completely outside header DOM tree */}
       {supportOpen && dropdownPos.top > 0 && createPortal(
         <div
-          className="hidden xl:block"
           style={{ position: 'fixed', top: dropdownPos.top, right: dropdownPos.right, zIndex: 10003 }}
           onMouseEnter={openSupport}
           onMouseLeave={closeSupport}
