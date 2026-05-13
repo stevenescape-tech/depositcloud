@@ -23,13 +23,13 @@ const navLinks = [
 ];
 
 const SupportDropdown = () => (
-  <div className="absolute top-full left-0 mt-3 w-[420px] z-50
-    border border-brand-blue bg-black/75 
+  <div className="w-max z-50
+    border border-solid border-brand-blue bg-black/75 
     [backdrop-filter:blur(19px)] [-webkit-backdrop-filter:blur(19px)]
     shadow-[-20px_20px_26px_rgba(0,0,0,0.05)]
-    p-10 flex flex-col gap-3">
+    px-10 py-8 flex flex-col gap-3">
     <p className="font-h2 text-white text-2xl tracking-[-1.44px] leading-normal">Support</p>
-    <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm tracking-[-0.98px] leading-normal">
+    <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm tracking-[-0.98px] leading-normal whitespace-nowrap">
       855-753-1650 or email{" "}
       <a
         href="mailto:support@depositcloud.com"
