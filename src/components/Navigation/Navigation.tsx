@@ -49,13 +49,17 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
   const [dropdownPos, setDropdownPos] = useState({ top: 0, right: 0 });
   const supportTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const loginBtnRef = useRef<HTMLAnchorElement>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (supportOpen && headerRef.current) {
-      const rect = headerRef.current.getBoundingClientRect();
-      const rightEdge = window.innerWidth - rect.right;
-      setDropdownPos({ top: rect.bottom, right: rightEdge });
+    if (supportOpen && headerRef.current && loginBtnRef.current) {
+      const headerRect = headerRef.current.getBoundingClientRect();
+      const loginRect = loginBtnRef.current.getBoundingClientRect();
+      setDropdownPos({
+        top: headerRect.bottom,
+        right: window.innerWidth - loginRect.right,
+      });
     }
   }, [supportOpen]);
 
@@ -145,6 +149,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
   const loginButtonDesktop = (
     <a
+      ref={loginBtnRef}
       href={LOGIN_URL}
       target="_blank"
       rel="noopener noreferrer"
