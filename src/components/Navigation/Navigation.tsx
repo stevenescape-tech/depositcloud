@@ -304,7 +304,8 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         {/* Desktop support dropdown – anchored to header bottom, outside translated nav */}
         {supportOpen && (
           <div
-            className="absolute bottom-0 left-0 right-0 translate-y-full z-50 hidden xl:block"
+            className="hidden xl:block"
+            style={{ position: 'fixed', top: '72px', left: 0, right: 0, zIndex: 50 }}
             onMouseEnter={openSupport}
             onMouseLeave={closeSupport}
           >
