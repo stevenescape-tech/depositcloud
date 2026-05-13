@@ -378,15 +378,16 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
               {item.label}
             </a>
           ))}
-          <div className="flex flex-col items-center gap-4">
-            <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal]">
+          {loginButtonMobile}
+          <div className="flex flex-col items-center gap-3 pt-2">
+            <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-0.5px] leading-[normal]">
               Get Support
             </span>
             <div className="flex flex-col items-center gap-2">
-              <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm text-center tracking-[-0.5px]">
+              <p className="[font-family:'Courier_Prime',Helvetica] text-white/70 text-sm text-center tracking-[-0.5px]">
                 855-753-1650
               </p>
-              <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm text-center tracking-[-0.5px]">
+              <p className="[font-family:'Courier_Prime',Helvetica] text-white/70 text-sm text-center tracking-[-0.5px]">
                 or email{" "}
                 <a
                   href="mailto:support@depositcloud.com"
@@ -398,7 +399,6 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
               </p>
             </div>
           </div>
-          {loginButtonMobile}
         </nav>
       </div>
 
