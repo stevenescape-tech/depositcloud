@@ -175,7 +175,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
     <>
       <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-black/50 py-4 border-b-[0.5px] border-b-brand-blue/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_32px_rgba(0,0,0,0.3)] [-webkit-backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)] [backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)]">
         {/* Desktop Navigation (1280px+) */}
-        <nav role="navigation" aria-label="Main navigation" className="relative hidden xl:flex w-full max-w-[1112px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
+        <nav role="navigation" aria-label="Main navigation" className="relative hidden xl:flex w-full max-w-[1112px] mx-auto px-4 items-center justify-between animate-fade-in opacity-0">
           <button
             onClick={handleLogoClick}
             className="cursor-pointer bg-transparent border-0 p-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
@@ -213,10 +213,20 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             {loginButtonDesktop}
           </div>
 
+          {/* Dropdown anchored to nav right edge */}
+          {supportOpen && (
+            <div
+              className="absolute top-full right-0 mt-2"
+              onMouseEnter={openSupport}
+              onMouseLeave={closeSupport}
+            >
+              <SupportDropdown />
+            </div>
+          )}
         </nav>
 
         {/* Tablet Navigation (768px - 1279px) */}
-        <nav className="hidden md:flex xl:hidden w-full mx-auto px-[46px] items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
+        <nav className="hidden md:flex xl:hidden w-full mx-auto px-[46px] items-center justify-between animate-fade-in opacity-0">
           <button
             onClick={handleLogoClick}
             className="cursor-pointer bg-transparent border-0 p-0 shrink-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
@@ -301,19 +311,6 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           </div>
         </div>
 
-        {/* Desktop support dropdown – anchored to header bottom, outside translated nav */}
-        {supportOpen && (
-          <div
-            className="hidden xl:block"
-            style={{ position: 'fixed', top: '72px', left: 0, right: 0, zIndex: 50 }}
-            onMouseEnter={openSupport}
-            onMouseLeave={closeSupport}
-          >
-            <div className="w-full max-w-[1112px] mx-auto px-4 flex justify-end">
-              <SupportDropdown />
-            </div>
-          </div>
-        )}
       </header>
 
       {/* Mobile Menu Overlay */}
