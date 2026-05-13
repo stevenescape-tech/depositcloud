@@ -213,13 +213,15 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             {loginButtonDesktop}
           </div>
 
-          {/* Dropdown anchored to nav right edge */}
+          {/* Dropdown anchored below header border */}
           {supportOpen && (
             <div
-              className="absolute top-full right-0 mt-2"
+              className="absolute top-full right-0"
               onMouseEnter={openSupport}
               onMouseLeave={closeSupport}
             >
+              {/* Invisible bridge fills header bottom-padding gap so hover doesn't break */}
+              <div className="h-[20px]" />
               <SupportDropdown />
             </div>
           )}
