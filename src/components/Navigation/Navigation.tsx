@@ -25,7 +25,7 @@ const navLinks = [
 
 const SupportDropdown = () => (
   <div className="w-max z-50
-    border border-solid border-brand-blue bg-black/75 
+    border-[0.5px] border-solid border-brand-blue bg-black/75 
     [backdrop-filter:blur(19px)] [-webkit-backdrop-filter:blur(19px)]
     shadow-[-20px_20px_26px_rgba(0,0,0,0.05)]
     px-10 py-8 flex flex-col gap-3">
