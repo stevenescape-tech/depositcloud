@@ -193,7 +193,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
               item.hasDropdown ? (
                 <div
                   key={item.label}
-                  className="relative"
+                  className="relative flex items-center"
                   onMouseEnter={openSupport}
                   onMouseLeave={closeSupport}
                 >
@@ -242,7 +242,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
               item.hasDropdown ? (
                 <div
                   key={item.label}
-                  className="relative"
+                  className="relative flex items-center"
                   onMouseEnter={openSupport}
                   onMouseLeave={closeSupport}
                 >
