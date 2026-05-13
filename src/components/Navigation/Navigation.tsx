@@ -198,7 +198,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
                   onMouseLeave={closeSupport}
                 >
                   <button
-                    className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white text-brand-blue"
+                    className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white hover:text-brand-blue"
                   >
                     {item.label}
                   </button>
@@ -246,7 +246,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
                   onMouseEnter={openSupport}
                   onMouseLeave={closeSupport}
                 >
-                  <button className="[font-family:'Courier_Prime',Helvetica] font-normal text-brand-blue text-xs lg:text-sm text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white">
+                  <button className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-xs lg:text-sm text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white hover:text-brand-blue">
                     {item.label}
                   </button>
                   {supportOpen && (
