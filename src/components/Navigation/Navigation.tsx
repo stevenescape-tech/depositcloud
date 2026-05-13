@@ -1,5 +1,6 @@
 import { Button } from "../ui/button";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router-dom";
 import { LOGIN_URL } from "../../lib/constants";
 
@@ -45,8 +46,18 @@ const SupportDropdown = () => (
 export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [supportOpen, setSupportOpen] = useState(false);
+  const [dropdownPos, setDropdownPos] = useState({ top: 0, right: 0 });
   const supportTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const headerRef = useRef<HTMLElement>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (supportOpen && headerRef.current) {
+      const rect = headerRef.current.getBoundingClientRect();
+      const rightEdge = window.innerWidth - rect.right;
+      setDropdownPos({ top: rect.bottom, right: rightEdge });
+    }
+  }, [supportOpen]);
 
   const handleLogoClick = () => {
     if (variant === 'legal' || window.location.pathname !== '/') {
@@ -173,7 +184,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
 
   return (
     <>
-      <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-black/50 py-4 border-b-[0.5px] border-b-brand-blue/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_32px_rgba(0,0,0,0.3)] [-webkit-backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)] [backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)]">
+      <header ref={headerRef} role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-black/50 py-4 border-b-[0.5px] border-b-brand-blue/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_32px_rgba(0,0,0,0.3)] [-webkit-backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)] [backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)]">
         {/* Desktop Navigation (1280px+) */}
         <nav role="navigation" aria-label="Main navigation" className="relative hidden xl:flex w-full max-w-[1112px] mx-auto px-4 items-center justify-between animate-fade-in opacity-0">
           <button
@@ -213,18 +224,6 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             {loginButtonDesktop}
           </div>
 
-          {/* Dropdown anchored below header border */}
-          {supportOpen && (
-            <div
-              className="absolute top-full right-0"
-              onMouseEnter={openSupport}
-              onMouseLeave={closeSupport}
-            >
-              {/* Invisible bridge fills header bottom-padding gap so hover doesn't break */}
-              <div className="h-[20px]" />
-              <SupportDropdown />
-            </div>
-          )}
         </nav>
 
         {/* Tablet Navigation (768px - 1279px) */}
@@ -393,6 +392,19 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           {loginButtonMobile}
         </nav>
       </div>
+
+      {/* Support dropdown rendered via portal — completely outside header DOM tree */}
+      {supportOpen && dropdownPos.top > 0 && createPortal(
+        <div
+          className="hidden xl:block"
+          style={{ position: 'fixed', top: dropdownPos.top, right: dropdownPos.right, zIndex: 10003 }}
+          onMouseEnter={openSupport}
+          onMouseLeave={closeSupport}
+        >
+          <SupportDropdown />
+        </div>,
+        document.body
+      )}
     </>
   );
 };
