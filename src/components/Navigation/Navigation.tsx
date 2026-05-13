@@ -216,7 +216,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           {/* Dropdown anchored to nav right edge */}
           {supportOpen && (
             <div
-              className="absolute top-full right-0 mt-3"
+              className="absolute top-full right-0 mt-[1.75rem]"
               onMouseEnter={openSupport}
               onMouseLeave={closeSupport}
             >
