@@ -213,16 +213,6 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             {loginButtonDesktop}
           </div>
 
-          {/* Dropdown anchored to nav right edge */}
-          {supportOpen && (
-            <div
-              className="absolute top-full right-0 mt-[1.75rem]"
-              onMouseEnter={openSupport}
-              onMouseLeave={closeSupport}
-            >
-              <SupportDropdown />
-            </div>
-          )}
         </nav>
 
         {/* Tablet Navigation (768px - 1279px) */}
@@ -310,6 +300,19 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             </button>
           </div>
         </div>
+
+        {/* Desktop support dropdown – anchored to header bottom, outside translated nav */}
+        {supportOpen && (
+          <div
+            className="absolute bottom-0 left-0 right-0 translate-y-full z-50 hidden xl:block"
+            onMouseEnter={openSupport}
+            onMouseLeave={closeSupport}
+          >
+            <div className="w-full max-w-[1112px] mx-auto px-4 flex justify-end">
+              <SupportDropdown />
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Mobile Menu Overlay */}
