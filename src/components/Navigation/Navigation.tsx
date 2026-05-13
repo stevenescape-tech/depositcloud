@@ -1,5 +1,5 @@
 import { Button } from "../ui/button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { LOGIN_URL } from "../../lib/constants";
 
@@ -18,11 +18,34 @@ const navLinks = [
   { label: "Platform", href: "#platform", external: false },
   { label: "Features", href: "#features", external: false },
   { label: "Book a demo", href: "#contact", external: false },
+  { label: "Support", href: "#support", external: false, hasDropdown: true },
   { label: "About", href: "/about", external: false },
 ];
 
+const SupportDropdown = () => (
+  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[420px] z-50
+    border border-brand-blue bg-black/75 
+    [backdrop-filter:blur(19px)] [-webkit-backdrop-filter:blur(19px)]
+    shadow-[-20px_20px_26px_rgba(0,0,0,0.05)]
+    p-10 flex flex-col gap-3">
+    <p className="font-h2 text-white text-2xl tracking-[-1.44px] leading-normal">Support</p>
+    <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm tracking-[-0.98px] leading-normal">
+      855-753-1650 or email{" "}
+      <a
+        href="mailto:support@depositcloud.com"
+        className="text-brand-blue underline hover:opacity-80 transition-opacity"
+        onClick={(e) => e.stopPropagation()}
+      >
+        support@depositcloud.com
+      </a>
+    </p>
+  </div>
+);
+
 export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [supportOpen, setSupportOpen] = useState(false);
+  const supportTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
@@ -53,10 +76,9 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
     }
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, external: boolean) => {
-    if (external) {
-      return;
-    }
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, external: boolean, hasDropdown?: boolean) => {
+    if (external) return;
+    if (hasDropdown) { e.preventDefault(); return; }
 
     e.preventDefault();
     
@@ -97,6 +119,15 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
     setIsMenuOpen(false);
   };
 
+  const openSupport = () => {
+    if (supportTimeout.current) clearTimeout(supportTimeout.current);
+    setSupportOpen(true);
+  };
+
+  const closeSupport = () => {
+    supportTimeout.current = setTimeout(() => setSupportOpen(false), 150);
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -106,7 +137,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       href={LOGIN_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-[9px] h-10 w-[102px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border border-solid border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+      className="inline-flex items-center justify-center gap-[9px] h-10 w-[102px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border border-solid border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
     >
       <UserIcon className="w-[15px] h-[14px] shrink-0 text-brand-blue" />
       Login
@@ -118,7 +149,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
       href={LOGIN_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-[9px] h-9 w-[90px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border border-solid border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+      className="inline-flex items-center justify-center gap-[9px] h-9 w-[90px] pl-[11px] pr-[8px] py-[7px] rounded-[6px] border border-solid border-brand-blue [font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-brand-blue/10 transition-all cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
     >
       <UserIcon className="w-[13px] h-[12px] shrink-0 text-brand-blue" />
       Login
@@ -157,16 +188,36 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             />
           </button>
 
-          <div className="inline-flex items-center justify-center gap-[63px]">
+          <div className="inline-flex items-center justify-center gap-[40px]">
             {navLinks.map((item) => (
-              <Button
-                key={item.label}
-                variant="ghost"
-                className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-white text-lg text-center tracking-[-1.26px] leading-[normal] whitespace-nowrap hover:bg-transparent hover:text-white/80 transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                asChild
-              >
-                <a href={item.href} onClick={(e) => handleClick(e, item.href, item.external)}>{item.label}</a>
-              </Button>
+              item.hasDropdown ? (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={openSupport}
+                  onMouseLeave={closeSupport}
+                >
+                  <button
+                    className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white text-brand-blue"
+                  >
+                    {item.label}
+                  </button>
+                  {supportOpen && (
+                    <div onMouseEnter={openSupport} onMouseLeave={closeSupport}>
+                      <SupportDropdown />
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Button
+                  key={item.label}
+                  variant="ghost"
+                  className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:bg-transparent hover:text-brand-blue transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
+                  asChild
+                >
+                  <a href={item.href} onClick={(e) => handleClick(e, item.href, item.external)}>{item.label}</a>
+                </Button>
+              )
             ))}
             {loginButtonDesktop}
           </div>
@@ -186,16 +237,34 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             />
           </button>
 
-          <div className="inline-flex items-center justify-center gap-[24px] lg:gap-[40px]">
+          <div className="inline-flex items-center justify-center gap-[16px] lg:gap-[28px]">
             {navLinks.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleClick(e, item.href, item.external)}
-                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-sm lg:text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
-              >
-                {item.label}
-              </a>
+              item.hasDropdown ? (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={openSupport}
+                  onMouseLeave={closeSupport}
+                >
+                  <button className="[font-family:'Courier_Prime',Helvetica] font-normal text-brand-blue text-xs lg:text-sm text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white">
+                    {item.label}
+                  </button>
+                  {supportOpen && (
+                    <div onMouseEnter={openSupport} onMouseLeave={closeSupport}>
+                      <SupportDropdown />
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleClick(e, item.href, item.external)}
+                  className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-xs lg:text-sm text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:text-brand-blue transition-colors cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
             {loginButtonTablet}
           </div>
@@ -241,7 +310,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         </div>
       </header>
 
-      {/* Mobile Menu Overlay - Outside header, fixed positioning */}
+      {/* Mobile Menu Overlay */}
       <div
         className={`md:hidden fixed inset-0 bg-black transition-all duration-300 ${
           isMenuOpen ? 'opacity-95 pointer-events-auto' : 'opacity-0 pointer-events-none'
@@ -249,7 +318,6 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
         style={{ zIndex: 10003 }}
         onClick={toggleMenu}
       >
-        {/* Repeat mobile header bar inside overlay so it stays visible */}
         <div className="flex w-full px-4 py-4">
           <div className="flex w-full items-center justify-between">
             <button
@@ -287,17 +355,35 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           onClick={(e) => e.stopPropagation()}
         >
           {navLinks.map((item, index) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={(e) => handleClick(e, item.href, item.external)}
-              className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:opacity-80 transition-opacity focus:outline-2 focus:outline-offset-2 focus:outline-white"
-              style={{
-                transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
-              }}
-            >
-              {item.label}
-            </a>
+            item.hasDropdown ? (
+              <div key={item.label} className="flex flex-col items-center gap-2">
+                <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-brand-blue text-2xl text-center tracking-[-1.12px] leading-[normal]">
+                  {item.label}
+                </span>
+                <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm text-center tracking-[-0.5px] px-8">
+                  855-753-1650 or{" "}
+                  <a
+                    href="mailto:support@depositcloud.com"
+                    className="text-brand-blue underline"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    support@depositcloud.com
+                  </a>
+                </p>
+              </div>
+            ) : (
+              <a
+                key={item.label}
+                href={item.href}
+                onClick={(e) => handleClick(e, item.href, item.external)}
+                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:text-brand-blue transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
+                style={{
+                  transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
+                }}
+              >
+                {item.label}
+              </a>
+            )
           ))}
           {loginButtonMobile}
         </nav>
