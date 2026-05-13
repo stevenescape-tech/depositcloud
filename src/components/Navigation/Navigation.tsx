@@ -365,37 +365,39 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           style={{ height: 'calc(100% - 72px)' }}
           onClick={(e) => e.stopPropagation()}
         >
-          {navLinks.map((item, index) => (
-            item.hasDropdown ? (
-              <div key={item.label} className="flex flex-col items-center gap-2">
-                <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-brand-blue text-2xl text-center tracking-[-1.12px] leading-[normal]">
-                  {item.label}
-                </span>
-                <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm text-center tracking-[-0.5px] px-8">
-                  855-753-1650 or{" "}
-                  <a
-                    href="mailto:support@depositcloud.com"
-                    className="text-brand-blue underline"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    support@depositcloud.com
-                  </a>
-                </p>
-              </div>
-            ) : (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={(e) => handleClick(e, item.href, item.external)}
-                className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:text-brand-blue transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
-                style={{
-                  transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
-                }}
-              >
-                {item.label}
-              </a>
-            )
+          {navLinks.filter(item => !item.hasDropdown).map((item, index) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={(e) => handleClick(e, item.href, item.external)}
+              className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap hover:text-brand-blue transition-colors focus:outline-2 focus:outline-offset-2 focus:outline-white"
+              style={{
+                transitionDelay: isMenuOpen ? `${(index + 1) * 50}ms` : "0ms",
+              }}
+            >
+              {item.label}
+            </a>
           ))}
+          <div className="flex flex-col items-center gap-4">
+            <span className="[font-family:'Courier_Prime',Helvetica] font-normal text-white text-2xl text-center tracking-[-1.12px] leading-[normal]">
+              Get Support
+            </span>
+            <div className="flex flex-col items-center gap-2">
+              <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm text-center tracking-[-0.5px]">
+                855-753-1650
+              </p>
+              <p className="[font-family:'Courier_Prime',Helvetica] text-white text-sm text-center tracking-[-0.5px]">
+                or email{" "}
+                <a
+                  href="mailto:support@depositcloud.com"
+                  className="text-brand-blue underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  support@depositcloud.com
+                </a>
+              </p>
+            </div>
+          </div>
           {loginButtonMobile}
         </nav>
       </div>
