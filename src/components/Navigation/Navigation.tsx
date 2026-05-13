@@ -175,7 +175,7 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
     <>
       <header role="banner" className="fixed top-0 left-0 right-0 z-[10002] flex flex-col w-full items-center justify-center gap-[11px] bg-black/50 py-4 border-b-[0.5px] border-b-brand-blue/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_32px_rgba(0,0,0,0.3)] [-webkit-backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)] [backdrop-filter:blur(20px)_saturate(180%)_brightness(110%)]">
         {/* Desktop Navigation (1280px+) */}
-        <nav role="navigation" aria-label="Main navigation" className="hidden xl:flex w-full max-w-[1112px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
+        <nav role="navigation" aria-label="Main navigation" className="relative hidden xl:flex w-full max-w-[1112px] mx-auto px-4 items-center justify-between translate-y-[-1rem] animate-fade-in opacity-0">
           <button
             onClick={handleLogoClick}
             className="cursor-pointer bg-transparent border-0 p-0 focus:outline-2 focus:outline-offset-2 focus:outline-white"
@@ -191,23 +191,14 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
           <div className="inline-flex items-center justify-center gap-[40px]">
             {navLinks.map((item) => (
               item.hasDropdown ? (
-                <div
+                <button
                   key={item.label}
-                  className="relative flex items-center"
+                  className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white hover:text-brand-blue"
                   onMouseEnter={openSupport}
                   onMouseLeave={closeSupport}
                 >
-                  <button
-                    className="h-auto p-0 [font-family:'Courier_Prime',Helvetica] font-normal text-white text-base text-center tracking-[-1.12px] leading-[normal] whitespace-nowrap transition-colors bg-transparent border-0 cursor-pointer focus:outline-2 focus:outline-offset-2 focus:outline-white hover:text-brand-blue"
-                  >
-                    {item.label}
-                  </button>
-                  {supportOpen && (
-                    <div onMouseEnter={openSupport} onMouseLeave={closeSupport}>
-                      <SupportDropdown />
-                    </div>
-                  )}
-                </div>
+                  {item.label}
+                </button>
               ) : (
                 <Button
                   key={item.label}
@@ -221,6 +212,17 @@ export const Navigation = ({ variant = 'home' }: NavigationProps): JSX.Element =
             ))}
             {loginButtonDesktop}
           </div>
+
+          {/* Dropdown anchored to nav right edge */}
+          {supportOpen && (
+            <div
+              className="absolute top-full right-0 mt-3"
+              onMouseEnter={openSupport}
+              onMouseLeave={closeSupport}
+            >
+              <SupportDropdown />
+            </div>
+          )}
         </nav>
 
         {/* Tablet Navigation (768px - 1279px) */}
