@@ -18,12 +18,12 @@ const navLinks = [
   { label: "Platform", href: "#platform", external: false },
   { label: "Features", href: "#features", external: false },
   { label: "Book a demo", href: "#contact", external: false },
-  { label: "Support", href: "#support", external: false, hasDropdown: true },
+  { label: "Get Support", href: "#support", external: false, hasDropdown: true },
   { label: "About", href: "/about", external: false },
 ];
 
 const SupportDropdown = () => (
-  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[420px] z-50
+  <div className="absolute top-full left-0 mt-3 w-[420px] z-50
     border border-brand-blue bg-black/75 
     [backdrop-filter:blur(19px)] [-webkit-backdrop-filter:blur(19px)]
     shadow-[-20px_20px_26px_rgba(0,0,0,0.05)]
