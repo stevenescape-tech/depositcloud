@@ -8,18 +8,26 @@ const benefits = [
   "Create true move in affordability",
 ];
 
-const statistics = [
+const platformFeatures = [
   {
-    value: "6 of the top 10",
-    description: "NMHC operators trust DepositCloud",
+    title: "Automated Move-out Processing",
+    description: "Customized work flows reduce site teams workload",
   },
   {
-    value: "1 billion",
-    description: "In assets under management",
+    title: "Compliance and Service Engine",
+    description: "50-state, County, City and Zip",
   },
   {
-    value: "112%",
-    description: "More deposit value",
+    title: "Real-time Relief",
+    description: "Retroactive conversion of current residents and escheatment",
+  },
+  {
+    title: "Human-based Customer Service",
+    description: "Zero AI resident interactions",
+  },
+  {
+    title: "Single Source of Truth",
+    description: "All your deposit & move-out data in one place",
   },
 ];
 
@@ -105,34 +113,22 @@ export const UnifiedPlatformSection = (): JSX.Element => {
               />
             </div>
 
-            <div className="flex flex-col gap-8 md:gap-[30px]">
-              <h3 className="font-h2 font-[number:var(--h2-font-weight)] text-[#2b2b2b] text-[28px] md:text-[35px] tracking-[-1.68px] md:tracking-[-2.10px] leading-normal">
-                Value delivered on <br />
-                autopilot
-              </h3>
-
-              <div className="flex flex-col gap-6 md:gap-8">
-                {statistics.map((stat, index) => (
-                  <div key={index} className="flex flex-col gap-1">
-                    <h4 className="font-h4 font-[number:var(--h4-font-weight)] text-[#2b2b2b] text-[40px] tracking-[-2.40px] leading-normal">
-                      {stat.value}
-                    </h4>
-                    <p className="font-body font-[number:var(--body-font-weight)] text-[#2b2b2b] text-sm tracking-[0] leading-7">
-                      {stat.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+            <div className="flex flex-col gap-4 md:gap-5">
+              {platformFeatures.map((feature, index) => (
+                <div key={index} className="flex flex-col gap-1">
+                  <p className="font-body font-bold text-[#2b2b2b] text-sm md:text-base tracking-[-0.3px] leading-6">
+                    {feature.title}
+                  </p>
+                  <p className="font-body font-[number:var(--body-font-weight)] text-[#595959] text-sm tracking-[0] leading-6">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
             </div>
 
-            <div className="flex flex-col gap-2 md:gap-4">
-              <h5 className="font-h5 font-[number:var(--h5-font-weight)] text-[#2b2b2b] text-2xl tracking-[-1.44px] leading-normal">
-                All your deposits in one place
-              </h5>
-              <p className="font-body font-[number:var(--body-font-weight)] text-[#2b2b2b] text-base tracking-[0] leading-7">
-                Built by property managers for owners, operators, and renters.
-              </p>
-            </div>
+            <p className="font-body font-[number:var(--body-font-weight)] text-[#2b2b2b] text-base tracking-[0] leading-7">
+              Built by property managers for owners, operators, and renters.
+            </p>
           </div>
 
           <div className="hidden md:flex absolute top-0 bottom-0 right-0 w-[48%] xl:w-[50%] z-10 items-center justify-end">
